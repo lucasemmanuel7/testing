@@ -1,0 +1,2393 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria de Imagenes - CSS Grid</title>
+    <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Inter:wght@400;500&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+
+    <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">   <!-- link cartel start-->
+    <link rel="stylesheet" href="styles-cuatro.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
+    <script src="//code.jquery.com/ui/1.12.1/jquery-ui.js"></script> 
+
+
+    <meta http-equiv="Content-Type"
+        content="text/html; charset=UTF-8" />
+    <script src="script-seven.js" defer></script>
+</head>
+<body>
+   
+    <header>
+        <!-- onclick="scrollToTop()" -->
+        <div class="logo" >
+            <img id="logo" class="logo-img" src="img/su-pastelerias-app.png" alt="Logo">
+            <!-- <i id="to-top-arrow" class="bi bi-caret-up-fill"></i> -->
+        </div>
+        <button id="list-products">
+        <!-- <span>lista de productos</span>     -->
+       <i class="bi bi-search"></i>
+        <!-- <img width="50" height="50" src="https://img.icons8.com/plasticine/100/shop.png" alt="shop"/> -->
+        </button>
+
+        <div class="container_products_list">
+            <div class="container-bottons-products-list">
+                <!-- onclick="inverterBtns()" -->
+                <button  class="menu-invertion-btns"><i class="bi bi-arrow-left-right"></i></button>
+                <button id="open-cart-total" class="menu-cart-total"><i class="bi bi-cart3"></i></button>
+                <button id="close-product-list" class="close-list-product"><i class="bi bi-x"></i></button>
+            </div>
+            <div class="container-list-products-options">
+                <ul class="list-products-options">
+                    <!--           1           -->
+                    <li class="height-container one">
+
+                            <a  class="styleBtnList" href="#torta_porcion" onclick="closeList()">Torta Porción</a>                                      
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           2           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#alf-de-maicena" onclick="closeList()">Alfajor de Maicena</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           3           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#xl-frola-de-batata" onclick="closeList()">XL Frola de Batata</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           4           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#xl-frola-de-membrillo" onclick="closeList()">XL Frola de Membrillo</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           5           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#xl-torta-de-ricota" onclick="closeList()">XL Torta de Ricota</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           6           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#xl-torta-de-coco" onclick="closeList()">XL Torta de Coco</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           7           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#mini-frola-de-batata" onclick="closeList()">Mini Frola de Batata</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           8           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#mini-frola-de-membrillo" onclick="closeList()">Mini Frola de Membrillo</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           9           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#mini-ricota" onclick="closeList()">Mini Ricota</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           10           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#mini-coco" onclick="closeList()">Mini Coco</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           11           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#tortita-de-manzana" onclick="closeList()">Tortita de Manzana</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--          12           -->
+                    <li class="height-container">
+                                                                     
+                            <a  class="styleBtnList" href="#tortita-de-merengue" onclick="closeList()">Tortita de Merengue</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+                    <!--           13           -->
+                    <li class="height-container ultimate-card">
+                                                                     
+                            <a  class="styleBtnList" href="#conito-choco-ddl" onclick="closeList()">Conito Chocolate/DDL</a>
+                            <div class="ctn-info-counters">
+                                <div class="container-name-counter">
+                                    <p>comprar</p>
+                                    <input id="num_order_clone" type="number" class="num_order_clon button" value="0" disabled>
+                                </div>
+                                <div class="container-stock-counter">
+                                    <p>stock</p>
+                                    <input  type="" class="num_stock_clon button" value="-" disabled>
+                                </div>
+                            </div>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+       
+        <button id="abrir" class="abrir-menu">
+                <i class="bi bi-cart3"></i>
+                <div class="count-products hidden">
+                    <div id="contador-productos">0</div>
+                </div>
+        </button>
+
+        <nav class="nav" id="nav">
+            <div class="container_btn_cart">   
+                <div class="ctn-btn-lupa">
+                    <button id="lupa"><i class="bi bi-search"></i></button>
+                </div>
+                <button class="cerrar-menu" id="cerrar"><i class="bi bi-x"></i></button>
+            </div> 
+            <div class="container_nav_list">  
+                <ul class="nav-list">
+                    <!-- <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Quiénes somos</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Qué hacemos</a></li>
+                    <li><a href="#">Contacto</a></li> -->
+
+                    <div class="row-product h">
+			
+					</div>
+					<p class="cart-empty">El carrito está vacío</p>
+                </ul>
+            </div>
+            <div class="cart-total">
+                <div class="cart_icon_ctn">
+                    <i class="bi bi-cart3 cart_icon"></i>
+                    <div class="ctn-count-product">
+                        <div id="count-product">0</div>
+                    </div>
+                </div>
+
+                <div class="ctn_total">
+                    <h3 class="total">Total:</h3>
+                    <!-- <span>
+                        $
+                        <input  type="number" class="total-pagar" value="0" disabled>
+                    </span> -->
+                    <div class="total-pagar">$0</div>
+                    <button id="wsp-icon-btn" class="wsp-icon-ctn"><i class="bi bi-whatsapp wsp-icon"></i></button>
+                </div>
+            </div>
+        </nav>
+        
+        <div id="viewportWsp" class="whatsapp">
+           <div class="header-wsp">
+    
+                <div class="imagen">
+                    <img class="logo-img" src="img/su-pastelerias-app.png"> 
+                </div>
+    
+                <div class="info-wsp">
+                    <div class="tlf">Su Pastelerías</div>
+                    <div class="estado">en línea</div>
+                </div>
+    
+                <div id="close-wsp-viewport" class="icon-close-wsp">
+                    <i class="bi bi-x"></i>
+                </div>
+    
+            </div>
+
+
+                <div class="conver">
+                    <div class="converMessage hidden">
+                        <div class="messages">
+
+
+                        </div>
+                        <!-- ¡Cambia el número de teléfono por el número al que quieras enviar el mensaje! Si no lo haces, tendrás que elegir un contacto de tu agenda 😉 
+                        <br>
+                        <br/>++++++++++++++++++++++++++++++++++++++++
+                        <br><br/>
+                        ¡Cambia el número de teléfono por el número al que quieras enviar el mensaje! Si no lo haces, tendrás que elegir un contacto de tu agenda 😉  -->
+                    </div>
+                        <div class="converMessageUser">
+                    </div>
+        
+                    <div class="ctn-btn-message">
+                        <button class="message">
+                            <img class="enviar" src="./img/send.png" alt="">
+                        </button>
+                    </div>
+                    
+                </div>
+        </div>
+        
+    </header>
+
+    
+
+
+    <div class="container_cards">
+
+        <!--                                 1                                       -->
+        
+        <div id="torta_porcion" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price">
+                     <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Porción de Torta</span>
+                                    <!-- data-for="num1_order" -->
+                                    <button  class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span>    
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock">¿Desea desbloquear producto?</div>
+                                        </div> 
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                               
+                                                <button class="yes_confirmation" onclick="yesResetCard(0), todos()">SI</button>
+                                                <!-- onclick="closeCartel()" -->
+                                                <button class="no_confirmation" onclick="closeCartel(0)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="switch">
+                                <input type="checkbox" id="check">
+                                <label for="check"></label>
+                            </div> -->
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Porción de Torta</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                       
+                                        <button class="yes_reset" onclick="yesResetCard(0); todos()">SI</button>
+                                        <!-- onclick="closeCartel()" -->
+                                        <button class="no_reset" onclick="closeCartel(0)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container_product_img">
+                        <img class="product_img_first torta_coco" src="img/tarta_coco_recortada.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $1600</span>
+                        <div class="price hidden">1600</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <!-- onclick="activeRedBoolean()" [disabled]="false"-->
+                            <button class="botton_off">OFF</button>
+                        </div>
+                    </div>
+
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <!-- onclick="card1()"   onclick="listenerClick()" -->
+                                <button data-for="num1_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+
+                                    <input id="num1_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                    <!-- onclick="card1()"   onclick="listenerClick()" -->
+                                <button data-for="num1_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card1()"     onclick="listenerClick()" -->
+                            <button data-for="num1_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num1_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                                <!-- onclick="card1()"    onclick="listenerClick()" -->
+                            <button data-for="num1_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+
+                                <span data-for="num1_stock" class="plus_button botton btn-add-cart">+</span> 
+                                <span data-for="num1_stock" class="on_button_stock botton btn-add-cart">ON</span>
+                    
+                            </button>
+                            
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        
+        </div>
+
+         <!--                                 2                                      -->
+
+        <div id="alf-de-maicena" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                     <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Alfajor de Maicena</span>
+                                    <button data-for="num2_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div> 
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(1)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(1)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- <div class="switch">
+                                <input type="checkbox" id="check">
+                                <label for="check"></label>
+                            </div> -->
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Alfajor de Maicena</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        
+                                        <button class="yes_reset" onclick="yesResetCard(1)">SI</button>
+                                        <!-- onclick="closeCartel()" -->
+                                        <button class="no_reset" onclick="closeCartel(1)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $607</span>
+                        <div class="price hidden">607</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <!-- onclick="activeRedBoolean()" -->
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <!-- onclick="card2()"    onclick="listenerClick()"-->
+                                <button data-for="num2_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+
+                                    <input id="num2_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                    <!-- onclick="card2()"    onclick="listenerClick()" -->
+                                <button data-for="num2_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num2_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num2_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                                <!-- onclick="card2()"    onclick="listenerClick()" -->
+                            <button data-for="num2_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+
+                                <span data-for="num2_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num2_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                    
+                            </button>
+                            
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        
+        </div>
+
+
+         <!--                                 3                                     -->
+
+         <div id="xl-frola-de-batata" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">XL Frola de Batata</span>
+                                    <button data-for="num3_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div> 
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(2)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(2)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">XL Frola de Batata</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(2)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(2)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $1430</span>
+                        <div class="price hidden">1430</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num3_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num3_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num3_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num3_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num3_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num3_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num3_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num3_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+         <!--                                 4                                      -->
+
+         <div id="xl-frola-de-membrillo" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">XL Frola de Membrillo</span>
+                                    <button data-for="num4_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div>  
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(3)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(3)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">XL Frola de Membrillo</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(3)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(3)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $1430</span>
+                        <div class="price hidden">1430</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num4_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num4_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num4_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num4_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num4_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num4_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num4_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num4_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+         <!--                                5                                      -->
+
+         <div id="xl-torta-de-ricota" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">XL Torta de Ricota</span>
+                                    <button data-for="num5_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div>  
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(4)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(4)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">XL Torta de Ricota</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(4)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(4)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $2300</span>
+                        <div class="price hidden">2300</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num5_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num5_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num5_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num5_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num5_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num5_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num5_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num5_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+         <!--                                 6                                     -->
+
+         <div id="xl-torta-de-coco" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">XL Torta de Coco</span>
+                                    <button data-for="num6_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div> 
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(5)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(5)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">XL Torta de Coco</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(5)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(5)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $1430</span>
+                        <div class="price hidden">1430</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num6_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num6_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num6_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num6_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num6_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num6_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num6_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num6_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+         <!--                                7                                     -->
+
+         <div id="mini-frola-de-batata" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Mini Frola de Batata</span>
+                                    <button data-for="num7_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div>  
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(6)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(6)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Mini Frola de Batata</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(6)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(6)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $643</span>
+                        <div class="price hidden">643</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num7_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num7_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num7_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num7_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num7_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num7_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num7_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num7_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+         <!--                                 8                                     -->
+
+        <div id="mini-frola-de-membrillo" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Mini Frola de Membrillo</span>
+                                    <button data-for="num8_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div>  
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(7)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(7)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Mini Frola de Membrillo</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(7)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(7)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $643</span>
+                        <div class="price hidden">643</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num8_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num8_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num8_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num8_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num8_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num8_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num8_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num8_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+         <!--                                 9                                     -->
+
+        <div id="mini-ricota" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Mini Ricota</span>
+                                    <button data-for="num9_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div>  
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(8)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(8)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Mini Ricota</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(8)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(8)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $850</span>
+                        <div class="price hidden">1430</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num9_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num9_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num9_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num9_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num9_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num9_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num9_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num9_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        
+                 <!--                                 10                                     -->
+
+        <div id="mini-coco" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Mini Coco</span>
+                                    <button data-for="num10_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div> 
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(9)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(9)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Mini Coco</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(9)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(9)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $643</span>
+                        <div class="price hidden">643</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num10_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num10_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num10_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num10_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num10_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num10_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num10_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num10_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+                         <!--                                 11                                     -->
+
+        <div id="tortita-de-manzana" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Tortita de Manzana</span>
+                                    <button data-for="num11_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div>  
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(10)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(10)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Tortita de Manzana</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(10)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(10)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $465</span>
+                        <div class="price hidden">465</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num11_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num11_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num11_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num11_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num11_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num11_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num11_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num11_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+                                 <!--                                 12                                     -->
+
+        <div id="tortita-de-merengue" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Tortita de Merengue</span>
+                                    <button data-for="num12_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div>  
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(11)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(11)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Tortita de Merengue</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(11)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(11)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $465</span>
+                        <div class="price hidden">465</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num12_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num12_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num12_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num12_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num12_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num12_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num12_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num12_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+                                 <!--                                 13                                     -->
+
+        <div id="conito-choco-ddl" class="product_card one" >
+                                            
+            <div class="container_card">
+                <div class="name_img_price" >
+                    <div class="ctn-tittle-rotate">
+                        <div class="side default-side">
+                            <div class="ctn-dad-title-btn">
+                                <div class="ctn-title-btn">
+                                    <span class="product_name">Conito Chocolate/DDL</span>
+                                    <button data-for="num13_order" class="btn_blocking">
+                                        <!-- <i class="bi bi-three-dots"></i> -->
+                                        <!-- <i class="bi bi-three-dots-vertical"></i> -->
+                                        <!-- <i class="bi bi-lock-fill"></i> -->
+                                        <span class="lock-open">
+                                            <i class="bi bi-unlock-fill"></i>
+                                        </span>
+                                        <span class="lock-close">
+                                            <i class="bi bi-lock-fill"></i>
+                                        </span> 
+                                    </button>
+                                </div>
+
+                                <div class="ctn-cristal-text-locking">
+                                    <div class="ctn-text-locking">
+                                        <div class="ctn_product_locking">
+                                            <div class="product_locking">Producto Bloqueado</div> 
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="ctn-off-confirmation-cartel">
+                                    <div class="cartelQuestionLock">
+                                        <div class="ctn-question_desblock">
+                                            <div class="question_desblock"> ¿Desea desbloquear producto?</div>
+                                        </div> 
+                                    </div>
+                                    <div class="ctn-cristal-off-confirmation">
+                                        <div class="cartel-off-confirmation">
+                                            <div class="cartel-question_yes_no">¿Desea deshacer el reporte?</div> 
+                                            <div class="ctn_of_btn_confirmation">
+                                                
+                                                <button class="yes_confirmation" onclick="yesResetCard(12)">SI</button>
+                                                
+                                                <button class="no_confirmation" onclick="closeCartel(12)">NO</button>
+                                            </div>    
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="side hover-side">
+                            <ul class="ctn-falta-completar">
+                                <div class="title-falta-completar">Conito Chocolate/DDL</div>
+                                <div class="cartel-falta-completar">
+                                    <div class="falta-completar">FALTA COMPLETAR CANTIDAD DE STOCK</div>
+                                </div>
+                            </ul>
+                            <div class="ctn-off-confirmation_10">
+                                <div class="off-confirmation_cartel">
+                                    <div class="question_yes_no">Esta a punto de deshacer el reporte. ¿Estás seguro?</div>  
+                                    <div class="ctn_btn_confirmation">
+                                        <button class="yes_reset" onclick="yesResetCard(12)">SI</button>
+                                        <button class="no_reset" onclick="closeCartel(12)">NO</button>
+                                    </div>    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="container_product_img">
+                        <img class="product_img_first alf-maicena" src="img/alfajor-maicena.png" alt="img-galeria" onclick="somefunction(); return false;">
+                    </div>
+                    <div class="ctn-price-btn-off">
+                        <span class="product_price">Unidad: $1100</span>
+                        <div class="price hidden">1100</div>        <!--   ++++++++++++++++++++++++++++++++++++++++++++   -->
+                        <div class="ctn-cartel-off-question">
+                            <div class="cartel-off_question">
+                                <div class="cartel-question_red">¿DESEA DESHACER EL REPORTE?</div>     
+                            </div>
+                            <button class="botton_off" >OFF</button>
+                        </div>
+                    </div>
+                    <div data-for="num1_stock" class="ctn-cristal-img">
+                        <div class="cristal-img">
+                            <div class="candado-bloqueo"></div>     
+                        </div>
+                    </div>
+                </div>
+                <div class="ctn-solo-stock">
+                    <div class="solo-stock">SOLO REPORTAR STOCK</div>   <!--  Solo reportar Stock   -->
+                </div>
+                <div class="ctn-cartel-stock-order">
+                    <div class="cartel-stock-order">REPORTAR STOCK Y COMPRAR</div>     <!--  Reportar Stock y Comprar   -->
+                </div>
+                <div class="ctn-cartel-plus_green">
+                    <div class="cartel-plus_green">
+                        <img id="emoji-confused" src="/img/question_perfil_face.png" alt="">
+                        <div class="cartel-question_green">¿DESEA CONTINUAR CON EL REPORTE?</div>
+                    </div>
+                </div>
+                <div class="ctn-cartel-start">
+                    <div class="cartel-start">
+                       <p class="cartel_start_text">COMIENCE REPORTANDO LA CANTIDAD DE STOCK ACTUAL</p> 
+                    </div>
+                </div>
+                <div class="icon_cake">
+                    <!-- <i class="bi bi-emoji-smile-fill"></i> -->
+                    <!-- <i class="bi bi-emoji-smile"></i> -->
+                    <img src="/Bakery-Icons-cake-remove.png" alt="">
+                </div>
+                <section class="ctn-segunda-mitad">
+                    <div class="segunda-mitad">   
+                        <div class="father_ctn-order">
+                            <ul class="container_product_order">  
+                                <button data-for="num13_order" class="buttonDecrement_order btn-add-cart botton_minus">-</button> <!-- onclick="productListNoOrder()"  onclick="myFunctionDos()" -->
+                                    <div class="ctn-name_order">
+                                        <li class="name_order">COMPRAR</li>
+                                    </div>
+                                    <div class="ctn-check-order">
+                                        <i class="bi bi-check-square-fill check-icon-order"></i>
+                                    </div>
+                                    <input id="num13_order" type="number" class="num_order_counter counter" value="0" disabled>
+                                <button data-for="num13_order" id="btn_plus_order_one" class="buttonIncrement_order btn-add-cart botton_plus">+</button>  <!--  onclick="productListOrder()" onclick="myFunction()" -->
+                            </ul>
+                        </div>
+        
+                        <ul class="container_product_stock">   
+                            <!-- onclick="card2()"   onclick="listenerClick()" -->
+                            <button data-for="num13_stock" class="buttonDecrement_stock btn-add-cart botton_minus">-</button>
+                                <div class="ctn-name_stock">
+                                    <li class="name_stock">STOCK</li>
+                                </div>
+                                <div class="ctn-check-stock">
+                                    <i class="bi bi-check-square-fill check-icon-stock"></i>
+                                </div>
+                                <div class="dad">
+                                    <span>-</span>
+                                    <input id="num13_stock" type="number" class="num_stock_counter counter" value="-1" disabled></input>
+                                </div>
+                            <button data-for="num13_stock" class="buttonIncrement_stock btn-add-cart botton_plus">
+                                <span data-for="num13_stock" class="plus_button botton  btn-add-cart">+</span> 
+                                <span data-for="num13_stock" class="on_button_stock botton  btn-add-cart">ON</span>
+                            </button>
+                        </ul>
+                    </div>
+                    <div class="ctn-opacy">
+                        <div class="ctn-buttonPlusGreen"></div>
+                    </div>
+                </section>
+
+            </div>
+        </div>        
+
+    </div>
+    
+</body>
+</html>
+
+

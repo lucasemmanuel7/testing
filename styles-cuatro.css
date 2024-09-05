@@ -2748,7 +2748,7 @@ input:disabled {
   backdrop-filter: blur(0.7px);
   -webkit-backdrop-filter: blur(5px);
   /* border: 1.5px solid rgba(255, 255, 255, 0.3); */
-  border-radius: 10px;
+  border-radius: 15px;
 }
 
 .cart_icon {

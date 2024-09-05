@@ -158,7 +158,7 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: column;
   align-items: initial;   /* ?  reacomodando nav  */
  /*  justify-content: space-around; */   /* separar la lista */
-  height: 73vh;    
+  height: 67vh;    
   border: 1px solid #ffdde1;
   border: 1px solid #000000;
   /* margin-top: -10px;  reacomodando nav  */

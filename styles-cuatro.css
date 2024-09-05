@@ -246,7 +246,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #ee9ca7;
   /* box-shadow: 0 0 0 10vmax rgba(0, 0, 0, .5); */
   width: 100%;                   /* correccion de menu hamburguesa por stiky header  */
-  height: 88vh;
+  height: 89vh;
   padding: 1rem 1rem; /* reacomodando nav */
   /* padding-bottom: 5.2rem;  reacomodando nav */
   z-index: 3000;

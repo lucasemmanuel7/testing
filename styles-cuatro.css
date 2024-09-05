@@ -158,7 +158,7 @@ input[type=number]::-webkit-outer-spin-button {
   flex-direction: column;
   align-items: initial;   /* ?  reacomodando nav  */
  /*  justify-content: space-around; */   /* separar la lista */
-  height: 67vh;    
+  height: 73vh;    
   border: 1px solid #ffdde1;
   border: 1px solid #000000;
   /* margin-top: -10px;  reacomodando nav  */
@@ -246,7 +246,7 @@ input[type=number]::-webkit-outer-spin-button {
   background-color: #ee9ca7;
   /* box-shadow: 0 0 0 10vmax rgba(0, 0, 0, .5); */
   width: 100%;                   /* correccion de menu hamburguesa por stiky header  */
-  height: 93.5vh;
+  height: 100vh;
   padding: 1rem 1rem; /* reacomodando nav */
   /* padding-bottom: 5.2rem;  reacomodando nav */
   z-index: 3000;
@@ -692,7 +692,7 @@ border: 1px solid #000000; */
 
 .conver {
 
-  background-image: url(/img/wall.jpg);
+  background-image: url(img/wall.jpg);
   display: flex;
   flex-direction: column;
   /* justify-content: end; */
@@ -844,17 +844,17 @@ width: 90%;      /* width: 100%; */
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
   box-shadow: 0 4px 8px rgb(0 0 0 / 30%);
-  background-image: url(/img/pasteleria_background.jpg);
+  background-image: url(img/pasteleria_background.jpg);
   background-size: cover;
 }
 
  .container_card.background-yellow {
-  background-image: url(/img/cake-pasteleria.jpg);
+  background-image: url(img/cake-pasteleria.jpg);
   background-size: contain;
  }
  
  .container_card.background-green {
-  background-image: url(/img/cake-pasteleria-green-700px_rose_strong.jpg);
+  background-image: url(img/cake-pasteleria-green-700px_rose_strong.jpg);
   background-size: contain;
  }
  
@@ -1583,7 +1583,7 @@ width: 90%;      /* width: 100%; */
   width: 69%;
   height: 33%;
   border: 2px solid var(--off-white);
-  background-image: url(/img/corazon_abalon.jpg);
+  background-image: url(img/corazon_abalon.jpg);
   background-size: auto;
   position: relative;              /*      ++++++++++++++++++++         chequear    ++++++++++++++++++++++          */
   bottom: 3.5px;               /*      ++++++++++++++++++++         chequear    ++++++++++++++++++++++          */
@@ -1990,7 +1990,7 @@ width: 90%;      /* width: 100%; */
   background-color: rgba(16, 16, 16, 0.5);
   position: absolute;
   z-index: 1400;
-  background-image: url(/img/rosa_espejos.jpg);
+  background-image: url(img/rosa_espejos.jpg);
   background-size: contain;
   border: inset 2px #ffff00;
   background: radial-gradient(ellipse farthest-corner at right bottom, #FEDB37 0%, #FDB931 8%, #9f7928 30%, #8A6E2F 40%, transparent 80%), radial-gradient(ellipse farthest-corner at left top, #FFFFFF 0%, #FFFFAC 8%, #D1B464 25%, #5d4a1f 62.5%, #5d4a1f 100%);
@@ -2805,12 +2805,6 @@ align-items: center;
 }
 
 
-
-
-
-
-
-
 /*   Aplicar estos estilos a contenedor bloqueado
 .ctn-opacy {
     display: flex;
@@ -2832,22 +2826,3 @@ align-items: center;
 .price {
   font-size: 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
- 
-
-
-
-
-
-

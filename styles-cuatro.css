@@ -2729,6 +2729,7 @@ input:disabled {
   background: antiquewhite;
   width: 100%;
   border-radius: 10px;
+  margin-bottom: 10px;
 }
 
 .cart_icon_ctn {

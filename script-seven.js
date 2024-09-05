@@ -1112,7 +1112,7 @@ const showHTML = () => {
               <strong> Stock: &nbsp ${numero} </strong> <br/>
 	      <br/>
               <strong> Precio Unitario: &nbsp $${data.price} </strong> <br/>
-              <strong> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total} </strong> 
+              <strong> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total} </strong> <br/>
               <br/>
               ++++++++++++++++++++++++++++++++++++
               <br/>
@@ -1126,7 +1126,7 @@ const showHTML = () => {
           <div class="">
               <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
               <strong> Comprar: &nbsp ${data.order} </strong> <br/>
-              <strong> Stock: &nbsp ${numero} </strong>
+              <strong> Stock: &nbsp ${numero} </strong> <br/>
               <br/>
               <br/>++++++++++++++++++++++++++++++++++++
               <br/>

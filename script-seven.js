@@ -968,7 +968,7 @@ const showHTML = () => {
 
   let counter = document.querySelector(".count-products");
   let cartEmpty = document.querySelector(".cart-empty");
-  let ctnMessageWsp = document.querySelector(".converMessage");
+  let ctnMessageWsp = document.querySelector(".ctn-messages");
   
   
 

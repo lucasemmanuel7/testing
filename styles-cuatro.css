@@ -716,7 +716,7 @@ border: 1px solid #000000; */
   flex-direction: column;
   padding: 10px;
   box-sizing: border-box;
-  width: 250px;
+  width: 240px;
   height: auto;
   float: right;
   align-items: center;
@@ -735,7 +735,7 @@ border: 1px solid #000000; */
   float: right;
   display: flex;
   align-items: center;
-  width: 230px;
+  width: 220px;
   padding: 5px;
 
 }

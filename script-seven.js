@@ -1214,7 +1214,7 @@ const showHTML = () => {
 
 $(".enviar").click(function(){
 
-  // let tester = document.querySelector(".test");
+  let tester = document.querySelector(".test");
   let ctnProductWsp = document.querySelector("messages");
 
 	

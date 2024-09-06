@@ -2840,3 +2840,8 @@ align-items: center;
 .price {
   font-size: 0;
 }
+
+
+.test {
+  white-space: pre;
+}

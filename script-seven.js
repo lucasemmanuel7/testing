@@ -1238,7 +1238,7 @@ $(".enviar").click(function(){
   if( contain >= 1 ){
       var phone = "+541150649933";
       if (phone){
-          window.location = "https://api.whatsapp.com/send?phone="+phone+"&text="+ctnProductWsp.textContent;
+          window.location = "https://api.whatsapp.com/send?phone="+phone+"&text="+ctnProductWsp;
       }
   }  
 

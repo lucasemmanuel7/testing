@@ -2076,8 +2076,8 @@ width: 90%;      /* width: 100%; */
 }
 
 .ctn-segunda-mitad.opacyActive {
-  border-left: 8.5px solid black;
-  border-right: 8.5px solid black;
+  border-left: 9px solid black;
+  border-right: 9px solid black;
   transition: all .5s ease;
 }
  

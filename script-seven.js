@@ -1106,7 +1106,7 @@ const showHTML = () => {
         
         ctnProductWsp.innerHTML =  `
     
-          <div class="">
+          <div class="test">
               <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
               <strong> Comprar: &nbsp ${data.order} </strong> <br/>
               <strong> Stock: &nbsp ${numero} </strong> <br/>
@@ -1123,7 +1123,7 @@ const showHTML = () => {
         
           ctnProductWsp.innerHTML =  `
       
-          <div class="">
+          <div class="test">
               <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
               <strong> Comprar: &nbsp ${data.order} </strong> <br/>
               <strong> Stock: &nbsp ${numero} </strong> 
@@ -1139,7 +1139,7 @@ const showHTML = () => {
 
           ctnProductWsp.innerHTML =  `
     
-          <div class="">
+          <div class="test">
               <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
               <strong> Comprar: &nbsp ${data.order} </strong> <br/>
               <strong> Stock: &nbsp ${numero} </strong> <br/>
@@ -1158,7 +1158,7 @@ const showHTML = () => {
         
           ctnProductWsp.innerHTML =  `
       
-          <div class="">
+          <div class="test">
               <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
               <strong> Comprar: &nbsp ${data.order} </strong> <br/>
               <strong> Stock: &nbsp ${numero} </strong> 
@@ -1211,6 +1211,35 @@ const showHTML = () => {
 
 
 }
+
+$(".enviar").click(function(){
+
+  let tester = document.querySelector(".test");
+  let contain = document.getElementsByClassName('test').length;
+
+  console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
+
+  
+    if ( contain >= 1 ) {
+      
+      console.log('tester ', tester.textContent,  tester.textContent.length)
+
+    } if ( contain === 0 ) {
+
+      console.log('tester ', tester = 0)
+
+    }
+
+
+  // var mensaje = $("textarea").val();
+  if( contain >= 1 ){
+      var phone = $("+541150649933");
+      if (phone){
+          window.location = "https://api.whatsapp.com/send?phone="+phone+"&text="+tester.textContent;
+      }
+  }  
+
+})
 
 
 // const wspHTML = () => {

@@ -1112,7 +1112,7 @@ const showHTML = () => {
               <br> <strong> Stock: &nbsp ${numero} </strong> <br/>
 	      <br> <br/>
               <br> <strong> Precio Unitario: &nbsp $${data.price} </strong> <br/>
-              <br> <strong> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total} </strong> <br/>
+              <br> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total} <br/>
               <br> <br/>
               <br> ++++++++++++++++++++++++++++++++++++ <br/>
               <br> <br/>
@@ -1145,11 +1145,11 @@ const showHTML = () => {
               <br> <strong> Stock: &nbsp ${numero} </strong> <br/>
               <br> <br/>
               <br> <strong> Precio Unitario: &nbsp $${data.price} </strong> <br/>
-              <br> <strong> Total por (&nbsp${data.order}&nbsp)  ${cantidadOrder}: &nbsp $${data.total} </strong> <br/>
+              <br> Total por (&nbsp${data.order}&nbsp)  ${cantidadOrder}: &nbsp $${data.total} <br/>
               <br> <br/>
               <br> +++++++++++++++++++++++++++++++++++ <br/>
               <br> <br/>
-              <br> <span class="total-wsp"> (Total por toda la compra: $${totalOfProducts}) </span> <br/>
+              <br> <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> <br/>
               <br> <br/>
           </div>
       
@@ -1165,7 +1165,7 @@ const showHTML = () => {
               <br> <br/>
               <br> ++++++++++++++++++++++++++++++++++++ <br/>
               <br> <br/>
-              <br> <span class="total-wsp"> (Total por toda la compra: $${totalOfProducts}) </span> <br/>
+              <br> <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> <br/>
               <br> <br/>
           </div>
       

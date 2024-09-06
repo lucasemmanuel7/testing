@@ -1214,10 +1214,11 @@ const showHTML = () => {
 
 $(".enviar").click(function(){
 
-  let tester = document.querySelectorAll(".test");
-  // let ctnMessageWsp = document.querySelector(".ctn-messages");
+  let tester = document.querySelector(".test");
+	
+  //let ctnMessageWsp = document.querySelector(".ctn-messages");
 
-  // let ctnMessageWsp = document.querySelector(".converMessage");
+   let ctnMessageWsp = document.querySelector(".converMessage");
 	
 	
   let contain = document.getElementsByClassName('test').length;
@@ -1240,7 +1241,7 @@ $(".enviar").click(function(){
   if( contain >= 1 ){
       var phone = "+541150649933";
       if (phone){
-          window.location = "https://api.whatsapp.com/send?phone="+phone+"&text="+test.textContent;
+          window.location = "https://api.whatsapp.com/send?phone="+phone+"&text="+ctnMessageWsp.textContent;
       }
   }  
 

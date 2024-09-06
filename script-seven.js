@@ -1126,7 +1126,7 @@ const showHTML = () => {
           <div class="">
               <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
               <strong> Comprar: &nbsp ${data.order} </strong> <br/>
-              <strong> Stock: &nbsp ${numero} </strong> <br/>
+              <strong> Stock: &nbsp ${numero} </strong> 
               <br/>
               <br/>++++++++++++++++++++++++++++++++++++
               <br/>
@@ -1154,7 +1154,23 @@ const showHTML = () => {
           </div>
       
           `
-        }
+        } if( data.order === 0 && data.stock === 0 && position + 1 === allProducts.length) {
+        
+          ctnProductWsp.innerHTML =  `
+      
+          <div class="">
+              <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
+              <strong> Comprar: &nbsp ${data.order} </strong> <br/>
+              <strong> Stock: &nbsp ${numero} </strong> 
+              <br/>
+              <br/>++++++++++++++++++++++++++++++++++++
+              <br/>
+              <br/><span class="total-wsp"> <strong>(&nbsp TOTAL POR TODA LA COMPRA: &nbsp $${totalOfProducts} &nbsp)</strong> </span>
+              <br/>
+          </div>
+      
+          `
+        } 
 
 
           rowProduct.append(containerProduct);

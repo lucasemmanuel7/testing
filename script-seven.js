@@ -1215,7 +1215,7 @@ const showHTML = () => {
 $(".enviar").click(function(){
 
   let tester = document.querySelector(".test");
-  let ctnProductWsp = document.querySelector("messages");
+  let ctnMessageWsp = document.querySelector(".ctn-messages");
 
 	
   let contain = document.getElementsByClassName('test').length;
@@ -1238,7 +1238,7 @@ $(".enviar").click(function(){
   if( contain >= 1 ){
       var phone = "+541150649933";
       if (phone){
-          window.location = "https://api.whatsapp.com/send?phone="+phone+"&text="+ctnProductWsp;
+          window.location = "https://api.whatsapp.com/send?phone="+phone+"&text="+ctnMessageWsp.textContent;
       }
   }  
 

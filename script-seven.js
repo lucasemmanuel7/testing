@@ -1233,7 +1233,7 @@ $(".enviar").click(function(){
 
   // var mensaje = $("textarea").val();
   if( contain >= 1 ){
-      var phone = $("+541150562000");
+      var phone = "+541150562000";
       if (phone){
           window.location = "https://api.whatsapp.com/send?phone="+phone+"&text="+tester.textContent;
       }

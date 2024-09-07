@@ -1107,10 +1107,10 @@ const showHTML = () => {
         ctnProductWsp.innerHTML =  `
     
           <div class="test">
-              <br> <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> 
-              <br> <strong> Comprar: &nbsp ${data.order} </strong> 
-              <br> <strong> Stock: &nbsp ${numero} </strong> 
-	      <br>
+              <br> <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> "&%0A"&
+              <br> <strong> Comprar: &nbsp ${data.order} </strong> "&%0A"&
+              <br> <strong> Stock: &nbsp ${numero} </strong> "&%0A"&
+	      <br> "&%0A"&
               <br> <strong> Precio Unitario: &nbsp $${data.price} </strong> 
               <br> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total}
               <br>
@@ -1124,10 +1124,10 @@ const showHTML = () => {
           ctnProductWsp.innerHTML =  `
       
           <div class="test">
-              <br> <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> 
-              <br> <strong> Comprar: &nbsp ${data.order} </strong> 
-              <br> <strong> Stock: &nbsp ${numero} </strong> 
-              <br>              
+              <br> <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> "&%0A"&
+              <br> <strong> Comprar: &nbsp ${data.order} </strong> "&%0A"&
+              <br> <strong> Stock: &nbsp ${numero} </strong> "&%0A"&
+              <br> "&%0A"&            
               <br>"""""""""""""""""""""""""""""""""""""" 
               <br>
           </div>
@@ -1140,10 +1140,10 @@ const showHTML = () => {
           ctnProductWsp.innerHTML =  `
     
           <div class="test">
-              <br> <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> 
-              <br> <strong> Comprar: &nbsp ${data.order} </strong> \n\r
-              <br> <strong> Stock: &nbsp ${numero} </strong> 
-              <br>
+              <br> <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> "&%0A"&
+              <br> <strong> Comprar: &nbsp ${data.order} </strong> "&%0A"&
+              <br> <strong> Stock: &nbsp ${numero} </strong> "&%0A"&
+              <br> "&%0A"&
               <br> <strong> Precio Unitario: &nbsp $${data.price} </strong> \n\r
               <br> Total por (&nbsp${data.order}&nbsp)  ${cantidadOrder}: &nbsp $${data.total} 
               <br>
@@ -1159,10 +1159,10 @@ const showHTML = () => {
           ctnProductWsp.innerHTML =  `
       
           <div class="test">
-              <br> <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> 
-              <br> <strong> Comprar: &nbsp ${data.order} </strong> 
-              <br> <strong> Stock: &nbsp ${numero} </strong> 
-              <br>
+              <br> <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> "&%0A"&
+              <br> <strong> Comprar: &nbsp ${data.order} </strong> "&%0A"&
+              <br> <strong> Stock: &nbsp ${numero} </strong> "&%0A"&
+              <br> "&%0A"&
               <br>""""""""""""""""""""""""""""""""""""""
               <br>
               <br> <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> 

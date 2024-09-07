@@ -1107,7 +1107,8 @@ const showHTML = () => {
         ctnProductWsp.innerHTML =  `
     
           <div class="test">
-              Producto1: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0ATotal por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total}  %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong>  %0A
+              Producto1: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0ATotal por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total}  %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong>  %0A %0A
+	      %0A
           </div>
       
           `
@@ -1116,7 +1117,8 @@ const showHTML = () => {
           ctnProductWsp.innerHTML =  `
       
           <div class="test">
-              Producto2: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order}</strong> %0A  * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A 
+              Producto2: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order}</strong> %0A  * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A
+	      %0A
           </div>
       
           `
@@ -1127,7 +1129,8 @@ const showHTML = () => {
           ctnProductWsp.innerHTML =  `
     
           <div class="test">
-              Producto3: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0A Total por (&nbsp${data.order}&nbsp)  ${cantidadOrder}: &nbsp $${data.total} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A 
+              Producto3: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0A Total por (&nbsp${data.order}&nbsp)  ${cantidadOrder}: &nbsp $${data.total} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A %0A
+	      %0A
           </div>
       
           `

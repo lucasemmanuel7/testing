@@ -1118,9 +1118,7 @@ const showHTML = () => {
           ctnProductWsp.innerHTML =  `
       
           <div class="test">
-              Producto2: &nbsp ${(data.title).toUpperCase()} %0A Comprar: &nbsp ${data.order}</strong> %0A Stock: &nbsp ${numero} %0A %0A                  
-              <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A
-              %0A
+              Producto2: &nbsp ${(data.title).toUpperCase()} %0A Comprar: &nbsp ${data.order}</strong> %0A Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A
           </div>
       
           `

@@ -748,8 +748,9 @@ border: 1px solid #000000; */
 
   float: right;
   display: flex;
+  width: 100%;
   align-items: center;
-  justify-content: center;
+  justify-content: start;
   padding: 5px;
 
 }

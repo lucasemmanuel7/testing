@@ -1104,42 +1104,21 @@ const showHTML = () => {
 
         if( data.order > 0 && data.stock >= 0 ) {
         
-        ctnProductWsp.innerHTML =  `
-    
-          <div class="test">
-              Producto1: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0ATotal por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total}  %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A
-          </div>
-      
-          `
+        ctnProductWsp.innerHTML =  `<div class="test">Producto1: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0ATotal por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total}  %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A%0A</div>`
+
         } if( data.order === 0 && data.stock >= 0 ) {
         
-          ctnProductWsp.innerHTML =  `
-      
-          <div class="test">
-              Producto2: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order}</strong> %0A  * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong>  %0A
-          </div>
-      
-          `
+          ctnProductWsp.innerHTML =  `<div class="test">Producto2: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order}</strong> %0A  * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong>%0A%0A</div>`
+		
         } if( data.order > 0 && data.stock >= 0 && position + 1 === allProducts.length ) {
 
           console.log('position ', position + 1)
 
-          ctnProductWsp.innerHTML =  `
-    
-          <div class="test">
-              Producto3: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0A Total por (&nbsp${data.order}&nbsp)  ${cantidadOrder}: &nbsp $${data.total} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A
-          </div>
-      
-          `
+          ctnProductWsp.innerHTML =  `<div class="test">Producto3: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0A Total por (&nbsp${data.order}&nbsp)  ${cantidadOrder}: &nbsp $${data.total} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A%0A</div>`
+		
         } if( data.order === 0 && data.stock === 0 && position + 1 === allProducts.length) {
         
-          ctnProductWsp.innerHTML =  `
-      
-          <div class="test">
-              Producto4: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A
-          </div>
-      
-          `
+          ctnProductWsp.innerHTML =  `<div class="test">Producto4: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A%0A</div>`
         } 
 
 

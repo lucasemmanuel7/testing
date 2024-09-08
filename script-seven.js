@@ -1097,75 +1097,110 @@ const showHTML = () => {
         `
 
         totalOfProducts = totalOfProducts + data.order * data.price;
+        
         const ctnProductWsp = document.createElement('div');
         ctnProductWsp.classList.add("messages");
-        if ( data.order === 1 ) { cantidadOrder = "unidad"} if ( data.order > 1 ) { cantidadOrder = "unidades"}
+
+        cantidadProductos = position + 1;
+
+        cantidadOrder = "unidad";
+        
+        if ( data.order === 1 ) { cantidadOrder = "unidad"} if ( data.order > 1 || data.order === 0 ) { cantidadOrder = "unidades"}
     
 
         if( data.order > 0 && data.stock >= 0 ) {
         
-        ctnProductWsp.innerHTML =  `<div class="test">Producto1: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0ATotal por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total}  %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A%0A</div>`
+        ctnProductWsp.innerHTML =  `
+          <div class="test">
+              Producto: &nbsp ${cantidadProductos} <br/>
+              <br/>
+              &nbsp [ &nbsp ${(data.title).toUpperCase()} &nbsp ] <br/>
+              <br/>
+              &nbsp &nbsp* Comprar: &nbsp ${data.order} <br/>
+              &nbsp &nbsp* Stock: &nbsp ${numero} <br/>
+              <br/>
+              • Precio por unidad: &nbsp $${data.price} <br/>
+              -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total} <- <br/>
+              <br/>
+              """""""""""""""""""""""""""""""""""""" <br/>
+          </div>
+          
+          `
 
         } if( data.order === 0 && data.stock >= 0 ) {
         
-          ctnProductWsp.innerHTML =  `<div class="test">Producto2: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order}</strong> %0A  * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong>%0A%0A</div>`
-		
+          ctnProductWsp.innerHTML =  `
+            <div class="test">
+              Producto: &nbsp ${cantidadProductos} <br/>
+              <br/>
+              &nbsp [ &nbsp ${(data.title).toUpperCase()} &nbsp ] <br/>
+              <br/>
+              &nbsp &nbsp* Comprar: &nbsp ${data.order} <br/>
+              &nbsp &nbsp* Stock: &nbsp ${numero} <br/>
+              <br/>
+              """""""""""""""""""""""""""""""""""""" <br/>
+          </div>
+          
+          `
+
         } if( data.order >= 0 && data.stock >= 0 && position + 1 === allProducts.length ) {
 
           console.log('position ', position + 1)
 
-          ctnProductWsp.innerHTML =  `<div class="test">Producto3: &nbsp ${(data.title).toUpperCase()} %0A  * Comprar: &nbsp ${data.order} %0A  * Stock: &nbsp ${numero} %0A %0A Precio Unitario: &nbsp $${data.price}  %0A Total por (&nbsp${data.order}&nbsp)  ${cantidadOrder}: &nbsp $${data.total} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp"> (&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A%0A</div>`
-		
-        }
+          ctnProductWsp.innerHTML =  `
+            <div class="test">
+                Producto: &nbsp ${cantidadProductos} <br/>
+                <br/>
+                &nbsp [ &nbsp ${(data.title).toUpperCase()} &nbsp ] <br/>
+                <br/>
+                &nbsp &nbsp* Comprar: &nbsp ${data.order} <br/>
+                &nbsp &nbsp* Stock: &nbsp ${numero} <br/>
+                <br/>
+                • Precio por unidad: &nbsp $${data.price} <br/>
+                -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total} <- <br/>
+                <br/>
+                """""""""""""""""""""""""""""""""""""" <br/>
+                <br/>
+                <span class="total-wsp"> (&nbsp Total por toda la compra: &nbsp $${totalOfProducts} &nbsp) </span> <br/>
+                <br/>
+            </div>
+            
+            `		
+
+        } 
+
+        const productWsp = document.createElement('div');
+        productWsp.classList.add("messagesWsp");
+
+        if( data.order > 0 && data.stock >= 0 ) {
+
+          productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(cantidadProductos)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A%0A</div>`
+
+        } if( data.order === 0 && data.stock >= 0 ) {
+        
+           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(cantidadProductos)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order}</strong> %0A   * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong>%0A%0A</div>`
+
+        } if( data.order >= 0 && data.stock >= 0 && position + 1 === allProducts.length ) {
+
+           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(cantidadProductos)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp">(&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A%0A</div>`
+
+        } 
 
           rowProduct.append(containerProduct);
 
-          converWsp.append(ctnProductWsp)
-          console.log('data.totalOfProducts ', data.totalOfProducts = totalOfProducts + data.total)
-          // console.log('totalOfProducts ', totalOfProducts = totalOfProducts + data.order * data.price);
-          document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
+          converWsp.append(ctnProductWsp);
+          converMessageWsp.append(productWsp);
 
+          document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
 
         position++
 
     });
 
-    // document.querySelector('.total-wsp').remove()
-
-    // var cell = document.getElementsByTagName('br');
-    // var length = cell.length;
-    // for(var i = 0; i < length; i++) {
-    // cell[0].parentNode.removeChild(cell[0]);
-    // }
-
-
-    const ctnBtn = document.querySelectorAll(".ctn-icon-close");
-
-    for (let i = 0; i < ctnBtn.length; i++) {
-      ctnBtn[i].addEventListener("click", function() {
-      
-        document.querySelectorAll(".bar1")[i].classList.toggle("change");
-        document.querySelectorAll(".bar2")[i].classList.toggle("change");
-        document.querySelectorAll(".bar3")[i].classList.toggle("change");
-      
-        document.querySelectorAll(".ctn-rotate-info")[i].classList.toggle("btnsVisible")
-
-      }
-    )}
-
-
-
-}
-
-$(".enviar").click(function(){
-
   let tester = document.querySelector(".test");
-	
-  //let ctnMessageWsp = document.querySelector(".ctn-messages");
 
-   let ctnMessageWsp = document.querySelector(".converMessage");
-	
-	
+  console.log('ctnMessageWsp ', ctnMessageWsp.textContent,  ctnMessageWsp.textContent.length)
+  
   let contain = document.getElementsByClassName('test').length;
 
   console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
@@ -1181,8 +1216,50 @@ $(".enviar").click(function(){
 
     }
 
+    const ctnBtn = document.querySelectorAll(".ctn-icon-close");
 
-  // var mensaje = $("textarea").val();
+    for (let i = 0; i < ctnBtn.length; i++) {
+      ctnBtn[i].addEventListener("click", function() {
+      
+        document.querySelectorAll(".bar1")[i].classList.toggle("change");
+        document.querySelectorAll(".bar2")[i].classList.toggle("change");
+        document.querySelectorAll(".bar3")[i].classList.toggle("change");
+      
+        document.querySelectorAll(".ctn-rotate-info")[i].classList.toggle("btnsVisible")
+
+      }
+    )}
+
+}
+
+
+$(".enviar").click(function(){
+
+  let tester = document.querySelector(".test");
+
+  let testWsp = document.querySelector(".testWsp");
+  
+   let ctnMessageWsp = document.querySelector(".converMessageWsp");
+	
+   console.log('ctnMessageWsp ', ctnMessageWsp)
+	
+  let contain = document.getElementsByClassName('test').length;
+
+
+  console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
+
+  
+    if ( contain >= 1 ) {
+      
+      console.log('tester ', tester.textContent,  tester.textContent.length)
+
+
+    } if ( contain === 0 ) {
+
+      console.log('tester ', tester = 0)
+
+    }
+
   if( contain >= 1 ){
       var phone = "+541150649933";
       if (phone){
@@ -1191,15 +1268,3 @@ $(".enviar").click(function(){
   }  
 
 })
-
-
-// const wspHTML = () => {
-
-//   allProducts.forEach(data => {
-
-
-//   })
-
-//   console.log('1234456 ', allProducts)
-
-// } 

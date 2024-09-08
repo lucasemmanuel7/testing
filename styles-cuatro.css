@@ -1674,6 +1674,10 @@ width: 90%;      /* width: 100%; */
   border: 2px solid #c6ffdd;
 }
 
+.price {
+  font-size: 0;
+}
+
 .ctn-cartel-off-question {
   display: flex;
   width: 100%;
@@ -2848,31 +2852,3 @@ align-items: center;
   font-size: 18px;
 }
 
-
-/*   Aplicar estos estilos a contenedor bloqueado
-.ctn-opacy {
-    display: flex;
-    width: 100%;
-    top: 0px;
-    height: 100%;
-    background-color: #00000054;
-    border-radius: 10px;
-    position: absolute;
-}
-
-.buttonIncrement_stock { 
-    z-index: 50000;       cancelarlo
-}
-*/
-
-
-
-.price {
-  font-size: 0;
-}
-
-/* 
-.test {
-  white-space: pre;
-}
-*/

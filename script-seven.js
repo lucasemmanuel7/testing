@@ -786,7 +786,7 @@ const rowProduct = document.querySelector('.row-product');
 const cartInfo = document.querySelector('.cart-product');
 
 const converWsp = document.querySelector('.converMessage')
-
+const converMessageWsp = document.querySelector('.converMessageWsp')
 
 // Lista de todos los contenedores de productos
 let productsLista = document.querySelector(".container_cards");
@@ -986,6 +986,8 @@ const showHTML = () => {
   rowProduct.innerHTML = '';
 
   converWsp.innerHTML = '';
+
+  converMessageWsp.innerHTML = '';
   
   total = 0;
   position = 0;

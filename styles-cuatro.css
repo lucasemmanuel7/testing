@@ -760,6 +760,10 @@ border: 1px solid #000000; */
 
 }
 
+.messages {
+  font-size: 12px;
+}
+
 .whatsapp > .conver > .message{
   display: flex;
   flex-direction: row-reverse;

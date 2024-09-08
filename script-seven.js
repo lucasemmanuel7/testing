@@ -1286,6 +1286,10 @@ $(".enviar").click(function(){
       
       console.log('tester ', tester.textContent,  tester.textContent.length)
       document.querySelector(".preloader").classList.toggle("hidden");
+
+      window.addEventListener("blur", () => {
+      document.querySelector(".preloader").classList.add("hidden");
+      })
       // console.log('testWsp ', testWsp.textContent,  testWsp.textContent.length)
 
 

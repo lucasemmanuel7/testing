@@ -981,6 +981,7 @@ const showHTML = () => {
   
   total = 0;
   position = 0;
+  numOfProduct = 1;
   totalOfProducts = 0;
   
 
@@ -1215,6 +1216,7 @@ const showHTML = () => {
 
 
         position++
+	numOfProduct++
 
     });
 

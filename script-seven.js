@@ -180,27 +180,14 @@ positionBtnList.addEventListener('click', () => {
 
    let contains = {
     ctnProductList: ctnProductList[i].classList.contains("inverterBtnsList"),
-    // ctnOrderCounter: ctnOrderCounter[i].classList.contains("inverterBtnsList"),
-    // ctnStockCounter: ctnStockCounter[i].classList.contains("inverterBtnsList"),
    }
 
    console.log('contains: ', contains.ctnProductList);
 
-  //  contains.ctnOrderCounter, contains.ctnStockCounter
-
-  //  const arr = [contains.ctnProductList, contains.ctnOrderCounter, contains.ctnStockCounter]
    let arr = contains.ctnProductList;
 
    localStorage.setItem("arr", JSON.stringify(arr)); 
-  //  console.log('arr: ', arr)
-  // if (arr === true) {
-  //    localStorage.setItem('dateSaved', arr)
-  // }
-  //  localStorage.getItem('dateSaved', arr)
 
-  // console.log('esTRUE: ', localStorage.getItem('dateSaved'));
-
-  
   })
 }
 
@@ -787,6 +774,8 @@ const cartInfo = document.querySelector('.cart-product');
 
 const converWsp = document.querySelector('.converMessage')
 
+const converMessageWsp = document.querySelector('.converMessageWsp')
+
 
 // Lista de todos los contenedores de productos
 let productsLista = document.querySelector(".container_cards");
@@ -962,6 +951,7 @@ function funcion2(i) {
 
 totalOfProducts = 0;
 
+
 // Funcion para mostrar HTML
 
 const showHTML = () => {
@@ -969,7 +959,6 @@ const showHTML = () => {
   let counter = document.querySelector(".count-products");
   let cartEmpty = document.querySelector(".cart-empty");
   let ctnMessageWsp = document.querySelector(".ctn-messages");
-  
   
 
   if (!allProducts.length) {
@@ -986,11 +975,14 @@ const showHTML = () => {
   rowProduct.innerHTML = '';
 
   converWsp.innerHTML = '';
+
+  converMessageWsp.innerHTML = '';
+
   
   total = 0;
   position = 0;
   totalOfProducts = 0;
-
+  
 
     allProducts.forEach(data => {
 
@@ -1168,9 +1160,32 @@ const showHTML = () => {
             `		
 
         } 
+        // if( data.order === 0 && data.stock === 0 && position + 1 === allProducts.length) {
+        
+        //   ctnProductWsp.innerHTML =  `
+      
+        //   <div class="test">
+        //       <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
+        //       <strong> Comprar: &nbsp ${data.order} </strong> <br/>
+        //       <strong> Stock: &nbsp ${numero} </strong> 
+        //       <br/>
+        //       <br/>++++++++++++++++++++++++++++++++++++
+        //       <br/>
+        //       <br/><span class="total-wsp"> <strong>(&nbsp TOTAL POR TODA LA COMPRA: &nbsp $${totalOfProducts} &nbsp)</strong> </span>
+        //       <br/>
+        //   </div>
+      
+        //   `
+        // } 
 
         const productWsp = document.createElement('div');
         productWsp.classList.add("messagesWsp");
+
+
+        // cantidadOrder = "unidad";
+        
+        // if ( data.order === 1 ) { cantidadOrder = "unidad"} if ( data.order > 1 ) { cantidadOrder = "unidades"}
+    
 
         if( data.order > 0 && data.stock >= 0 ) {
 
@@ -1191,7 +1206,10 @@ const showHTML = () => {
           converWsp.append(ctnProductWsp);
           converMessageWsp.append(productWsp);
 
+          console.log('data.totalOfProducts ', data.totalOfProducts = totalOfProducts + data.total)
+          // console.log('totalOfProducts ', totalOfProducts = totalOfProducts + data.order * data.price);
           document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
+
 
         position++
 
@@ -1201,6 +1219,7 @@ const showHTML = () => {
 
   console.log('ctnMessageWsp ', ctnMessageWsp.textContent,  ctnMessageWsp.textContent.length)
   
+  // console.log('k ', isNaN(tester.length)) 
   let contain = document.getElementsByClassName('test').length;
 
   console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
@@ -1215,6 +1234,15 @@ const showHTML = () => {
       console.log('tester ', tester = 0)
 
     }
+  
+    // document.querySelector('.total-wsp').remove()
+
+    // var cell = document.getElementsByTagName('br');
+    // var length = cell.length;
+    // for(var i = 0; i < length; i++) {
+    // cell[0].parentNode.removeChild(cell[0]);
+    // }
+
 
     const ctnBtn = document.querySelectorAll(".ctn-icon-close");
 
@@ -1239,11 +1267,16 @@ $(".enviar").click(function(){
 
   let testWsp = document.querySelector(".testWsp");
   
+	
+  //let ctnMessageWsp = document.querySelector(".ctn-messages");
+
    let ctnMessageWsp = document.querySelector(".converMessageWsp");
 	
    console.log('ctnMessageWsp ', ctnMessageWsp)
 	
   let contain = document.getElementsByClassName('test').length;
+
+  // let contain = document.getElementsByClassName('testWsp').length;
 
 
   console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
@@ -1252,6 +1285,8 @@ $(".enviar").click(function(){
     if ( contain >= 1 ) {
       
       console.log('tester ', tester.textContent,  tester.textContent.length)
+
+      // console.log('testWsp ', testWsp.textContent,  testWsp.textContent.length)
 
 
     } if ( contain === 0 ) {

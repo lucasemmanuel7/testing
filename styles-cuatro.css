@@ -2641,6 +2641,7 @@ input:disabled {
   font-size: 12px;
 }
 
+.ctn-num-product,
 .ctn-icon-close {
   display: flex;
   position: absolute;
@@ -2653,6 +2654,10 @@ input:disabled {
   border: 0.5px solid black;
   background: white;
   border-radius: 15px;
+}
+
+.ctn-num-product {
+  left: 0px;
 }
 
 .container {

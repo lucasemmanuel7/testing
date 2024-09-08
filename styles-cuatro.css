@@ -761,7 +761,9 @@ border: 1px solid #000000; */
 }
 
 .messages {
-  font-size: 14px;
+  //font-size: 14px;
+  font-size: 14.2px;
+  line-height: 19px;
 }
 
 .whatsapp > .conver > .message{

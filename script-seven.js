@@ -1011,6 +1011,9 @@ const showHTML = () => {
           containerProduct.innerHTML = `
                       
                       <div class="${ctnNameColor}">
+		        <div class="ctn-num-product"> 
+                            <div class="container">${numOfProduct}</div>
+                        </div>
                         <span class="name-product">${data.title}</span>
                         <div class="ctn-icon-close"> 
                             <div class="container">

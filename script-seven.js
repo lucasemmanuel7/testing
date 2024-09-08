@@ -1285,7 +1285,7 @@ $(".enviar").click(function(){
     if ( contain >= 1 ) {
       
       console.log('tester ', tester.textContent,  tester.textContent.length)
-
+      document.querySelector(".preloader").classList.toggle("hidden");
       // console.log('testWsp ', testWsp.textContent,  testWsp.textContent.length)
 
 

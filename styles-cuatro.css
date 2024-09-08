@@ -705,11 +705,25 @@ border: 1px solid #000000; */
 
 }
 
-.converMessageUser{
-  display:none;
+.ctn-messages {
+  position: relative;
 }
 
-/* .converMessageUser, */
+.tip {
+  display: block;
+  top: 0;
+  position: absolute;
+  /* z-index: var(--layer-1); */
+  width: 8px;
+  height: 13px;
+  right: -8px;
+}
+
+//.converMessageUser{
+//  display:none;
+//}
+
+.converMessageWsp,
 .converMessage {
 
   display: flex;
@@ -729,7 +743,12 @@ border: 1px solid #000000; */
 
 }
 
+.converMessageWsp {
+  visibility: hidden;
+  position: absolute;
+}
 
+.messagesWsp,
 .messages {
 
   float: right;

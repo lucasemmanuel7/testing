@@ -195,8 +195,8 @@ document.addEventListener("DOMContentLoaded", function() {
   // Titulo
    test = JSON.parse(localStorage.getItem("arr"));
   if (test === true) {
-      const titleLabel = document.querySelector(".menu-invertion-btns");
-      titleLabel.click();
+      //const titleLabel = document.querySelector(".menu-invertion-btns");
+      positionBtnList.click();
     }
 })
 
@@ -293,10 +293,6 @@ for (let i = 0; i < allBtnOff.length; i++) {
       let btnContainRed = allBtnOff[i].classList.contains('btn_off_red');
       const cartelQuestion = document.querySelectorAll('.cartel-off_question')[i].classList.contains('visibleCartel_btnOff');
 
-    // if( lockOpen[i].classList.contains("hidden") === true ){
-    //   document.querySelector(".cartelQuestionLock").classList.add("cartelVisible");
-    //   console.log('lockOpen: ', lockOpen[i].classList.contains("hidden"));
-    // } 
      if ( btnContainRed === true && cartelQuestion === false && ctnOpacy[i].classList.contains("btns-blocking") === false ){
       document.querySelectorAll(".ctn-cristal-off-confirmation")[i].classList.add('cartelConfirmationActivo');
       document.querySelectorAll(".cartel-off-confirmation")[i].classList.add('cartelConfirmationActivo');
@@ -323,7 +319,6 @@ let allProducts = [];
 function yesResetCard(i) {
 
   const cartelOff = document.querySelectorAll('.cartel-off_question')[i].classList.contains('visibleCartel_btnOff');
-//  const cartelOffConfirmation = document.querySelectorAll('.cartel-off-confirmation')[i].classList.contains('cartelConfirmationActivo')
   
       ctnLockingLocking[i].classList.remove("yellow");
       ctnCristalTextLocking[i].classList.remove("cartelConfirmationActivo");
@@ -336,7 +331,6 @@ function yesResetCard(i) {
 
 
   console.log('cartelOff ', cartelOff)
-  // console.log('cartelOffConfirmation ', cartelOffConfirmation)
 
   document.querySelectorAll(".container_product_stock")[i].classList.remove('noComplete');
 
@@ -354,9 +348,6 @@ function yesResetCard(i) {
   allOrder = document.querySelectorAll(".num_order_counter")[i].value = 0;
   document.querySelectorAll(".num_stock_clon")[i].value = allStock === -1 ? "-" : allStock;
   document.querySelectorAll(".num_order_clon")[i].value = allOrder;
-  // valorContador = 
-  // console.log('#contador ', parseInt(document.querySelector('#contador-productos').textContent));
-  // valorContador = valorContador - 1; 
 
   document.querySelectorAll(".name_img_price")[i].classList.remove('activo_green_card');
   document.querySelectorAll(".styleBtnList")[i].classList.remove('active_green_list');
@@ -632,17 +623,8 @@ for (let i = 0; i < allCards.length; i++) {
         document.querySelectorAll(".name_img_price")[i].classList.remove('activo_yellow_card');
         document.querySelectorAll(".name_img_price")[i].classList.add('activo_red_card'); 
 
-        // allProducts.map(product => { product.yellow = "visibility = hidden"});
-
-        // hola = allCards[i].id;
- 
-        // console.log('allCards.id ', hola)
-        // document.querySelectorAll(".ctn-name-product-and-close")[1].classList.add('redActiveOne');
-
-        // document.querySelector(`"#${hola}"`).classList.add('redActiveOne');
 
         let nameProduct = document.querySelectorAll(".product_name")[i].textContent;
-        // let priceProduct = document.querySelectorAll(".product_price")[i].textContent.substr(-3);
         let priceProduct = document.querySelectorAll(".price")[i].textContent;
 
         console.log('priceProduct ', priceProduct)
@@ -681,36 +663,6 @@ for (let i = 0; i < allCards.length; i++) {
           allProducts = [...allProducts, infoProduct];
           
         }
-
-
-        // console.log('infoProduct.position ', infoProduct.position)
-
-          // console.log('cart ', cart)
-
-          // for( j = 0; j < allCards.length; j++ ){ 
-          //   cartProduct = document.querySelectorAll('.cart-product')[j].querySelector("a").getAttribute("href").slice(1);
-
-          //   if(infoProduct.card === cartProduct) {
-          //     console.log('cart-product j ', j)
-
-          //     console.log('nameProduct', typeof document.querySelectorAll(".name-product")[j].textContent)
-
-          //     console.log('infoProduct.card ',  infoProduct.card)
-
-          //     // showHTML(infoProduct) 
-
-          //     return  document.querySelectorAll(".cart-product")[j].querySelector(".ctn-name-product-and-close").classList.add('redActiveOne');
-
-          //     //  document.querySelectorAll(".cart-product")[j].querySelector(".ctn-name-product-and-close").classList.add('redActiveOne');              
-          //   }
-          //   // showHTML(infoProduct) 
-
-          //   console.log('cartProduct ',  cartProduct)
-          // } // let cart = document.querySelectorAll('.cart-product').length;
-        
-
-        // valorTotal.innerHTML = totalOfProducts;
-        
   
         countProducts.innerHTML = allProducts.length;
 
@@ -798,7 +750,6 @@ for (let i = 0; i < allCards.length; i++) {
         const products = allCards[i];
 
         let nameProduct = document.querySelectorAll(".product_name")[i].textContent;
-        // let priceProduct = document.querySelectorAll(".product_price")[i].textContent.substr(-3);
         let priceProduct = document.querySelectorAll(".price")[i].textContent;
 
         let allOrder = parseInt(document.querySelectorAll(".num_order_counter")[i].value);
@@ -906,9 +857,6 @@ function funcion2(i) {
           document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
         }
 
-
-        // wspHTML ();
-      
         showHTML();
     }
 
@@ -997,18 +945,8 @@ const showHTML = () => {
         numero = data.stock === -1 ? "-" : data.stock;
 
         ctnNameColor = data.yellow; if( data.order > 0 && data.stock >= 0 ) { ctnNameColor = data.green; } if ( data.order >= 0  &&  data.stock === -1 ) {ctnNameColor = data.red; }
-        // ctnNameGreen = data.green
-        // ctnNameRed = data.red 
 
-        // if ( data.order === 0 &&  data.stock >= 0 ) {
-        //         ctnNameProduct = data.yellow
-          //  if( data.order > 0 && data.stock >= 0 ) {
-          //       ctnNameColor = data.green;
-          // } if ( data.order >= 0  &&  data.stock === -1  ){
-          //       ctnNameColor = data.red;
-          // }
-
-        
+	    
           containerProduct.innerHTML = `
                       
                       <div class="${ctnNameColor}">
@@ -1097,8 +1035,6 @@ const showHTML = () => {
         const ctnProductWsp = document.createElement('div');
         ctnProductWsp.classList.add("messages");
 
-        cantidadProductos = position + 1;
-
         cantidadOrder = "unidad";
         
         if ( data.order === 1 ) { cantidadOrder = "unidad"} if ( data.order > 1 || data.order === 0 ) { cantidadOrder = "unidades"}
@@ -1108,7 +1044,7 @@ const showHTML = () => {
         
         ctnProductWsp.innerHTML =  `
           <div class="test">
-              Producto: &nbsp ${cantidadProductos} <br/>
+              Producto: &nbsp ${numOfProduct} <br/>
               <br/>
               &nbsp [ &nbsp ${(data.title).toUpperCase()} &nbsp ] <br/>
               <br/>
@@ -1127,7 +1063,7 @@ const showHTML = () => {
         
           ctnProductWsp.innerHTML =  `
             <div class="test">
-              Producto: &nbsp ${cantidadProductos} <br/>
+              Producto: &nbsp ${numOfProduct} <br/>
               <br/>
               &nbsp [ &nbsp ${(data.title).toUpperCase()} &nbsp ] <br/>
               <br/>
@@ -1145,7 +1081,7 @@ const showHTML = () => {
 
           ctnProductWsp.innerHTML =  `
             <div class="test">
-                Producto: &nbsp ${cantidadProductos} <br/>
+                Producto: &nbsp ${numOfProduct} <br/>
                 <br/>
                 &nbsp [ &nbsp ${(data.title).toUpperCase()} &nbsp ] <br/>
                 <br/>
@@ -1164,44 +1100,23 @@ const showHTML = () => {
             `		
 
         } 
-        // if( data.order === 0 && data.stock === 0 && position + 1 === allProducts.length) {
-        
-        //   ctnProductWsp.innerHTML =  `
-      
-        //   <div class="test">
-        //       <strong> Producto: &nbsp ${(data.title).toUpperCase()} </strong> <br/>
-        //       <strong> Comprar: &nbsp ${data.order} </strong> <br/>
-        //       <strong> Stock: &nbsp ${numero} </strong> 
-        //       <br/>
-        //       <br/>++++++++++++++++++++++++++++++++++++
-        //       <br/>
-        //       <br/><span class="total-wsp"> <strong>(&nbsp TOTAL POR TODA LA COMPRA: &nbsp $${totalOfProducts} &nbsp)</strong> </span>
-        //       <br/>
-        //   </div>
-      
-        //   `
-        // } 
+
 
         const productWsp = document.createElement('div');
         productWsp.classList.add("messagesWsp");
 
-
-        // cantidadOrder = "unidad";
-        
-        // if ( data.order === 1 ) { cantidadOrder = "unidad"} if ( data.order > 1 ) { cantidadOrder = "unidades"}
-    
-
+	    
         if( data.order > 0 && data.stock >= 0 ) {
 
-          productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(cantidadProductos)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A%0A</div>`
+          productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(numOfProduct)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A%0A</div>`
 
         } if( data.order === 0 && data.stock >= 0 ) {
         
-           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(cantidadProductos)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order}</strong> %0A   * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong>%0A%0A</div>`
+           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(numOfProduct)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order}</strong> %0A   * Stock: &nbsp ${numero} %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong>%0A%0A</div>`
 
         } if( data.order >= 0 && data.stock >= 0 && position + 1 === allProducts.length ) {
 
-           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(cantidadProductos)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp">(&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A%0A</div>`
+           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(numOfProduct)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp">(&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A%0A</div>`
 
         } 
 

@@ -1168,9 +1168,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
       allTheCards = JSON.parse(localStorage.getItem("allProducts"));
 
-      for (let j = 0; j < todosLasCards.length; j++){
+      for (let j = 0; j < allTheCards.length; j++){
 
-       console.log('allProducts.position ', todosLasCards[j].position);
+       console.log('allProducts.position ', allTheCards[j].position);
        positionCard = allTheCards[j].position;
        valueStockCards = allTheCards[j].stock;
        valueOrderCards = allTheCards[j].order;

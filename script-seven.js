@@ -1166,7 +1166,7 @@ $(".enviar").click(function(){
 
 document.addEventListener("DOMContentLoaded", function() {
   
-  //  console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) );
+    console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) );
 
       todosLasCards = JSON.parse(localStorage.getItem("allProducts"));
 

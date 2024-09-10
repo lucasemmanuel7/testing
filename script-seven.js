@@ -865,40 +865,7 @@ function funcion2(i) {
 
 
 
-
-// rowProduct.addEventListener('click', e => {
-
-//   console.log('borrar ', e.target.classList.contains("borrar"))
-
-//   // cartProduct = document.querySelectorAll('.cart-product')[0].querySelector("a").getAttribute("href").slice(1);
-  
-
-//     if(e.target.classList.contains("borrar")) {
-//         const product = e.target.parentElement;
-//         const title = product.querySelector("a").getAttribute("href").slice(1);
-
-//        console.log ('target ', e.target.parentElement)
-
-//         console.log('title ', title);
-
-
-//         allProducts = allProducts.filter(
-//             product => console.log('product.card ', product.card),
-//         )
-
-
-        
-//         console.log(allProducts);
-//         countProducts.innerHTML = allProducts.length;
-      
-//         showHTML();
-//     }
-// })
-
-
-
 totalOfProducts = 0;
-
 
 // Funcion para mostrar HTML
 
@@ -1101,10 +1068,8 @@ const showHTML = () => {
 
         } 
 
-
         const productWsp = document.createElement('div');
         productWsp.classList.add("messagesWsp");
-
 	    
         if( data.order > 0 && data.stock >= 0 ) {
 
@@ -1126,43 +1091,28 @@ const showHTML = () => {
           converMessageWsp.append(productWsp);
 
           console.log('data.totalOfProducts ', data.totalOfProducts = totalOfProducts + data.total)
-          // console.log('totalOfProducts ', totalOfProducts = totalOfProducts + data.order * data.price);
           document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
-
 
         position++
 	numOfProduct++
-
     });
+
+  localStorage.setItem("allProducts", JSON.stringify(allProducts)); 
 
   let tester = document.querySelector(".test");
 
-  console.log('ctnMessageWsp ', ctnMessageWsp.textContent,  ctnMessageWsp.textContent.length)
-  
-  // console.log('k ', isNaN(tester.length)) 
   let contain = document.getElementsByClassName('test').length;
 
-  console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
-
-  
-    if ( contain >= 1 ) {
-      
-      console.log('tester ', tester.textContent,  tester.textContent.length)
-
-    } if ( contain === 0 ) {
+	
+   // if ( contain >= 1 ) {   
+   //   console.log('tester ', tester.textContent,  tester.textContent.length)
+   // }
+	
+    if ( contain === 0 ) {
 
       console.log('tester ', tester = 0)
 
     }
-  
-    // document.querySelector('.total-wsp').remove()
-
-    // var cell = document.getElementsByTagName('br');
-    // var length = cell.length;
-    // for(var i = 0; i < length; i++) {
-    // cell[0].parentNode.removeChild(cell[0]);
-    // }
-
 
     const ctnBtn = document.querySelectorAll(".ctn-icon-close");
 
@@ -1185,32 +1135,17 @@ $(".enviar").click(function(){
 
   let tester = document.querySelector(".test");
 
-  let testWsp = document.querySelector(".testWsp");
-  
-	
-  //let ctnMessageWsp = document.querySelector(".ctn-messages");
-
-   let ctnMessageWsp = document.querySelector(".converMessageWsp");
-	
-   console.log('ctnMessageWsp ', ctnMessageWsp)
+  let ctnMessageWsp = document.querySelector(".converMessageWsp");
 	
   let contain = document.getElementsByClassName('test').length;
 
-  // let contain = document.getElementsByClassName('testWsp').length;
-
-
-  console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
-
-  
     if ( contain >= 1 ) {
       
-      console.log('tester ', tester.textContent,  tester.textContent.length)
       document.querySelector(".preloader").classList.toggle("hidden");
 
       window.addEventListener("blur", () => {
       document.querySelector(".preloader").classList.add("hidden");
       })
-      // console.log('testWsp ', testWsp.textContent,  testWsp.textContent.length)
 
 
     } if ( contain === 0 ) {
@@ -1226,4 +1161,25 @@ $(".enviar").click(function(){
       }
   }  
 
+})
+
+
+document.addEventListener("DOMContentLoaded", function() {
+
+      allTheCards = JSON.parse(localStorage.getItem("allProducts"));
+
+      for (let j = 0; j < todosLasCards.length; j++){
+
+       console.log('allProducts.position ', todosLasCards[j].position);
+       positionCard = allTheCards[j].position;
+       valueStockCards = allTheCards[j].stock;
+       valueOrderCards = allTheCards[j].order;
+
+       document.querySelectorAll('.product_card')[positionCard].querySelector('.num_order_counter').value = valueOrderCards
+
+       document.querySelectorAll('.product_card')[positionCard].querySelector('.num_stock_counter').value = valueStockCards
+        
+       allCards[positionCard].click();
+
+      }
 })

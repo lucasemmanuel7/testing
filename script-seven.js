@@ -1165,14 +1165,17 @@ $(".enviar").click(function(){
 
 
 document.addEventListener("DOMContentLoaded", function() {
+  
+  //  console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) );
 
-      allTheCards = JSON.parse(localStorage.getItem("allProducts"));
+      todosLasCards = JSON.parse(localStorage.getItem("allProducts"));
 
-      for (let j = 0; j < allTheCards.length; j++){
-	      
-       positionCard = allTheCards[j].position;
-       valueStockCards = allTheCards[j].stock;
-       valueOrderCards = allTheCards[j].order;
+      for (let j = 0; j < todosLasCards.length; j++){
+
+       console.log('allProducts.position ', todosLasCards[j].position);
+       positionCard = todosLasCards[j].position;
+       valueStockCards = todosLasCards[j].stock;
+       valueOrderCards = todosLasCards[j].order;
 
        document.querySelectorAll('.product_card')[positionCard].querySelector('.num_order_counter').value = valueOrderCards
 

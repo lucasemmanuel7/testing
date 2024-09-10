@@ -476,6 +476,9 @@ for (let i = 0; i < allCards.length; i++) {
       document.querySelectorAll(".num_stock_counter")[i].classList.add('visibleCounter');
 
     } if( allOrder > 0 && allStock >= 0 ) { // active mode GREEN
+      document.querySelectorAll(".cartel-start")[i].classList.add('on_start'); //////// ON START
+      document.querySelectorAll(".plus_button")[i].classList.add('simbol_plus_visible'); // botton ON INCREMENT STOCK
+	    
       document.querySelectorAll(".name_img_price")[i].classList.add('activo_green_card');
       document.querySelectorAll(".styleBtnList")[i].classList.add('active_green_list');
       document.querySelectorAll(".container_card")[i].classList.add('background-green'); /* recien */
@@ -1166,16 +1169,16 @@ $(".enviar").click(function(){
 
 document.addEventListener("DOMContentLoaded", function() {
   
-    console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) );
+  //  console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) );
 
-      todosLasCards = JSON.parse(localStorage.getItem("allProducts"));
+      cardsMemory = JSON.parse(localStorage.getItem("allProducts"));
 
-      for (let j = 0; j < todosLasCards.length; j++){
+      for (let j = 0; j < cardsMemory.length; j++){
 
-       console.log('allProducts.position ', todosLasCards[j].position);
-       positionCard = todosLasCards[j].position;
-       valueStockCards = todosLasCards[j].stock;
-       valueOrderCards = todosLasCards[j].order;
+       console.log('allProducts.position ', cardsMemory[j].position);
+       positionCard = cardsMemory[j].position;
+       valueStockCards = cardsMemory[j].stock;
+       valueOrderCards = cardsMemory[j].order;
 
        document.querySelectorAll('.product_card')[positionCard].querySelector('.num_order_counter').value = valueOrderCards
 

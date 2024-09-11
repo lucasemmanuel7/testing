@@ -1188,3 +1188,23 @@ document.addEventListener("DOMContentLoaded", function() {
 
       }
 })
+
+
+
+var scrollTimer = -1;
+
+function bodyScroll() {
+	
+  document.querySelector(".ctn-btn-limpiar-cards").classList.add('noVisible');
+
+  if (scrollTimer != -1)
+    clearTimeout(scrollTimer);
+
+  scrollTimer = window.setTimeout("scrollFinished()", 100);
+}
+
+function scrollFinished() {
+	
+  document.querySelector(".ctn-btn-limpiar-cards").classList.remove('noVisible');
+	
+}

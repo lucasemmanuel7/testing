@@ -1195,7 +1195,7 @@ var scrollTimer = -1;
 
 function bodyScroll() {
 	
-  document.querySelector(".ctn-btn-limpiar-cards").classList.add('noVisible');
+  document.querySelector(".ctn-btn-limpiar-cards").classList.add('noVisibleFlutter');
 
   if (scrollTimer != -1)
     clearTimeout(scrollTimer);
@@ -1205,6 +1205,6 @@ function bodyScroll() {
 
 function scrollFinished() {
 	
-  document.querySelector(".ctn-btn-limpiar-cards").classList.remove('noVisible');
+  document.querySelector(".ctn-btn-limpiar-cards").classList.remove('noVisibleFlutter');
 	
 }

@@ -2857,3 +2857,25 @@ align-items: center;
   font-size: 18px;
 }
 
+
+
+.ctn-btn-limpiar-cards {
+  position: fixed;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  /* background-color: var(--black-color); */
+  width: 90%;
+  margin: auto;
+  transition: bottom .3s ease;
+}
+
+.ctn-btn-limpiar-cards.noVisible {
+  bottom: -6.5rem;
+  transition: bottom .5s ease;
+}
+
+.limpiar-cards {
+  width: 100%;
+}
+

@@ -2870,7 +2870,7 @@ align-items: center;
   transition: bottom .3s ease;
 }
 
-.ctn-btn-limpiar-cards.noVisible {
+.ctn-btn-limpiar-cards.noVisibleFlutter {
   bottom: -6.5rem;
   transition: bottom .5s ease;
 }

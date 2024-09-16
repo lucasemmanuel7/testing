@@ -195,10 +195,13 @@ document.addEventListener("DOMContentLoaded", function() {
   // Titulo
    test = JSON.parse(localStorage.getItem("arr"));
   if (test === true) {
-      //const titleLabel = document.querySelector(".menu-invertion-btns");
+      // const positionBtnList = document.querySelector(".menu-invertion-btns");
       positionBtnList.click();
-    }
+  }
 })
+
+
+
 
 
 const ctnCards = document.querySelectorAll(".container_card");
@@ -292,6 +295,7 @@ for (let i = 0; i < allBtnOff.length; i++) {
 
       let btnContainRed = allBtnOff[i].classList.contains('btn_off_red');
       const cartelQuestion = document.querySelectorAll('.cartel-off_question')[i].classList.contains('visibleCartel_btnOff');
+
 
      if ( btnContainRed === true && cartelQuestion === false && ctnOpacy[i].classList.contains("btns-blocking") === false ){
       document.querySelectorAll(".ctn-cristal-off-confirmation")[i].classList.add('cartelConfirmationActivo');
@@ -407,6 +411,33 @@ function yesResetCard(i) {
     document.querySelectorAll(".title-falta-completar")[i].classList.remove('titleVisible');    /// Elevation de Name Product
   }  
 
+
+
+  productName = document.querySelectorAll('.product_name')[i].textContent;
+
+  console.log('productName ',  productName);
+
+    console.log('cartProduct', allProducts);
+  
+
+  allProducts = allProducts.filter(
+    product =>  product.title !== productName,
+  )
+
+  if (allProducts.length === 0) {
+    totalOfProducts = 0;
+    document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
+    document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
+
+  }
+
+  countProducts.innerHTML = allProducts.length;
+  countProductFooter.innerHTML = allProducts.length;
+
+  countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
+  countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+  
+  showHTML();
 }
 
 
@@ -441,8 +472,8 @@ for (let i = 0; i < allCards.length; i++) {
       
     let allOrder = parseInt(document.querySelectorAll(".num_order_counter")[i].value);
     let allStock = parseInt(document.querySelectorAll(".num_stock_counter")[i].value);
-    let allOrderClon =  document.querySelectorAll(".num_order_clon")[i].value = allOrder;
-    let allStockClon =  document.querySelectorAll(".num_stock_clon")[i].value = allStock === -1 ? "-" : allStock;
+    allOrderClon =  document.querySelectorAll(".num_order_clon")[i].value = allOrder;
+    allStockClon =  document.querySelectorAll(".num_stock_clon")[i].value = allStock === -1 ? "-" : allStock;
 
     const cartelStart = document.querySelectorAll('.cartel-start')[i].classList.contains('on_start');
 
@@ -478,7 +509,8 @@ for (let i = 0; i < allCards.length; i++) {
     } if( allOrder > 0 && allStock >= 0 ) { // active mode GREEN
       document.querySelectorAll(".cartel-start")[i].classList.add('on_start'); //////// ON START
       document.querySelectorAll(".plus_button")[i].classList.add('simbol_plus_visible'); // botton ON INCREMENT STOCK
-	    
+
+
       document.querySelectorAll(".name_img_price")[i].classList.add('activo_green_card');
       document.querySelectorAll(".styleBtnList")[i].classList.add('active_green_list');
       document.querySelectorAll(".container_card")[i].classList.add('background-green'); /* recien */
@@ -498,7 +530,6 @@ for (let i = 0; i < allCards.length; i++) {
 
     } if( allOrder >= 0 && allStock >= 0 ) {   // desactive carteles con btn green plus 
       document.querySelectorAll(".name_img_price")[i].classList.add('shadow_desactive');
-     
       document.querySelectorAll(".styleBtnList")[i].classList.remove('active_red_list');
       document.querySelectorAll(".ctn-title-btn")[i].classList.remove('red_active');
       document.querySelectorAll(".product_price")[i].classList.remove('active-red');
@@ -627,6 +658,7 @@ for (let i = 0; i < allCards.length; i++) {
         document.querySelectorAll(".name_img_price")[i].classList.add('activo_red_card'); 
 
 
+
         let nameProduct = document.querySelectorAll(".product_name")[i].textContent;
         let priceProduct = document.querySelectorAll(".price")[i].textContent;
 
@@ -665,14 +697,13 @@ for (let i = 0; i < allCards.length; i++) {
         } else {
           allProducts = [...allProducts, infoProduct];
           
-        }
+        }        
   
         countProducts.innerHTML = allProducts.length;
 
         console.log("allProducts ", allProducts)
 
       showHTML(infoProduct) 
-
 
     }
 
@@ -698,6 +729,9 @@ for (let i = 0; i < allCards.length; i++) {
       )
         
         countProducts.innerHTML = allProducts.length;
+
+        countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
+        countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
       
       showHTML();
     }
@@ -710,6 +744,7 @@ for (let i = 0; i < allCards.length; i++) {
       totalOfProducts = 0;
       // countProductFooter = 0;
       document.querySelector(".total-pagar").innerHTML = totalOfProducts;
+      document.querySelector(".total-pagar_inNav").innerHTML = totalOfProducts;
       document.querySelector("#count-product").innerHTML =  allProducts.length;
      
       showHTML();
@@ -717,7 +752,6 @@ for (let i = 0; i < allCards.length; i++) {
       document.querySelector("#count-product").innerHTML =  allProducts.length;
       showHTML();
     }
-
 
   })
 }
@@ -738,7 +772,11 @@ let productsLista = document.querySelector(".container_cards");
 
 
 let valorTotal = parseInt(document.querySelector('.total-pagar').textContent);
+
 let countProducts = document.querySelector('#contador-productos');
+let countStock = document.querySelector('#btnArrowDown');
+let countOrder = document.querySelector('#btnArrowUp');
+
 let countProductFooter = document.querySelector('#count-product');
 
 
@@ -814,14 +852,16 @@ for (let i = 0; i < allCards.length; i++) {
         countProducts.innerHTML = allProducts.length;
         countProductFooter.innerHTML = allProducts.length;
 
-
         console.log("allProducts ", allProducts)
 
+        console.log("allProducts.ORDER ", allProducts.map(product => { return product.order }));
+
+        console.log("allProducts.ORDER FILTER", allProducts.filter(a => a.order === 0 ).length)
+
+        countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
+        countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
         console.log("totalPagar ", typeof valorTotal, valorTotal)
-
-
-        // wspHTML(infoProduct);
 
         showHTML(infoProduct);
       
@@ -848,18 +888,19 @@ function funcion2(i) {
         allProducts = allProducts.filter(
             product =>  product.card !== cartProduct,
         )
-
-
         
         console.log(allProducts);
         countProducts.innerHTML = allProducts.length;
         countProductFooter.innerHTML = allProducts.length;
 
+        countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
+        countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+
         if (allProducts.length === 0) {
           totalOfProducts = 0;
           document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
         }
-
+      
         showHTML();
     }
 
@@ -868,7 +909,44 @@ function funcion2(i) {
 
 
 
+
+// rowProduct.addEventListener('click', e => {
+
+//   console.log('borrar ', e.target.classList.contains("borrar"))
+
+//   // cartProduct = document.querySelectorAll('.cart-product')[0].querySelector("a").getAttribute("href").slice(1);
+  
+
+//     if(e.target.classList.contains("borrar")) {
+//         const product = e.target.parentElement;
+//         const title = product.querySelector("a").getAttribute("href").slice(1);
+
+//        console.log ('target ', e.target.parentElement)
+
+//         console.log('title ', title);
+
+
+//         allProducts = allProducts.filter(
+//             product => console.log('product.card ', product.card),
+//         )
+
+
+        
+//         console.log(allProducts);
+//         countProducts.innerHTML = allProducts.length;
+      
+//         showHTML();
+//     }
+// })
+
+
+function formatNumber(num) {
+  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+}
+
+
 totalOfProducts = 0;
+
 
 // Funcion para mostrar HTML
 
@@ -916,14 +994,16 @@ const showHTML = () => {
 
         ctnNameColor = data.yellow; if( data.order > 0 && data.stock >= 0 ) { ctnNameColor = data.green; } if ( data.order >= 0  &&  data.stock === -1 ) {ctnNameColor = data.red; }
 
-	    
+
           containerProduct.innerHTML = `
                       
                       <div class="${ctnNameColor}">
-		        <div class="ctn-num-product"> 
+
+                          <div class="ctn-num-product" data-for="${numOfProduct}"> 
                             <div class="container">${numOfProduct}</div>
-                        </div>
-                        <span class="name-product">${data.title}</span>
+                          </div>
+
+                        <span class="name-product" data-for="${data.position}">${data.title}</span>
                         <div class="ctn-icon-close"> 
                             <div class="container">
                               <div class="bar1"></div>
@@ -941,7 +1021,7 @@ const showHTML = () => {
 
                                 <div class="ctn-price-product">
                                   <span class="price-product">Precio</span>
-                                  <p class="price-product-cart">$${data.price}</p>
+                                  <p class="price-product-cart">$${formatNumber(data.price)}</p>
                                 </div>
                               
                                 <div class="ctn-order-product">
@@ -956,7 +1036,7 @@ const showHTML = () => {
 
                                 <div class="ctn-total-product">
                                   <span class="total-product">Total</span>
-                                  <p class="price-total-product">$${data.total}</p>
+                                  <p class="price-total-product">$${formatNumber(data.total)}</p>
                                 </div>
                                 
                             </div>
@@ -1005,8 +1085,7 @@ const showHTML = () => {
         const ctnProductWsp = document.createElement('div');
         ctnProductWsp.classList.add("messages");
 
-        cantidadOrder = "unidad";
-        
+        cantidadOrder = "unidad";      
         if ( data.order === 1 ) { cantidadOrder = "unidad"} if ( data.order > 1 || data.order === 0 ) { cantidadOrder = "unidades"}
     
 
@@ -1073,7 +1152,8 @@ const showHTML = () => {
 
         const productWsp = document.createElement('div');
         productWsp.classList.add("messagesWsp");
-	    
+
+
         if( data.order > 0 && data.stock >= 0 ) {
 
           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(numOfProduct)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A%0A</div>`
@@ -1094,28 +1174,64 @@ const showHTML = () => {
           converMessageWsp.append(productWsp);
 
           console.log('data.totalOfProducts ', data.totalOfProducts = totalOfProducts + data.total)
-          document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
+
+          // function format (n) {
+          //   return n.toFixed(2).replace('.', ',').replace(/\d{3}(?=(\d{3})*,)/g, function (s) {
+          //     return '.' + s
+          //   })
+          // }
+
+          // calculations = [totalOfProducts];
+
+          // console.log('calculations ', calculations.map(format))
+
+          
+          console.log('calculations ', formatNumber(totalOfProducts))
+          
+          document.querySelector(".total-pagar").innerHTML = "$  " + formatNumber(totalOfProducts);
+          document.querySelector(".total-pagar_inNav").innerHTML = "$  " + formatNumber(totalOfProducts);
+          
+          
+
 
         position++
-	numOfProduct++
+        numOfProduct++
+
+
+
     });
 
-  localStorage.setItem("allProducts", JSON.stringify(allProducts)); 
+    localStorage.setItem("allProducts", JSON.stringify(allProducts)); 
+
 
   let tester = document.querySelector(".test");
 
+  console.log('ctnMessageWsp ', ctnMessageWsp.textContent,  ctnMessageWsp.textContent.length)
+  
+  // console.log('k ', isNaN(tester.length)) 
   let contain = document.getElementsByClassName('test').length;
 
-	
-   // if ( contain >= 1 ) {   
-   //   console.log('tester ', tester.textContent,  tester.textContent.length)
-   // }
-	
-    if ( contain === 0 ) {
+  console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
+
+  
+    if ( contain >= 1 ) {
+      
+      console.log('tester ', tester.textContent,  tester.textContent.length)
+
+    } if ( contain === 0 ) {
 
       console.log('tester ', tester = 0)
 
     }
+  
+    // document.querySelector('.total-wsp').remove()
+
+    // var cell = document.getElementsByTagName('br');
+    // var length = cell.length;
+    // for(var i = 0; i < length; i++) {
+    // cell[0].parentNode.removeChild(cell[0]);
+    // }
+
 
     const ctnBtn = document.querySelectorAll(".ctn-icon-close");
 
@@ -1138,17 +1254,35 @@ $(".enviar").click(function(){
 
   let tester = document.querySelector(".test");
 
-  let ctnMessageWsp = document.querySelector(".converMessageWsp");
+  let testWsp = document.querySelector(".testWsp");
+  
+  
+	
+  //let ctnMessageWsp = document.querySelector(".ctn-messages");
+
+   let ctnMessageWsp = document.querySelector(".converMessageWsp");
+	
+   console.log('ctnMessageWsp ', ctnMessageWsp)
 	
   let contain = document.getElementsByClassName('test').length;
 
+  // let contain = document.getElementsByClassName('testWsp').length;
+
+
+  console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
+
+  
     if ( contain >= 1 ) {
       
+      console.log('tester ', tester.textContent,  tester.textContent.length)
+
       document.querySelector(".preloader").classList.toggle("hidden");
 
       window.addEventListener("blur", () => {
       document.querySelector(".preloader").classList.add("hidden");
       })
+      
+      // console.log('testWsp ', testWsp.textContent,  testWsp.textContent.length)
 
 
     } if ( contain === 0 ) {
@@ -1167,18 +1301,43 @@ $(".enviar").click(function(){
 })
 
 
+
+// for (let i = 0; i < allCards.length; i++) {
+//   allCards[i].addEventListener("click", function() {
+
+//     let name_img_price = document.querySelectorAll(".name_img_price")[i];
+
+//     let contains = {
+//       nameImgPrice: name_img_price.classList.contains('activo_yellow_card'),
+//     }
+
+//     let nameCardYellow = contains.nameImgPrice;
+
+//     localStorage.setItem("nameCardYellow", JSON.stringify(nameCardYellow)); 
+
+//     let numStockCounter = document.querySelectorAll('.num_stock_counter')[i].value;
+
+//     localStorage.setItem("numStockCounter", JSON.stringify(numStockCounter)); 
+
+
+//   }
+// )}
+
+
 document.addEventListener("DOMContentLoaded", function() {
-  
-  //  console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) );
+  // Titulo
+    
+    console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) );
 
-      cardsMemory = JSON.parse(localStorage.getItem("allProducts"));
 
-      for (let j = 0; j < cardsMemory.length; j++){
+      todosLasCards = JSON.parse(localStorage.getItem("allProducts"));
 
-       console.log('allProducts.position ', cardsMemory[j].position);
-       positionCard = cardsMemory[j].position;
-       valueStockCards = cardsMemory[j].stock;
-       valueOrderCards = cardsMemory[j].order;
+      for (let j = 0; j < todosLasCards.length; j++){
+
+       console.log('allProducts.position ', todosLasCards[j].position);
+       positionCard = todosLasCards[j].position;
+       valueStockCards = todosLasCards[j].stock;
+       valueOrderCards = todosLasCards[j].order;
 
        document.querySelectorAll('.product_card')[positionCard].querySelector('.num_order_counter').value = valueOrderCards
 
@@ -1187,15 +1346,19 @@ document.addEventListener("DOMContentLoaded", function() {
        allCards[positionCard].click();
 
       }
+
 })
+
 
 
 
 var scrollTimer = -1;
 
 function bodyScroll() {
-	
-  document.querySelector(".ctn-btn-limpiar-cards").classList.add('noVisibleFlutter');
+  // document.body.style.backgroundColor = "white";
+  
+  document.querySelector(".ctn-btn-limpiar-cards").classList.add('noVisible');
+  // console.log("white");
 
   if (scrollTimer != -1)
     clearTimeout(scrollTimer);
@@ -1204,7 +1367,160 @@ function bodyScroll() {
 }
 
 function scrollFinished() {
-	
-  document.querySelector(".ctn-btn-limpiar-cards").classList.remove('noVisibleFlutter');
-	
+  // document.body.style.backgroundColor = "red";
+  document.querySelector(".ctn-btn-limpiar-cards").classList.remove('noVisible');
+  // console.log("red");
 }
+
+
+const btnToTop = document.querySelector(".btnToNavbar");
+const btnOptionMenu = document.querySelector(".options");
+
+btnToTop.addEventListener('click', () => {
+  document.querySelector(".ctn-btn-limpiar-cards").classList.toggle("btnFloating");
+  document.querySelector(".limpiar-cards").classList.toggle("btnInNavbar");
+  document.querySelector(".options").classList.toggle("visibleInNavbar");
+  document.querySelector(".btnToNavbar").classList.toggle("visiblebtnFloating");
+  document.querySelector(".btnToNav").classList.toggle("visiblebtnFloating");
+  document.querySelector("#btnArrowUp").classList.toggle("visiblebtnFloating");
+  document.querySelector("#btnArrowDown").classList.toggle("visiblebtnFloating");
+  document.querySelector(".delete-info-btn").classList.toggle("btnFloating");
+  document.querySelector(".total-pagar_inNav").classList.toggle("visibleFloating");
+})
+
+
+/*=============== EXPANDED LIST ===============*/
+const navExpand = document.getElementById('nav-expand');
+      navExpandList = document.getElementById('nav-expand-list');
+      navExpandIcon = document.getElementById('nav-expand-icon');
+      deleteInfoAllCards = document.getElementById('delete_info-cards');
+      deleteInfo = document.querySelector(".btnToNavbarTwo");
+      deleteCtnQuestion = document.querySelector(".no_delete_ctn_question");
+      yesDeleteInfoCards = document.querySelector(".yes_delete_info_cards");
+      
+
+btnOptionMenu.addEventListener('click', () => {
+   // Expand list
+  navExpandList.classList.toggle('show-list');
+
+  document.querySelector(".btnToNavbar").classList.toggle("visiblebtnFloating");
+  document.querySelector(".btnToNavbarTwo").classList.toggle("visiblebtnFloating");
+ 
+})
+
+
+const btnToNav = document.querySelector(".btnToNav");
+
+btnToNav.addEventListener('click', () => {
+  document.querySelector(".ctn-btn-limpiar-cards").classList.remove("btnFloating");
+  document.querySelector(".limpiar-cards").classList.remove("btnInNavbar");
+  document.querySelector(".options").classList.remove("visibleInNavbar");
+  document.querySelector(".btnToNavbar").classList.remove("visiblebtnFloating");
+  document.querySelector(".btnToNav").classList.remove("visiblebtnFloating");
+  document.querySelector(".delete-info-btn").classList.remove("btnFloating");
+  document.querySelector("#btnArrowUp").classList.remove("visiblebtnFloating");
+  document.querySelector("#btnArrowDown").classList.remove("visiblebtnFloating");
+  document.querySelector(".total-pagar_inNav").classList.remove("visibleFloating");
+})
+
+
+// allCards
+
+deleteInfoAllCards.addEventListener('click', () => {
+
+  document.querySelector(".ctn-delete-info-all-cards").classList.add("visible");
+  body.classList.remove("moving");
+  body.classList.add("stop");
+
+})
+
+
+yesDeleteInfoCards.addEventListener('click', () => {
+
+    for (let i = 0; i < allCards.length; i++) { 
+    
+     yesResetCard(i)
+    
+    }
+
+    document.querySelector(".ctn-delete-info-all-cards").classList.remove("visible");
+    body.classList.remove("stop");
+    body.classList.add("moving");
+
+})
+
+
+
+deleteInfo.addEventListener('click', () => {
+
+  document.querySelector(".ctn-delete-info-all-cards").classList.add("visible");
+  body.classList.remove("moving");
+  body.classList.add("stop");
+
+})
+
+
+deleteCtnQuestion.addEventListener('click', () => {
+  document.querySelector(".ctn-delete-info-all-cards").classList.remove("visible");
+  body.classList.remove("stop");
+  body.classList.add("moving");
+})
+
+
+
+
+
+// const boxes = document.querySelectorAll('.product_card');
+// const option = {
+//   root: null, //viewport
+//   rootMargin: '80px',
+//   threshold: 0.5, // 50%가 viewport에 들어와 있어야 callback 실행
+// }
+// const callback = (entries, observer) => {
+
+//   newArr = allProducts.filter(x=>x.hasOwnProperty('position')).map(x=>x.position[0]);
+
+//   newArrSort = newArr.sort((a, b) => a - b );
+
+//   console.log(allProducts.filter(x=>x.hasOwnProperty('position')).map(x=>x.position[0]))
+
+//   console.log('newArrSort ', newArrSort )
+
+//   entries.forEach(entry => {
+
+//     if (entry.isIntersecting) {
+//       // entry.target.classList.add('active');
+//       console.log('entry.target .add', entry.target, entry.target.dataset.for)
+
+//       // return entry.target.dataset.for
+
+//       // sumar1(valor)
+//     //  console.log('data X', valor)
+
+//       // document.querySelector("#torta_porcion").dataset.for
+//       // allProducts.map((value, index, arrayRef) => { console.log('arrayRef.length ', arrayRef.length) });
+//       // sumar1(entry.target)
+
+//       let val = entry.target.dataset.for;
+//       let number = newArrSort.reverse().find(e => e <= val);
+  
+//       console.log('cercanoMinimo ', number);
+  
+  
+//       goal = entry.target.dataset.for;
+  
+//       let min = Math.min(...newArrSort.filter( num => num >= goal ));
+  
+//       console.log('cercanoMaximo ', min)
+        
+//     } else {
+//       // entry.target.classList.remove('active');
+//       console.log('entry.target .remove ', entry.target, entry.target.dataset.for)
+//     }
+      
+//   });
+
+// };
+// const observer = new IntersectionObserver(callback, option);
+
+// boxes.forEach(box => observer.observe(box));

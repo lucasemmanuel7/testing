@@ -1435,8 +1435,11 @@ yesDeleteInfoCards.addEventListener('click', () => {
 
     for (let i = 0; i < allCards.length; i++) { 
     
-     yesResetCard(i)
-    
+     	yesResetCard(i)
+
+        allProducts = allProducts.filter(
+    	  product =>  product.title !== productName,
+        )
     }
 
     document.querySelector(".ctn-delete-info-all-cards").classList.remove("visible");

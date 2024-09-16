@@ -420,10 +420,6 @@ function yesResetCard(i) {
     console.log('cartProduct', allProducts);
   
 
-  allProducts = allProducts.filter(
-    product =>  product.title !== productName,
-  )
-
   if (allProducts.length === 0) {
     totalOfProducts = 0;
     document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;

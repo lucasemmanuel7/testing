@@ -733,14 +733,15 @@ for (let i = 0; i < allCards.length; i++) {
     }
 
 
-    let cartEmpty = document.querySelector(".cart-empty").classList.contains("hidden");
+    let cartEmpty = document.querySelector(".ctn-cartel-cart-empty").classList.contains("hidden");
       
 
     if (allProducts.length === 0) {
       totalOfProducts = 0;
       // countProductFooter = 0;
-      document.querySelector(".total-pagar").innerHTML = totalOfProducts;
-      document.querySelector(".total-pagar_inNav").innerHTML = totalOfProducts;
+      document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
+      document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
+
       document.querySelector("#count-product").innerHTML =  allProducts.length;
      
       showHTML();
@@ -894,7 +895,9 @@ function funcion2(i) {
 
         if (allProducts.length === 0) {
           totalOfProducts = 0;
+
           document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
+          document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
         }
       
         showHTML();
@@ -937,7 +940,7 @@ function funcion2(i) {
 
 
 function formatNumber(num) {
-  return num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
+  return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 }
 
 
@@ -949,7 +952,7 @@ totalOfProducts = 0;
 const showHTML = () => {
 
   let counter = document.querySelector(".count-products");
-  let cartEmpty = document.querySelector(".cart-empty");
+  let cartEmpty = document.querySelector(".ctn-cartel-cart-empty");
   let ctnMessageWsp = document.querySelector(".ctn-messages");
   
 
@@ -1017,7 +1020,7 @@ const showHTML = () => {
 
                                 <div class="ctn-price-product">
                                   <span class="price-product">Precio</span>
-                                  <p class="price-product-cart">$${formatNumber(data.price)}</p>
+                                  <p class="price-product-cart">${formatNumber(data.price)}</p>
                                 </div>
                               
                                 <div class="ctn-order-product">
@@ -1032,7 +1035,7 @@ const showHTML = () => {
 
                                 <div class="ctn-total-product">
                                   <span class="total-product">Total</span>
-                                  <p class="price-total-product">$${formatNumber(data.total)}</p>
+                                  <p class="price-total-product">${formatNumber(data.total)}</p>
                                 </div>
                                 
                             </div>
@@ -1184,16 +1187,11 @@ const showHTML = () => {
           
           console.log('calculations ', formatNumber(totalOfProducts))
           
-          document.querySelector(".total-pagar").innerHTML = "$  " + formatNumber(totalOfProducts);
-          document.querySelector(".total-pagar_inNav").innerHTML = "$  " + formatNumber(totalOfProducts);
-          
-          
-
+          document.querySelector(".total-pagar").innerHTML = formatNumber(totalOfProducts);
+          document.querySelector(".total-pagar_inNav").innerHTML = formatNumber(totalOfProducts);         
 
         position++
         numOfProduct++
-
-
 
     });
 
@@ -1328,6 +1326,10 @@ document.addEventListener("DOMContentLoaded", function() {
 
       todosLasCards = JSON.parse(localStorage.getItem("allProducts"));
 
+      console.log('todosLasCards ', todosLasCards)
+    
+    if (todosLasCards !== null ) {
+
       for (let j = 0; j < todosLasCards.length; j++){
 
        console.log('allProducts.position ', todosLasCards[j].position);
@@ -1343,6 +1345,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
       }
 
+    }
 })
 
 

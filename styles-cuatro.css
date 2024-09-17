@@ -582,7 +582,7 @@ p.inverteNamesBtnsList {
 .container-list-products-options {
   display: flex;
   width: 100%;
-  height: 100vh;
+  height: 100dvh;
 }
  
 .container-bottons-products-list {
@@ -598,7 +598,7 @@ p.inverteNamesBtnsList {
 .container-list-products-options {
   display: flex;
   width: 100%;
-  height: 95vh;
+  height: 95dvh;
   padding: 0rem 1.5rem 3rem;
 }
 

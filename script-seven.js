@@ -60,6 +60,10 @@ abrir.addEventListener("click", () => {
    body.classList.add("stop");
    // html.classList.remove("moving"); // volvió para eliminar el scroll overflow-y
    // html.classList.add("stop"); // volvió para eliminar el scroll overflow-y
+
+   navExpandList.classList.remove('show-list');
+   document.querySelector(".btnToNavbar").classList.remove("visiblebtnFloating");
+   document.querySelector(".btnToNavbarTwo").classList.remove("visiblebtnFloating");
 })
 
 
@@ -95,6 +99,11 @@ shopListOpen.addEventListener("click", () => {
  body.classList.add("stop");
 //  html.classList.remove("moving");
 //  html.classList.add("stop");
+
+ navExpandList.classList.remove('show-list');
+ document.querySelector(".btnToNavbar").classList.remove("visiblebtnFloating");
+ document.querySelector(".btnToNavbarTwo").classList.remove("visiblebtnFloating");
+
 })
 
 // products_list-visible
@@ -723,6 +732,7 @@ for (let i = 0; i < allCards.length; i++) {
       allProducts = allProducts.filter(
         product =>  product.title !== productName,
       )
+
         
         countProducts.innerHTML = allProducts.length;
 
@@ -795,6 +805,11 @@ for (let i = 0; i < allCards.length; i++) {
         let yellowNameProduct = "ctn-name-product-and-close";
         let greenNameProduct = "ctn-name-product-and-close_green";
         let redNameProduct = "ctn-name-product-and-close_red";
+
+        let borrarAndModifiedYellow = "ctn-btns-borrar-and-modified_yellow";
+        let borrarAndModifiedGreen = "ctn-btns-borrar-and-modified_green";
+        let borrarAndModifiedRed = "ctn-btns-borrar-and-modified_red";
+
     
         let cardId = document.querySelectorAll(".product_card")[i].id;   
         
@@ -810,9 +825,14 @@ for (let i = 0; i < allCards.length; i++) {
           stock: allStock,
           title: nameProduct,
           price: priceProduct,
-          yellow: yellowNameProduct,
-          green: greenNameProduct,
-          red: redNameProduct,
+          nameYellow: yellowNameProduct,
+          nameGreen: greenNameProduct,
+          nameRed: redNameProduct,
+
+          ctnBtnsYellow: borrarAndModifiedYellow,
+          ctnBtnsGreen: borrarAndModifiedGreen,
+          ctnBtnsRed: borrarAndModifiedRed,
+
           totalOfProducts: valorTotal,
           total: 0,
           position: [i],
@@ -886,6 +906,7 @@ function funcion2(i) {
             product =>  product.card !== cartProduct,
         )
         
+
         console.log(allProducts);
         countProducts.innerHTML = allProducts.length;
         countProductFooter.innerHTML = allProducts.length;
@@ -954,15 +975,24 @@ const showHTML = () => {
   let counter = document.querySelector(".count-products");
   let cartEmpty = document.querySelector(".ctn-cartel-cart-empty");
   let ctnMessageWsp = document.querySelector(".ctn-messages");
-  
+  // let navList = document.querySelector(".nav-list");
+
+  // if (allProducts.length === 0) {
+//   rowProduct = document.querySelector(".row-product").classList.add("noVisible");
+// } else {
+//   rowProduct = document.querySelector(".row-product").classList.remove("noVisible");
+// }
+
 
   if (!allProducts.length) {
 		counter.classList.add('hidden');
-		cartEmpty.classList.remove('hidden');
+		cartEmpty.classList.remove('no_Visible');
+    rowProduct.classList.add('no__Visible');
     ctnMessageWsp.classList.add('hidden');
 	} else {
 		counter.classList.remove('hidden');
-		cartEmpty.classList.add('hidden');
+		cartEmpty.classList.add('no_Visible');
+    rowProduct.classList.remove('no__Visible');
     ctnMessageWsp.classList.remove('hidden');
 	}
   
@@ -991,7 +1021,8 @@ const showHTML = () => {
         
         numero = data.stock === -1 ? "-" : data.stock;
 
-        ctnNameColor = data.yellow; if( data.order > 0 && data.stock >= 0 ) { ctnNameColor = data.green; } if ( data.order >= 0  &&  data.stock === -1 ) {ctnNameColor = data.red; }
+        ctnNameColor = data.nameYellow; if( data.order > 0 && data.stock >= 0 ) { ctnNameColor = data.nameGreen; } if ( data.order >= 0  &&  data.stock === -1 ) {ctnNameColor = data.nameRed; }
+        ctnBtnsColor = data.ctnBtnsYellow; if( data.order > 0 && data.stock >= 0 ) { ctnBtnsColor = data.ctnBtnsGreen; } if ( data.order >= 0  &&  data.stock === -1 ) { ctnBtnsColor = data.ctnBtnsRed; }
 
 
           containerProduct.innerHTML = `
@@ -1044,7 +1075,7 @@ const showHTML = () => {
 
                         <div class="info-btn hover-info">
 
-                            <div class="ctn-btns-borrar-and-modified">
+                            <div class="${ctnBtnsColor}">
                               <button  class="borrar" onclick="yesResetCard(${data.position}); funcion2(${position})">Borrar
                               
                               <svg xmlns="http://www.w3.org/2000/svg" 
@@ -1240,8 +1271,14 @@ const showHTML = () => {
 
       }
     )}
-
+    
 }
+
+// if (allProducts.length === 0) {
+//   rowProduct = document.querySelector(".row-product").classList.add("noVisible");
+// } else {
+//   rowProduct = document.querySelector(".row-product").classList.remove("noVisible");
+// }
 
 
 $(".enviar").click(function(){
@@ -1281,7 +1318,7 @@ $(".enviar").click(function(){
 
     } if ( contain === 0 ) {
 
-      console.log('tester ', tester = 0)
+      console.log('tester ', tester = 0);
 
     }
 
@@ -1373,7 +1410,7 @@ function scrollFinished() {
 
 
 const btnToTop = document.querySelector(".btnToNavbar");
-const btnOptionMenu = document.querySelector(".options");
+const btnOptionMenu = document.querySelector(".options"); 
 
 btnToTop.addEventListener('click', () => {
   document.querySelector(".ctn-btn-limpiar-cards").classList.toggle("btnFloating");
@@ -1406,6 +1443,7 @@ btnOptionMenu.addEventListener('click', () => {
   document.querySelector(".btnToNavbarTwo").classList.toggle("visiblebtnFloating");
  
 })
+
 
 
 const btnToNav = document.querySelector(".btnToNav");

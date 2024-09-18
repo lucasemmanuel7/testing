@@ -1226,7 +1226,7 @@ const showHTML = () => {
 
     });
 
-    localStorage.setItem("allProducts", JSON.stringify(allProducts)); 
+    localStorage.setItem("allProducts", JSON.stringify(allProducts));   // Guardando en localStorage
 
 
   let tester = document.querySelector(".test");
@@ -1354,39 +1354,7 @@ $(".enviar").click(function(){
 //   }
 // )}
 
-
-document.addEventListener("DOMContentLoaded", function() {
-  // Titulo
-    
-    console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) );
-
-
-      todosLasCards = JSON.parse(localStorage.getItem("allProducts"));
-
-      console.log('todosLasCards ', todosLasCards)
-    
-    if (todosLasCards !== null ) {
-
-      for (let j = 0; j < todosLasCards.length; j++){
-
-       console.log('allProducts.position ', todosLasCards[j].position);
-       positionCard = todosLasCards[j].position;
-       valueStockCards = todosLasCards[j].stock;
-       valueOrderCards = todosLasCards[j].order;
-
-       document.querySelectorAll('.product_card')[positionCard].querySelector('.num_order_counter').value = valueOrderCards
-
-       document.querySelectorAll('.product_card')[positionCard].querySelector('.num_stock_counter').value = valueStockCards
-        
-       allCards[positionCard].click();
-
-      }
-
-    }
-})
-
-
-
+let ctnBtnLimpiarCards = document.querySelector(".ctn-btn-limpiar-cards");
 
 var scrollTimer = -1;
 
@@ -1441,8 +1409,33 @@ btnOptionMenu.addEventListener('click', () => {
 
   document.querySelector(".btnToNavbar").classList.toggle("visiblebtnFloating");
   document.querySelector(".btnToNavbarTwo").classList.toggle("visiblebtnFloating");
+
+
+
+  let contains = {
+    btnsOptionInBottom: btnToTop.classList.contains("visiblebtnFloating"),
+  }
+
+   console.log('contains: ', contains.btnsOptionInBottom);
+
+   let btnOption = contains.btnsOptionInBottom;
+
+   localStorage.setItem("btnOptionMenuArr", JSON.stringify(btnOption)); 
  
 })
+
+
+// document.addEventListener("DOMContentLoaded", function() {
+//   // Titulo
+//   //  test = JSON.parse(localStorage.getItem("arr"));
+//   // if (test === true) {
+//   //     // const positionBtnList = document.querySelector(".menu-invertion-btns");
+//   //     positionBtnList.click();
+//   // }
+
+
+// })
+
 
 
 
@@ -1505,6 +1498,59 @@ deleteCtnQuestion.addEventListener('click', () => {
   body.classList.remove("stop");
   body.classList.add("moving");
 })
+
+
+
+
+
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Titulo
+    
+    console.log('allProducts ', JSON.parse(localStorage.getItem("allProducts")) ); // Devolviendo en localStorage
+
+
+      todosLasCards = JSON.parse(localStorage.getItem("allProducts"));
+
+      console.log('todosLasCards ', todosLasCards)
+    
+    if (todosLasCards !== null ) {
+
+      for (let j = 0; j < todosLasCards.length; j++){
+
+        console.log('allProducts.position ', todosLasCards[j].position);
+        positionCard = todosLasCards[j].position;
+        valueStockCards = todosLasCards[j].stock;
+        valueOrderCards = todosLasCards[j].order;
+
+        document.querySelectorAll('.product_card')[positionCard].querySelector('.num_order_counter').value = valueOrderCards
+
+        document.querySelectorAll('.product_card')[positionCard].querySelector('.num_stock_counter').value = valueStockCards
+          
+        allCards[positionCard].click();
+
+      }
+
+
+    }
+
+    btnOption = JSON.parse(localStorage.getItem("btnOptionMenuArr"));
+
+    if (btnOption === true) {
+      // const positionBtnList = document.querySelector(".menu-invertion-btns");
+      btnOptionMenu.click();
+      btnToTop.click();
+    }
+
+
+})
+
+
+
+
 
 
 

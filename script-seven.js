@@ -975,7 +975,6 @@ const showHTML = () => {
   let counter = document.querySelector(".count-products");
   let cartEmpty = document.querySelector(".ctn-cartel-cart-empty");
   let ctnMessageWsp = document.querySelector(".ctn-messages");
-  let navList = document.querySelector(".nav-list");
   // let navList = document.querySelector(".nav-list");
 
   // if (allProducts.length === 0) {
@@ -989,13 +988,11 @@ const showHTML = () => {
     counter.classList.add('hidden');
     cartEmpty.classList.remove('no_Visible');
     rowProduct.classList.add('no__Visible');
-    navList.classList.add('flow_hidden');
     ctnMessageWsp.classList.add('hidden');
 	} else {
     counter.classList.remove('hidden');
     cartEmpty.classList.add('no_Visible');
     rowProduct.classList.remove('no__Visible');
-    navList.classList.remove('flow_hidden');
     ctnMessageWsp.classList.remove('hidden');
 	}
   

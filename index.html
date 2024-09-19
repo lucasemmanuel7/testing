@@ -39,44 +39,77 @@
         <div class="ctn-btn-limpiar-cards">
             <button class="limpiar-cards">
                 <!-- <img class="btnToNav" src="./img/send.png" alt="" hidden > -->
-                <span class="btnToNav" hidden>Ocultar menú</span>
-                <span class="delete-info-btn" hidden >Borrar info</span>
-               
-                
-            <i class="bi bi-gear-fill options">
-                <ul class="nav__expand-list" id="nav-expand-list">
-                    <li class="nav__expand-link">
-                    <!-- <a href="#" class="nav__expand-link">
-                        <i class="ri-image-2-line"></i>
-                        <span>Gallery</span>
-                    </a> -->
-                    <!-- <img class="btnToNavbar" src="./img/send.png" alt=""> -->
-                    <span class="btnToNavbar">Menú flotante</span>
+            <div class="ctn-btns-floating">   
+                <!-- Ocultar menú -->
+                <span class="btnToNav" hidden><i class="bi bi-eye-slash-fill"></i></span>
+                <span id="btnArrowDown" hidden>0</span>
 
-                    </li>
-        
-                    <li class="nav__expand-link_two">
-                        <!-- <a href="#" class="nav__expand-link" id="delete_info-cards"> -->
-                            <!-- <i class="ri-archive-line"></i> -->
-                            <span class="nav__expand-link" id="delete_info-cards">Borrar info</span>
-                        <!-- </a> -->
-                    </li>
-        
+                <!-- xl-torta-de-ricota -->
+                <!-- <a  id="btnArrowDown" href="#xl-torta-de-ricota" hidden><i class="bi bi-arrow-down"></i></a>                                       -->
+
+
+                <span id="btnArrowUp" hidden>0</span>
+                <div class="total-pagar_inNav">$0</div>
+                <!-- Borrar info -->
+                <span id="delete_info-cards" class="delete-info-btn" hidden ><i class="bi bi-trash3"></i></span>
+            </div>    
+            <!-- <i class="bi bi-gear-fill"></i> -->
+            
+            <i class="bi bi-gear options">
+                <ul class="nav__expand-list" id="nav-expand-list">
+                    <div class="ctn_cristal_btns_black">
+                        <div class="ctn_btns_black">
+                            <li class="nav__expand-link">
+                            <!-- <a href="#" class="nav__expand-link">
+                                <i class="ri-image-2-line"></i>
+                                <span>Gallery</span>
+                            </a> -->
+                            <!-- <img class="btnToNavbar" src="./img/send.png" alt=""> -->
+                            <span class="btnToNavbar">Menú flotante</span>
+
+                            </li>
+                
+                            <!-- nav__expand-link_two -->
+                            <li class="nav__expand-link">
+                                <!-- <a href="#" class="nav__expand-link" id="delete_info-cards"> -->
+                                    <!-- <i class="ri-archive-line"></i> -->
+                                    <!-- nav__expand-link -->
+                                    <span class="btnToNavbarTwo" id="delete_info-cards">Borrar info</span>
+                                <!-- </a> -->
+                            </li>
+                        </div>
+                    </div>
+                    
+                    
                     <!-- <li>
-                    <a href="#" class="nav__expand-link">
-                        <i class="ri-bookmark-3-line"></i>
-                        <span>Saved</span>
-                    </a>
+                        <a href="#" class="nav__expand-link">
+                            <i class="ri-bookmark-3-line"></i>
+                            <span>Saved</span>
+                        </a>
                     </li> -->
                 </ul>
-            </i>
-             
-
-            
+            </i>          
+              
             </button>
-
         </div>
 
+        <ul class="ctn-delete-info-all-cards" >
+
+            <div class="delete-info-all-cards">
+                <div class="cartel-off-cristal-delete">
+                    <div class="cartel-off-">
+                        <div class="cartel-question_">¿Desea eliminar los valores actuales de los productos seleccionados?</div> 
+                    </div>
+                    <div class="ctn_of_btn_">
+                        <button class="yes_delete_info_cards" >SI</button>
+                        <button class="no_delete_ctn_question">NO</button>
+                    </div> 
+                </div>
+            </div>
+
+        </ul>
+
+        
         <button id="list-products">
         <!-- <span>lista de productos</span>     -->
        <i class="bi bi-search"></i>
@@ -314,10 +347,12 @@
                     <li><a href="#">Qué hacemos</a></li>
                     <li><a href="#">Contacto</a></li> -->
 
-                    <div class="row-product h">
+                    <div class="row-product">
 			
 					</div>
-					<p class="cart-empty">El carrito está vacío</p>
+                    <div class="ctn-cartel-cart-empty">
+					    <p class="cartel-cart-empty">El carrito está vacío</p>
+                    </div>
                 </ul>
             </div>
             <div class="cart-total">
@@ -353,7 +388,7 @@
                 </div>
     
                 <div id="close-wsp-viewport" class="icon-close-wsp">
-                    <i class="bi bi-x"></i>
+                    <i class="bi bi-x close_wsp"></i>
                 </div>
     
             </div>
@@ -395,14 +430,11 @@
 
     </header>
 
-    
-
-
     <div class="container_cards">
 
         <!--                                 1                                       -->
         
-        <div id="torta_porcion" class="product_card one" >
+        <div id="torta_porcion" data-for="0" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price">
@@ -583,7 +615,7 @@
 
          <!--                                 2                                      -->
 
-        <div id="alf-de-maicena" class="product_card one" >
+        <div id="alf-de-maicena" data-for="1" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -765,7 +797,7 @@
 
          <!--                                 3                                     -->
 
-         <div id="xl-frola-de-batata" class="product_card one" >
+         <div id="xl-frola-de-batata" data-for="2" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -918,7 +950,7 @@
 
          <!--                                 4                                      -->
 
-         <div id="xl-frola-de-membrillo" class="product_card one" >
+         <div id="xl-frola-de-membrillo" data-for="3" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -1071,7 +1103,7 @@
 
          <!--                                5                                      -->
 
-         <div id="xl-torta-de-ricota" class="product_card one" >
+         <div id="xl-torta-de-ricota" data-for="4" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -1224,7 +1256,7 @@
 
          <!--                                 6                                     -->
 
-         <div id="xl-torta-de-coco" class="product_card one" >
+         <div id="xl-torta-de-coco" data-for="5" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -1377,7 +1409,7 @@
 
          <!--                                7                                     -->
 
-         <div id="mini-frola-de-batata" class="product_card one" >
+         <div id="mini-frola-de-batata" data-for="6" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -1530,7 +1562,7 @@
 
          <!--                                 8                                     -->
 
-        <div id="mini-frola-de-membrillo" class="product_card one" >
+        <div id="mini-frola-de-membrillo" data-for="7" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -1682,7 +1714,7 @@
 
          <!--                                 9                                     -->
 
-        <div id="mini-ricota" class="product_card one" >
+        <div id="mini-ricota" data-for="8" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -1834,7 +1866,7 @@
         
                  <!--                                 10                                     -->
 
-        <div id="mini-coco" class="product_card one" >
+        <div id="mini-coco" data-for="9" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -1986,7 +2018,7 @@
 
                          <!--                                 11                                     -->
 
-        <div id="tortita-de-manzana" class="product_card one" >
+        <div id="tortita-de-manzana" data-for="10" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -2138,7 +2170,7 @@
 
                                  <!--                                 12                                     -->
 
-        <div id="tortita-de-merengue" class="product_card one" >
+        <div id="tortita-de-merengue" data-for="11" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -2290,7 +2322,7 @@
 
                                  <!--                                 13                                     -->
 
-        <div id="conito-choco-ddl" class="product_card one" >
+        <div id="conito-choco-ddl" data-for="12" class="product_card one" >
                                             
             <div class="container_card">
                 <div class="name_img_price" >
@@ -2445,3 +2477,5 @@
     
 </body>
 </html>
+
+

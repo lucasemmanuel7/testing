@@ -2621,10 +2621,10 @@ input:disabled {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  gap: 6px;
+  gap: 5px;
   width: 100%;
   height: 95px;
-  padding: 0 13px;
+  padding: 5px 13px;
   border: 1px solid rgba(0, 0, 0, 0.20);
   background: #faebd72e;
 

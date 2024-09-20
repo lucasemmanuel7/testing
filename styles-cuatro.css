@@ -2816,6 +2816,7 @@ input:disabled {
 .container {
   display: inline-block;
   cursor: pointer;
+  font-weight: 500;
 }
 
 .bar1, .bar2, .bar3 {

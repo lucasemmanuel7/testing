@@ -1445,35 +1445,14 @@ function scrollFinished() {
 //   }
 // });
 
-// let TheBody = document.getElementsByTagName("body");
+let TheBody = document.getElementsByTagName("body");
   
-// function OnScrolling(){                             // put this on a scrolling EVENT
-//   let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight; // this is the scroll end Pixel
+function OnScrolling(){                             // put this on a scrolling EVENT
+  let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight; // this is the scroll end Pixel
   
-//       if (ScrollEnd.toFixed() == window.scrollY.toFixed()){
-//           //do stuff 
-//           console.log('HHRR')
-//           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-//           document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-//           document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-//       } else {
-//           document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-//           document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-//           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-//       }
-//   }
-
-
-$(window).scroll(function (e) {
-  var target = e.currentTarget,
-      scrollTop = target.scrollTop || window.pageYOffset,
-      scrollHeight = target.scrollHeight || document.body.scrollHeight;
-
-  var boolean = scrollHeight - scrollTop === $(target).innerHeight();
-
-  if (boolean === true) {
+      if (ScrollEnd.toFixed() == window.scrollY.toFixed()){
           //do stuff 
-          console.log('HHRR')
+          console.log('HHAA')
           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
           document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
           document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
@@ -1484,7 +1463,31 @@ $(window).scroll(function (e) {
           document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
       }
-});
+  }
+
+
+// $(window).scroll(function (e) {
+//   var target = e.currentTarget,
+//       scrollTop = target.scrollTop || window.pageYOffset,
+//       scrollHeight = target.scrollHeight || document.body.scrollHeight;
+
+//   var boolean = scrollHeight - scrollTop === $(target).innerHeight();
+
+//   if (boolean === true) {
+//           //do stuff 
+//           console.log('HHRR')
+//           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+//           document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+//           document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+//           document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+//       } else {
+//           document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+//           document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
+//           document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+//           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+//       }
+// });
+
 
 const btnToTop = document.querySelector(".btnToNavbar");
 const btnOptionMenu = document.querySelector(".options"); 

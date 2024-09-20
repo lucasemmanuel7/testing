@@ -1446,9 +1446,9 @@ function scrollFinished() {
 let TheBody = document.getElementsByTagName("body");
   
 function OnScrolling(){                             // put this on a scrolling EVENT
-  let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight; // this is the scroll end Pixel
+  let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight - 20; // this is the scroll end Pixel
   
-      if (ScrollEnd.toFixed() == window.scrollY.toFixed()){
+      if (ScrollEnd.toFixed() == window.scrollY.toFixed() - 20){
           //do stuff 
           console.log('HHRR')
           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');

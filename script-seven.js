@@ -200,16 +200,16 @@ positionBtnList.addEventListener('click', () => {
   })
 }
 
-document.addEventListener("DOMContentLoaded", function() {
-  // Titulo
-   test = JSON.parse(localStorage.getItem("arr"));
-  if (test === true) {
-      // const positionBtnList = document.querySelector(".menu-invertion-btns");
-      positionBtnList.click();
-  }
-})
+// document.addEventListener("DOMContentLoaded", function() {
+//   // Titulo
+//    test = JSON.parse(localStorage.getItem("arr"));
+//   if (test === true) {
+//       // const positionBtnList = document.querySelector(".menu-invertion-btns");
+//       positionBtnList.click();
+//   }
+// })
 
-
+   
 
 
 
@@ -420,7 +420,7 @@ function yesResetCard(i) {
     document.querySelectorAll(".title-falta-completar")[i].classList.remove('titleVisible');    /// Elevation de Name Product
   }  
 
-
+ 
 
   productName = document.querySelectorAll('.product_name')[i].textContent;
 
@@ -433,7 +433,7 @@ function yesResetCard(i) {
     totalOfProducts = 0;
     document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
     document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
-
+    
   }
 
   countProducts.innerHTML = allProducts.length;
@@ -663,7 +663,6 @@ for (let i = 0; i < allCards.length; i++) {
         document.querySelectorAll(".name_img_price")[i].classList.add('activo_red_card'); 
 
 
-
         let nameProduct = document.querySelectorAll(".product_name")[i].textContent;
         let priceProduct = document.querySelectorAll(".price")[i].textContent;
 
@@ -753,6 +752,7 @@ for (let i = 0; i < allCards.length; i++) {
       document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
 
       document.querySelector("#count-product").innerHTML =  allProducts.length;
+      
      
       showHTML();
     } else {
@@ -985,14 +985,16 @@ const showHTML = () => {
 
 
   if (!allProducts.length) {
-    counter.classList.add('hidden');
-    cartEmpty.classList.remove('no_Visible');
-    rowProduct.classList.add('no__Visible');
+		counter.classList.add('hidden');
+		cartEmpty.classList.remove('no_Visible');
+    rowProduct.classList.remove('no__Visible');
+    // navList.classList.add('flow_hidden');
     ctnMessageWsp.classList.add('hidden');
 	} else {
-    counter.classList.remove('hidden');
-    cartEmpty.classList.add('no_Visible');
-    rowProduct.classList.remove('no__Visible');
+		counter.classList.remove('hidden');
+		cartEmpty.classList.add('no_Visible');
+   
+    // navList.classList.remove('flow_hidden');
     ctnMessageWsp.classList.remove('hidden');
 	}
   
@@ -1226,6 +1228,7 @@ const showHTML = () => {
 
     });
 
+
     localStorage.setItem("allProducts", JSON.stringify(allProducts));   // Guardando en localStorage
 
 
@@ -1275,13 +1278,17 @@ const showHTML = () => {
 }
 
 // if (allProducts.length === 0) {
-//   rowProduct = document.querySelector(".row-product").classList.add("noVisible");
-// } else {
+//   // rowProduct = document.querySelector(".row-product").classList.add("noVisible");
+//   rowProduct.classList.add('no__Visible');
+// } 
+
+// else {
 //   rowProduct = document.querySelector(".row-product").classList.remove("noVisible");
 // }
 
+// .enviar
 
-$(".enviar").click(function(){
+$(".ctn-btn-message").click(function(){
 
   let tester = document.querySelector(".test");
 
@@ -1410,8 +1417,10 @@ btnOptionMenu.addEventListener('click', () => {
   document.querySelector(".btnToNavbar").classList.toggle("visiblebtnFloating");
   document.querySelector(".btnToNavbarTwo").classList.toggle("visiblebtnFloating");
 
-
-
+  document.querySelector(".options").classList.toggle('hover');
+  document.querySelector(".configuration").classList.toggle('no__Visible');
+  document.querySelector(".options-close").classList.toggle('visible');
+  
   let contains = {
     btnsOptionInBottom: btnToTop.classList.contains("visiblebtnFloating"),
   }
@@ -1474,6 +1483,10 @@ yesDeleteInfoCards.addEventListener('click', () => {
         allProducts = allProducts.filter(
     	  product =>  product.title !== productName,
         )
+
+        // if (allProducts.length === 0) {
+          // rowProduct.classList.add('no__Visible');
+        // } 
     }
 
     document.querySelector(".ctn-delete-info-all-cards").classList.remove("visible");
@@ -1481,7 +1494,6 @@ yesDeleteInfoCards.addEventListener('click', () => {
     body.classList.add("moving");
 
 })
-
 
 
 deleteInfo.addEventListener('click', () => {
@@ -1534,7 +1546,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
       }
 
-
     }
 
     btnOption = JSON.parse(localStorage.getItem("btnOptionMenuArr"));
@@ -1545,6 +1556,14 @@ document.addEventListener("DOMContentLoaded", function() {
       btnToTop.click();
     }
 
+
+
+    test = JSON.parse(localStorage.getItem("arr"));
+
+    if (test === true) {
+        // const positionBtnList = document.querySelector(".menu-invertion-btns");
+        positionBtnList.click();
+    }
 
 })
 

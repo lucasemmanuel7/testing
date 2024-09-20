@@ -1398,30 +1398,28 @@ function scrollFinished() {
   // console.log("red");
 }
 
-// function IsScrollbarAtBottom() {
-//   var documentHeight = $(document).height();
-//   var scrollDifference = $(window).height() + $(window).scrollTop();
-//   console.log('HHHH', documentHeight === scrollDifference)
-//   return (documentHeight == scrollDifference);
-
+function IsScrollbarAtBottom() {
+  var documentHeight = $(document).height();
+  var scrollDifference = $(window).height() + $(window).scrollTop();
+  console.log('HHHH', documentHeight === scrollDifference)
+  // return (documentHeight == scrollDifference);
   // documentHeight === scrollDifference;
-  //  if (documentHeight === scrollDifference) {
 
-  //   //  document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-  //   //  document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+   if (documentHeight === scrollDifference) {
+    //do stuff 
+    console.log('HHRR')
+    document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+    document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+    document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+    ocument.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
 
-  //   console.log('HHHH en IF', documentHeight === scrollDifference)
-  //   //  document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-
-  //    // #ctnValueOrderFooter.visibleFooter,
-    
-  // }
-  // } else {
-  //   document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-  //   document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-  //   // document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-  // }
-// }
+  } else {
+    document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+    document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
+    document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+    document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+  }
+}
 
 // $(window).scroll(function () {
 //   if(IsScrollbarAtBottom === true) {
@@ -1445,25 +1443,25 @@ function scrollFinished() {
 //   }
 // });
 
-let TheBody = document.getElementsByTagName("body");
+// let TheBody = document.getElementsByTagName("body");
   
-function OnScrolling(){                             // put this on a scrolling EVENT
-  let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight; // this is the scroll end Pixel
+// function OnScrolling(){                             // put this on a scrolling EVENT
+//   let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight; // this is the scroll end Pixel
   
-      if (ScrollEnd.toFixed() == window.scrollY.toFixed()){
-          //do stuff 
-          console.log('HHAA')
-          document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-          document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-          document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-          document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-      } else {
-          document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-          document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
-          document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-          document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-      }
-  }
+//       if (ScrollEnd.toFixed() == window.scrollY.toFixed()){
+//           //do stuff 
+//           console.log('HHRR')
+//           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+//           document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+//           document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+//           document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+//       } else {
+//           document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+//           document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
+//           document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+//           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+//       }
+//   }
 
 
 // $(window).scroll(function (e) {

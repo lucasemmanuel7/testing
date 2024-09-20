@@ -54,8 +54,9 @@
                 <span id="delete_info-cards" class="delete-info-btn" hidden ><i class="bi bi-trash3"></i></span>
             </div>    
             <!-- <i class="bi bi-gear-fill"></i> -->
-            
-            <i class="bi bi-gear options">
+            <div class="options">
+            <i class="bi bi-gear configuration"></i>
+            <i class="bi bi-x options-close"></i>
                 <ul class="nav__expand-list" id="nav-expand-list">
                     <div class="ctn_cristal_btns_black">
                         <div class="ctn_btns_black">
@@ -65,7 +66,10 @@
                                 <span>Gallery</span>
                             </a> -->
                             <!-- <img class="btnToNavbar" src="./img/send.png" alt=""> -->
-                            <span class="btnToNavbar">Menú flotante</span>
+                            <div class="btnToNavbar">
+                                <span>Menú flotante</span>
+                                <i class="bi bi-eye"></i>
+                            </div>
 
                             </li>
                 
@@ -74,7 +78,10 @@
                                 <!-- <a href="#" class="nav__expand-link" id="delete_info-cards"> -->
                                     <!-- <i class="ri-archive-line"></i> -->
                                     <!-- nav__expand-link -->
-                                    <span class="btnToNavbarTwo" id="delete_info-cards">Borrar info</span>
+                                <div class="btnToNavbarTwo" id="delete_info-cards">
+                                    <span>Borrar info</span>
+                                    <i class="bi bi-trash3"></i>
+                                </div>
                                 <!-- </a> -->
                             </li>
                         </div>
@@ -88,8 +95,8 @@
                         </a>
                     </li> -->
                 </ul>
-            </i>          
-              
+                      
+            </div>
             </button>
         </div>
 
@@ -121,7 +128,7 @@
                 <!-- onclick="inverterBtns()" -->
                 <button  class="menu-invertion-btns"><i class="bi bi-arrow-left-right"></i></button>
                 <button id="open-cart-total" class="menu-cart-total"><i class="bi bi-cart3"></i></button>
-                <button id="close-product-list" class="close-list-product"><i class="bi bi-x"></i></button>
+                <button id="close-product-list" class="close-list-product cerrar-menu"><i class="bi bi-x"></i></button>
             </div>
             <div class="container-list-products-options">
                 <ul class="list-products-options">
@@ -418,6 +425,7 @@
          
                     <div class="ctn-btn-message">
                         <button class="message">
+                            <span class="send-message">ENVIAR MENSAJE</span>
                             <img class="enviar" src="./img/send.png" alt="">
                         </button>
                     </div>
@@ -2477,5 +2485,3 @@
     
 </body>
 </html>
-
-

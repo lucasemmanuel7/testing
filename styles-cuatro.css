@@ -3159,6 +3159,7 @@ filter: hue-rotate(90deg);
   align-items: center;
 }
 
+
 .ctn-btn-limpiar-cards.btnFloating {
   position: fixed;
   bottom: 1.5rem;
@@ -3183,7 +3184,10 @@ filter: hue-rotate(90deg);
 .ctn-btn-limpiar-cards.noVisible {
   bottom: -6.5rem;
   transition: bottom .5s ease;
+}
 
+.ctn-btn-limpiar-cards.displayNone {
+  display: none;
 }
 
 .limpiar-cards.btnInNavbar {
@@ -3215,6 +3219,7 @@ filter: hue-rotate(90deg);
   align-items: center;
   /* justify-content: center; */
   justify-content: space-between;
+  padding: 0 4px;
   padding: 0 15px;
   width: 100%;
   height: 49px;
@@ -3262,6 +3267,12 @@ filter: hue-rotate(90deg);
   border: 0.5px solid white;
 }
 
+#ctnValueStockFooter,
+#ctnValueOrderFooter {
+  display: none;
+}
+
+#ctnValueOrderFooter.visibleFooter,
 #btnArrowUp.visiblebtnFloating {
   background-color: mediumspringgreen;
   box-shadow: inset 2px 1px 3px #60b66a, inset -1px -1px 3px #d8ffd7;
@@ -3271,6 +3282,7 @@ filter: hue-rotate(90deg);
   font-size: 15px;
 }
 
+#ctnValueStockFooter.visibleFooter,
 #btnArrowDown.visiblebtnFloating {
   background-color: yellow;
   box-shadow: inset 2px 1px 3px #cfb330, inset -1px -1px 3px #d8d8d8;
@@ -3280,15 +3292,28 @@ filter: hue-rotate(90deg);
   font-size: 15px;
 }
 
+#ctnValueStockFooter.visibleFooter,
+#ctnValueOrderFooter.visibleFooter {
+  display: flex;
+  border-radius: 50px;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+}
+
+.total-pagar_footer,
 .total-pagar_inNav {
   display: none;
   font-size: 17px;
 }
 
+.total-pagar_footer.visibleFooter,
 .total-pagar_inNav.visibleFloating {
   display: flex;
   align-items: center;
   background: white;
+  color: black;
   height: 80%;
   min-width: 15%;
   justify-content: center;
@@ -3300,6 +3325,10 @@ filter: hue-rotate(90deg);
   border: 1.5px solid rgba(255, 255, 255, 0.3);
   /* background-color: #ecf0f3;*/
 }
+
+/* .total-pagar_footer.visibleFooter {
+  width: 20px;
+} */
 
 .delete-info-btn.btnFloating {
   visibility: visible;
@@ -3320,7 +3349,6 @@ filter: hue-rotate(90deg);
   color: black;
   border: 0.5px solid white;
 }
-
 
 
 
@@ -3606,4 +3634,24 @@ filter: hue-rotate(90deg);
   justify-content: space-around;
   align-items: center;
 
+}
+    
+.footer_section {
+  display: flex;
+  gap: 10px;
+  height: 80px;
+  background-color: #ffdde1;
+
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  width: 94%;
+  height: 60px;
+  transition: bottom .3s ease;
+  /* background-color: black; */
+  color: white;
+  font-size: 1.5rem;
+  box-shadow: 0 2px 16px hsla(228, 95%, 4%, .1);
+  margin-inline: auto;
+  padding: 0.5rem 1rem;
 }

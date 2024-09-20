@@ -3326,9 +3326,9 @@ filter: hue-rotate(90deg);
   /* background-color: #ecf0f3;*/
 }
 
-/* .total-pagar_footer.visibleFooter {
-  width: 20px;
-} */
+.total-pagar_footer.visibleFooter {
+  height: 50px;
+}
 
 .delete-info-btn.btnFloating {
   visibility: visible;
@@ -3646,7 +3646,7 @@ filter: hue-rotate(90deg);
   left: 0;
   right: 0;
   width: 94%;
-  height: 60px;
+  /* height: 60px; */
   transition: bottom .3s ease;
   /* background-color: black; */
   color: white;

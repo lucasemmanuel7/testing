@@ -433,7 +433,7 @@ function yesResetCard(i) {
     totalOfProducts = 0;
     document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
     document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
-    
+    document.querySelector(".total-pagar_footer").innerHTML = "$  " + totalOfProducts;
   }
 
   countProducts.innerHTML = allProducts.length;
@@ -441,7 +441,9 @@ function yesResetCard(i) {
 
   countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
   countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-  
+  ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+  ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+
   showHTML();
 }
 
@@ -737,6 +739,9 @@ for (let i = 0; i < allCards.length; i++) {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        
       
       showHTML();
     }
@@ -750,6 +755,7 @@ for (let i = 0; i < allCards.length; i++) {
       // countProductFooter = 0;
       document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
       document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
+      document.querySelector(".total-pagar_footer").innerHTML = "$  " + totalOfProducts;
 
       document.querySelector("#count-product").innerHTML =  allProducts.length;
       
@@ -783,6 +789,9 @@ let valorTotal = parseInt(document.querySelector('.total-pagar').textContent);
 let countProducts = document.querySelector('#contador-productos');
 let countStock = document.querySelector('#btnArrowDown');
 let countOrder = document.querySelector('#btnArrowUp');
+let ctnValueOrderFooter = document.querySelector('#ctnValueOrderFooter');
+let ctnValueStockFooter = document.querySelector('#ctnValueStockFooter');
+
 
 let countProductFooter = document.querySelector('#count-product');
 
@@ -877,6 +886,8 @@ for (let i = 0; i < allCards.length; i++) {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
         console.log("totalPagar ", typeof valorTotal, valorTotal)
 
@@ -913,12 +924,15 @@ function funcion2(i) {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
         if (allProducts.length === 0) {
           totalOfProducts = 0;
 
-          document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
-          document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
+          document.querySelector(".total-pagar").innerHTML = "$ " + totalOfProducts;
+          document.querySelector(".total-pagar_inNav").innerHTML = "$ " + totalOfProducts;
+          document.querySelector(".total-pagar_footer").innerHTML = "$ " + totalOfProducts;
         }
       
         showHTML();
@@ -1221,7 +1235,8 @@ const showHTML = () => {
           console.log('calculations ', formatNumber(totalOfProducts))
           
           document.querySelector(".total-pagar").innerHTML = formatNumber(totalOfProducts);
-          document.querySelector(".total-pagar_inNav").innerHTML = formatNumber(totalOfProducts);         
+          document.querySelector(".total-pagar_inNav").innerHTML = formatNumber(totalOfProducts);  
+          document.querySelector(".total-pagar_footer").innerHTML = formatNumber(totalOfProducts);  
 
         position++
         numOfProduct++
@@ -1383,6 +1398,93 @@ function scrollFinished() {
   // console.log("red");
 }
 
+// function IsScrollbarAtBottom() {
+//   var documentHeight = $(document).height();
+//   var scrollDifference = $(window).height() + $(window).scrollTop();
+//   console.log('HHHH', documentHeight === scrollDifference)
+//   return (documentHeight == scrollDifference);
+
+  // documentHeight === scrollDifference;
+  //  if (documentHeight === scrollDifference) {
+
+  //   //  document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+  //   //  document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+
+  //   console.log('HHHH en IF', documentHeight === scrollDifference)
+  //   //  document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+
+  //    // #ctnValueOrderFooter.visibleFooter,
+    
+  // }
+  // } else {
+  //   document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+  //   document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+  //   // document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+  // }
+// }
+
+// $(window).scroll(function () {
+//   if(IsScrollbarAtBottom === true) {
+
+//     console('Estoy fuera de IsScrollbarAtBottom ')
+
+//   }
+// })
+
+// $(window).scroll(function (e){
+//   var body = document.body;    
+//   //alert (body.clientHeight);
+//   var scrollTop = this.pageYOffset || body.scrollTop;
+//   if (body.scrollHeight - scrollTop === parseFloat(body.clientHeight)) {
+//       loadMoreNews();
+//       console.log('HHHH en IF', documentHeight === scrollDifference)
+//       document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+//       document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+//       document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+
+//   }
+// });
+
+// let TheBody = document.getElementsByTagName("body");
+  
+// function OnScrolling(){                             // put this on a scrolling EVENT
+//   let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight; // this is the scroll end Pixel
+  
+//       if (ScrollEnd.toFixed() == window.scrollY.toFixed()){
+//           //do stuff 
+//           console.log('HHRR')
+//           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+//           document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+//           document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+//       } else {
+//           document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+//           document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+//           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+//       }
+//   }
+
+
+$(window).scroll(function (e) {
+  var target = e.currentTarget,
+      scrollTop = target.scrollTop || window.pageYOffset,
+      scrollHeight = target.scrollHeight || document.body.scrollHeight;
+
+  var boolean = scrollHeight - scrollTop === $(target).innerHeight();
+
+  if (boolean === true) {
+          //do stuff 
+          console.log('HHRR')
+          document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+          document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+          document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+          document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+      } else {
+          document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+          document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
+          document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+          document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+      }
+});
 
 const btnToTop = document.querySelector(".btnToNavbar");
 const btnOptionMenu = document.querySelector(".options"); 
@@ -1484,15 +1586,31 @@ yesDeleteInfoCards.addEventListener('click', () => {
     	  product =>  product.title !== productName,
         )
 
-        // if (allProducts.length === 0) {
-          // rowProduct.classList.add('no__Visible');
-        // } 
+
+
+
+        countProducts.innerHTML = allProducts.length;
+        countProductFooter.innerHTML = allProducts.length;
+
+        countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
+        countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+
+        if (allProducts.length === 0) {
+          totalOfProducts = 0;
+
+          document.querySelector(".total-pagar").innerHTML = "$ " + totalOfProducts;
+          document.querySelector(".total-pagar_inNav").innerHTML = "$ " + totalOfProducts;
+          document.querySelector(".total-pagar_footer").innerHTML = "$ " + totalOfProducts;
+        }
     }
 
     document.querySelector(".ctn-delete-info-all-cards").classList.remove("visible");
     body.classList.remove("stop");
     body.classList.add("moving");
 
+    showHTML()
 })
 
 

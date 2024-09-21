@@ -441,8 +441,8 @@ function yesResetCard(i) {
 
   countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
   countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+  ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order === 0 ).length;
   ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-  ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
   showHTML();
 }
@@ -739,8 +739,8 @@ for (let i = 0; i < allCards.length; i++) {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
         
       
       showHTML();
@@ -886,8 +886,8 @@ for (let i = 0; i < allCards.length; i++) {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
         console.log("totalPagar ", typeof valorTotal, valorTotal)
 
@@ -924,8 +924,8 @@ function funcion2(i) {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
         if (allProducts.length === 0) {
           totalOfProducts = 0;
@@ -1398,12 +1398,38 @@ function scrollFinished() {
   // console.log("red");
 }
 
+// window.addEventListener('scroll', function(evt) {
+//   let blur = window.scrollY;
+
+
+//   // let maxY = window.scrollMaxY;
+
+//   //  window.scrollTo(0, maxY);
+
+//   if($(document).height() - $(window).height() - $(window).scrollTop() == 180){
+//      console.log('Holis', $(document).height() - $(window).height() - $(window).scrollTop())
+
+//     // document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+//     // document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+//     // document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+//     document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+//   } if($(document).height() - $(window).height() - $(window).scrollTop() < 180){
+   
+//     document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+//   }
+  
+//   console.log(`blur(${blur}px)`); 
+
+// });
+
 // function IsScrollbarAtBottom() {
 //   var documentHeight = $(document).height();
 //   var scrollDifference = $(window).height() + $(window).scrollTop();
 //   console.log('HHHH', documentHeight === scrollDifference)
-//   // return (documentHeight == scrollDifference);
+//   return (documentHeight == scrollDifference);
 //   // documentHeight === scrollDifference;
+
+// }
 
 //    if (documentHeight === scrollDifference) {
 //     //do stuff 
@@ -1443,7 +1469,33 @@ function scrollFinished() {
 //   }
 // });
 
-let TheBody = document.getElementsByTagName("body");
+
+// let TheBody = document.getElementsByTagName("body");
+  
+// function OnScrolling(){                             // put this on a scrolling EVENT
+//   let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight - 580; // this is the scroll end Pixel
+//   let ScrollMoving = window.scrollY.toFixed() - 580;
+
+//       if (ScrollEnd.toFixed() == ScrollMoving){
+//           //do stuff 
+//           result = window.scrollY.toFixed() - 580;
+//           console.log('HHRR', ScrollEnd.toFixed(), result, window.innerHeight)
+//           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+//           document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+//           document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+//           document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+//       } 
+//       else {
+//           document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+//           document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
+//           document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+//           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+//       }
+//   }
+
+
+
+  let TheBody = document.getElementsByTagName("body");
   
 function OnScrolling(){                             // put this on a scrolling EVENT
 
@@ -1451,21 +1503,73 @@ function OnScrolling(){                             // put this on a scrolling E
 
       boolean = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
 
-      if( boolean <= 80){
-        console.log('Holis', $(document).height() - $(window).height() - $(window).scrollTop())
-   
-       document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-       document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-       document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-       document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-     } if( boolean > 80 ){
       
-       document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-       document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
-       document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-       document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-     }
+    if(document.querySelector('.ctn-btn-limpiar-cards').classList.contains("btnFloating")) {
+
+      if( boolean <= 80){
+          console.log('Holis', $(document).height() - $(window).height() - $(window).scrollTop())
+    
+        document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+        document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+        document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+        document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+      } if( boolean > 80 ){
+        
+        document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+        document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
+        document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+        document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+      }
+      
+    }
+
   }
+
+
+
+
+
+
+
+//   function scrolled(event) {
+//     const container = event.target.body
+//     const {clientHeight, scrollHeight, scrollY: scrollTop} = container
+ 
+//     if (clientHeight + scrollY >= scrollHeight) {
+//      scrolledToBottom(event);
+//      console.log('HHBB');
+//     }
+//  }
+
+
+// function onScroll(event) {
+//   const tracker = event.target;
+//   const limit = tracker.scrollHeight - tracker.clientHeight;
+//   if (event.target.scrollTop === limit) {
+//     alert('Bottom reached');
+//      console.log('HHBB');
+
+//   }
+// }
+
+// $('#bodyidBody').scroll(function() {
+//   if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
+//     console.log('HHBB');
+//       alert('Bottom reached!');
+//   }
+// });
+
+
+// $('#bodyidBody').on('scroll', function() {
+//   var scrollTop = $(this).scrollTop();
+//   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
+//     $('#message').text('end reached');
+//   } else if (scrollTop <= 0) {
+//     $('#message').text('Top reached');
+//   } else {
+//     $('#message').text('');
+//   }
+// });
 
 // $(window).scroll(function (e) {
 //   var target = e.currentTarget,
@@ -1488,7 +1592,6 @@ function OnScrolling(){                             // put this on a scrolling E
 //           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
 //       }
 // });
-
 
 const btnToTop = document.querySelector(".btnToNavbar");
 const btnOptionMenu = document.querySelector(".options"); 

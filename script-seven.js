@@ -1446,23 +1446,26 @@ function scrollFinished() {
 let TheBody = document.getElementsByTagName("body");
   
 function OnScrolling(){                             // put this on a scrolling EVENT
-  let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight - 20; // this is the scroll end Pixel
-  
-      if (ScrollEnd.toFixed() == window.scrollY.toFixed() - 20){
-          //do stuff 
-          console.log('HHRR')
-          document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-          document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-          document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-          document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-      } else {
-          document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-          document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
-          document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-          document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-      }
-}
 
+      console.log('scrool ',  Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed()))
+
+      boolean = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
+
+      if( boolean <= 80){
+        console.log('Holis', $(document).height() - $(window).height() - $(window).scrollTop())
+   
+       document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+       document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+       document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+       document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+     } if( boolean > 80 ){
+      
+       document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
+       document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
+       document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
+       document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+     }
+  }
 
 // $(window).scroll(function (e) {
 //   var target = e.currentTarget,

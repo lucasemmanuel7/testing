@@ -2989,6 +2989,10 @@ input:disabled {
   color: white;
 }
 
+.price-total-product {
+  width: auto;
+}
+
 /* .name-product-cart,
 .price-product-cart {
   width: 50px;

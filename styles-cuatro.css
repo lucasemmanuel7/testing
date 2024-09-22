@@ -3749,6 +3749,7 @@ filter: hue-rotate(90deg);
     
 .footer_section {
   display: flex;
+  justify-content: space-between;
   gap: 10px;
   height: 80px;
   background-color: #ffdde1;
@@ -3767,9 +3768,13 @@ filter: hue-rotate(90deg);
   padding: 0.5rem 1rem;
 }
 
+.ctn-menu-in-footer {
+  display: flex;
+  gap: 10px;
+}
+
 .design_by {
-  width: 37%;
+  display: flex;
+  flex-direction: column;
   color: black;
-  position: absolute;
-  right: 12px;
 }

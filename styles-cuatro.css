@@ -3766,3 +3766,8 @@ filter: hue-rotate(90deg);
   margin-inline: auto;
   padding: 0.5rem 1rem;
 }
+
+.design_by {
+  width: 50%;
+  color: black;
+}

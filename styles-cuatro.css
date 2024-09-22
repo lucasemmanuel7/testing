@@ -2961,6 +2961,7 @@ input:disabled {
   gap: 7px;
   height: 45px;
   font-size: 12px;
+  padding: 0 1px;
   /* border: 1px solid black; */
 
   /* border: 1px solid rgb(253, 189, 189); */
@@ -3775,7 +3776,7 @@ filter: hue-rotate(90deg);
   gap: 10px;
 }
 
-.design_by {
+.ctn-design_by {
   display: flex;
   flex-direction: column;
   color: black;

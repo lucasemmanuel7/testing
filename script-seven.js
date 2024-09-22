@@ -1,4 +1,3 @@
-
 const quantities = document.querySelectorAll('.product_card');
 
 [...quantities].forEach(function(quantity) {
@@ -47,7 +46,6 @@ const quantities = document.querySelectorAll('.product_card');
 somefunction = function () { return false;}
 
 
-//const html = document.querySelector("html"); // volvió para eliminar el scroll overflow-y
 const body = document.querySelector("body");
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
@@ -58,8 +56,6 @@ abrir.addEventListener("click", () => {
    nav.classList.add("visible");
    body.classList.remove("moving");
    body.classList.add("stop");
-   // html.classList.remove("moving"); // volvió para eliminar el scroll overflow-y
-   // html.classList.add("stop"); // volvió para eliminar el scroll overflow-y
 
    navExpandList.classList.remove('show-list');
    document.querySelector(".btnToNavbar").classList.remove("visiblebtnFloating");
@@ -71,8 +67,6 @@ cerrar.addEventListener("click", () => {
    nav.classList.remove("visible");
    body.classList.remove("stop");
    body.classList.add("moving");
-  // html.classList.remove("stop"); // volvió para eliminar el scroll overflow-y
-  // html.classList.add("moving"); // volvió para eliminar el scroll overflow-y
 })
 
 const viewportWsp = document.querySelector("#viewportWsp");
@@ -97,8 +91,6 @@ shopListOpen.addEventListener("click", () => {
  productsList.classList.add("visible");
  body.classList.remove("moving");
  body.classList.add("stop");
-//  html.classList.remove("moving");
-//  html.classList.add("stop");
 
  navExpandList.classList.remove('show-list');
  document.querySelector(".btnToNavbar").classList.remove("visiblebtnFloating");
@@ -111,8 +103,6 @@ shopListClose.addEventListener("click", () => {
  productsList.classList.remove("visible");
  body.classList.remove("stop");
  body.classList.add("moving");
-//  html.classList.remove("stop");
-//  html.classList.add("moving");
 })
 
 
@@ -131,49 +121,25 @@ cartProductList.addEventListener("click", () => {
 })
 
 
-// function scrollToTop() {
-//  document.body.scrollTop = 0;
-//  document.documentElement.scrollTop = 0;
-// }
-
 function scrollToTop() {
+
  document.body.scrollTop = 0;
- document.documentElement.scrollTop = 0; 
+ document.documentElement.scrollTop = 0;
+ 
 }
-
-// window.onscroll = function() {scrollFunction()};
-
-
-// function scrollFunction() {
-//  const logoImg = document.getElementById("logo");
-//  const arrowTop = document.getElementById("to-top-arrow")
-
-
-//  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-//    logoImg.classList.add("logoNoVisible");
-//    arrowTop.classList.add("arrowTopVisible");
-//  } else {
-//    logoImg.classList.remove("logoNoVisible");
-//    arrowTop.classList.remove("arrowTopVisible");
-//  }
-// }
 
 
 function closeNav() {
   nav.classList.remove("visible");
   body.classList.remove("stop");
   body.classList.add("moving");
- //  html.classList.remove("stop");
- //  html.classList.add("moving");
- }
+}
 
 
 function closeList() {
  productsList.classList.remove("visible");
  body.classList.remove("stop");
  body.classList.add("moving");
-//  html.classList.remove("stop");
-//  html.classList.add("moving");
 }
 
 const positionBtnList = document.querySelector(".menu-invertion-btns");
@@ -203,17 +169,6 @@ positionBtnList.addEventListener('click', () => {
 
   })
 }
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   // Titulo
-//    test = JSON.parse(localStorage.getItem("arr"));
-//   if (test === true) {
-//       // const positionBtnList = document.querySelector(".menu-invertion-btns");
-//       positionBtnList.click();
-//   }
-// })
-
-   
 
 
 
@@ -756,14 +711,12 @@ for (let i = 0; i < allCards.length; i++) {
 
     if (allProducts.length === 0) {
       totalOfProducts = 0;
-      // countProductFooter = 0;
       document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
       document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
       document.querySelector(".total-pagar_footer").innerHTML = "$  " + totalOfProducts;
 
       document.querySelector("#count-product").innerHTML =  allProducts.length;
       
-     
       showHTML();
     } else {
       document.querySelector("#count-product").innerHTML =  allProducts.length;
@@ -947,37 +900,6 @@ function funcion2(i) {
 
 
 
-
-// rowProduct.addEventListener('click', e => {
-
-//   console.log('borrar ', e.target.classList.contains("borrar"))
-
-//   // cartProduct = document.querySelectorAll('.cart-product')[0].querySelector("a").getAttribute("href").slice(1);
-  
-
-//     if(e.target.classList.contains("borrar")) {
-//         const product = e.target.parentElement;
-//         const title = product.querySelector("a").getAttribute("href").slice(1);
-
-//        console.log ('target ', e.target.parentElement)
-
-//         console.log('title ', title);
-
-
-//         allProducts = allProducts.filter(
-//             product => console.log('product.card ', product.card),
-//         )
-
-
-        
-//         console.log(allProducts);
-//         countProducts.innerHTML = allProducts.length;
-      
-//         showHTML();
-//     }
-// })
-
-
 function formatNumber(num) {
   return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 }
@@ -993,15 +915,8 @@ const showHTML = () => {
   let counter = document.querySelector(".count-products");
   let cartEmpty = document.querySelector(".ctn-cartel-cart-empty");
   let ctnMessageWsp = document.querySelector(".ctn-messages");
-  // let navList = document.querySelector(".nav-list");
 
-  // if (allProducts.length === 0) {
-//   rowProduct = document.querySelector(".row-product").classList.add("noVisible");
-// } else {
-//   rowProduct = document.querySelector(".row-product").classList.remove("noVisible");
-// }
-
-
+  
   if (!allProducts.length) {
 		counter.classList.add('hidden');
 		cartEmpty.classList.remove('no_Visible');
@@ -1248,18 +1163,13 @@ const showHTML = () => {
     });
 
 
-    localStorage.setItem("allProducts", JSON.stringify(allProducts));   // Guardando en localStorage
+  localStorage.setItem("allProducts", JSON.stringify(allProducts));   // Guardando en localStorage
 
 
   let tester = document.querySelector(".test");
 
-  console.log('ctnMessageWsp ', ctnMessageWsp.textContent,  ctnMessageWsp.textContent.length)
   
-  // console.log('k ', isNaN(tester.length)) 
   let contain = document.getElementsByClassName('test').length;
-
-  console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
-
   
     if ( contain >= 1 ) {
       
@@ -1270,17 +1180,8 @@ const showHTML = () => {
       console.log('tester ', tester = 0)
 
     }
-  
-    // document.querySelector('.total-wsp').remove()
 
-    // var cell = document.getElementsByTagName('br');
-    // var length = cell.length;
-    // for(var i = 0; i < length; i++) {
-    // cell[0].parentNode.removeChild(cell[0]);
-    // }
-
-
-    const ctnBtn = document.querySelectorAll(".ctn-icon-close");
+  const ctnBtn = document.querySelectorAll(".ctn-icon-close");
 
     for (let i = 0; i < ctnBtn.length; i++) {
       ctnBtn[i].addEventListener("click", function() {
@@ -1296,16 +1197,6 @@ const showHTML = () => {
     
 }
 
-// if (allProducts.length === 0) {
-//   // rowProduct = document.querySelector(".row-product").classList.add("noVisible");
-//   rowProduct.classList.add('no__Visible');
-// } 
-
-// else {
-//   rowProduct = document.querySelector(".row-product").classList.remove("noVisible");
-// }
-
-// .enviar
 
 $(".ctn-btn-message").click(function(){
 
@@ -1313,40 +1204,29 @@ $(".ctn-btn-message").click(function(){
 
   let testWsp = document.querySelector(".testWsp");
   
-  
-	
-  //let ctnMessageWsp = document.querySelector(".ctn-messages");
 
-   let ctnMessageWsp = document.querySelector(".converMessageWsp");
+  let ctnMessageWsp = document.querySelector(".converMessageWsp");
 	
-   console.log('ctnMessageWsp ', ctnMessageWsp)
+  console.log('ctnMessageWsp ', ctnMessageWsp)
 	
   let contain = document.getElementsByClassName('test').length;
-
-  // let contain = document.getElementsByClassName('testWsp').length;
-
 
   console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
 
   
-    if ( contain >= 1 ) {
+  if ( contain >= 1 ) {
       
-      console.log('tester ', tester.textContent,  tester.textContent.length)
+    console.log('tester ', tester.textContent,  tester.textContent.length)
 
-      document.querySelector(".preloader").classList.toggle("hidden");
+    document.querySelector(".preloader").classList.toggle("hidden");
 
-      window.addEventListener("blur", () => {
-      document.querySelector(".preloader").classList.add("hidden");
-      })
-      
-      // console.log('testWsp ', testWsp.textContent,  testWsp.textContent.length)
+    window.addEventListener("blur", () => {
+    document.querySelector(".preloader").classList.add("hidden");
+    })
 
-
-    } if ( contain === 0 ) {
-
-      console.log('tester ', tester = 0);
-
-    }
+  } if ( contain === 0 ) {
+    tester = 0;
+  }
 
   if( contain >= 1 ){
       var phone = "+5491150649933";
@@ -1358,37 +1238,12 @@ $(".ctn-btn-message").click(function(){
 })
 
 
-
-// for (let i = 0; i < allCards.length; i++) {
-//   allCards[i].addEventListener("click", function() {
-
-//     let name_img_price = document.querySelectorAll(".name_img_price")[i];
-
-//     let contains = {
-//       nameImgPrice: name_img_price.classList.contains('activo_yellow_card'),
-//     }
-
-//     let nameCardYellow = contains.nameImgPrice;
-
-//     localStorage.setItem("nameCardYellow", JSON.stringify(nameCardYellow)); 
-
-//     let numStockCounter = document.querySelectorAll('.num_stock_counter')[i].value;
-
-//     localStorage.setItem("numStockCounter", JSON.stringify(numStockCounter)); 
-
-
-//   }
-// )}
-
 let ctnBtnLimpiarCards = document.querySelector(".ctn-btn-limpiar-cards");
 
 var scrollTimer = -1;
 
 function bodyScroll() {
-  // document.body.style.backgroundColor = "white";
-  
   document.querySelector(".ctn-btn-limpiar-cards").classList.add('noVisible');
-  // console.log("white");
 
   if (scrollTimer != -1)
     clearTimeout(scrollTimer);
@@ -1397,113 +1252,17 @@ function bodyScroll() {
 }
 
 function scrollFinished() {
-  // document.body.style.backgroundColor = "red";
   document.querySelector(".ctn-btn-limpiar-cards").classList.remove('noVisible');
-  // console.log("red");
 }
 
-// window.addEventListener('scroll', function(evt) {
-//   let blur = window.scrollY;
 
 
-//   // let maxY = window.scrollMaxY;
-
-//   //  window.scrollTo(0, maxY);
-
-//   if($(document).height() - $(window).height() - $(window).scrollTop() == 180){
-//      console.log('Holis', $(document).height() - $(window).height() - $(window).scrollTop())
-
-//     // document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-//     // document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-//     // document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-//     document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-//   } if($(document).height() - $(window).height() - $(window).scrollTop() < 180){
-   
-//     document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-//   }
-  
-//   console.log(`blur(${blur}px)`); 
-
-// });
-
-// function IsScrollbarAtBottom() {
-//   var documentHeight = $(document).height();
-//   var scrollDifference = $(window).height() + $(window).scrollTop();
-//   console.log('HHHH', documentHeight === scrollDifference)
-//   return (documentHeight == scrollDifference);
-//   // documentHeight === scrollDifference;
-
-// }
-
-//    if (documentHeight === scrollDifference) {
-//     //do stuff 
-//     console.log('HHRR')
-//     document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-//     document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-//     document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-//     ocument.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-
-//   } else {
-//     document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-//     document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
-//     document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-//     document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-//   }
-// }
-
-// $(window).scroll(function () {
-//   if(IsScrollbarAtBottom === true) {
-
-//     console('Estoy fuera de IsScrollbarAtBottom ')
-
-//   }
-// })
-
-// $(window).scroll(function (e){
-//   var body = document.body;    
-//   //alert (body.clientHeight);
-//   var scrollTop = this.pageYOffset || body.scrollTop;
-//   if (body.scrollHeight - scrollTop === parseFloat(body.clientHeight)) {
-//       loadMoreNews();
-//       console.log('HHHH en IF', documentHeight === scrollDifference)
-//       document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-//       document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-//       document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-
-//   }
-// });
-
-
-// let TheBody = document.getElementsByTagName("body");
-  
-// function OnScrolling(){                             // put this on a scrolling EVENT
-//   let ScrollEnd = TheBody[0].scrollHeight - window.innerHeight - 580; // this is the scroll end Pixel
-//   let ScrollMoving = window.scrollY.toFixed() - 580;
-
-//       if (ScrollEnd.toFixed() == ScrollMoving){
-//           //do stuff 
-//           result = window.scrollY.toFixed() - 580;
-//           console.log('HHRR', ScrollEnd.toFixed(), result, window.innerHeight)
-//           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-//           document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-//           document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-//           document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-//       } 
-//       else {
-//           document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-//           document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
-//           document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-//           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-//       }
-//   }
-
-
-
-  let TheBody = document.getElementsByTagName("body");
+let TheBody = document.getElementsByTagName("body");
   
 function OnScrolling(){                             // put this on a scrolling EVENT
 
       console.log('scrool ',  Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed()))
+      console.log('$(document).height() ', typeof $(document).height())
 
       boolean = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
 
@@ -1524,78 +1283,12 @@ function OnScrolling(){                             // put this on a scrolling E
         document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
         document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
       }
-      
+
     }
 
   }
 
 
-
-
-
-
-
-//   function scrolled(event) {
-//     const container = event.target.body
-//     const {clientHeight, scrollHeight, scrollY: scrollTop} = container
- 
-//     if (clientHeight + scrollY >= scrollHeight) {
-//      scrolledToBottom(event);
-//      console.log('HHBB');
-//     }
-//  }
-
-
-// function onScroll(event) {
-//   const tracker = event.target;
-//   const limit = tracker.scrollHeight - tracker.clientHeight;
-//   if (event.target.scrollTop === limit) {
-//     alert('Bottom reached');
-//      console.log('HHBB');
-
-//   }
-// }
-
-// $('#bodyidBody').scroll(function() {
-//   if($(this).scrollTop() + $(this).innerHeight() >= $(this)[0].scrollHeight) {
-//     console.log('HHBB');
-//       alert('Bottom reached!');
-//   }
-// });
-
-
-// $('#bodyidBody').on('scroll', function() {
-//   var scrollTop = $(this).scrollTop();
-//   if (scrollTop + $(this).innerHeight() >= this.scrollHeight) {
-//     $('#message').text('end reached');
-//   } else if (scrollTop <= 0) {
-//     $('#message').text('Top reached');
-//   } else {
-//     $('#message').text('');
-//   }
-// });
-
-// $(window).scroll(function (e) {
-//   var target = e.currentTarget,
-//       scrollTop = target.scrollTop || window.pageYOffset,
-//       scrollHeight = target.scrollHeight || document.body.scrollHeight;
-
-//   var boolean = scrollHeight - scrollTop === $(target).innerHeight();
-
-//   if (boolean === true) {
-//           //do stuff 
-//           console.log('HHRR')
-//           document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-//           document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-//           document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-//           document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-//       } else {
-//           document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-//           document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
-//           document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-//           document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-//       }
-// });
 
 const btnToTop = document.querySelector(".btnToNavbar");
 const btnOptionMenu = document.querySelector(".options"); 
@@ -1610,6 +1303,16 @@ btnToTop.addEventListener('click', () => {
   document.querySelector("#btnArrowDown").classList.toggle("visiblebtnFloating");
   document.querySelector(".delete-info-btn").classList.toggle("btnFloating");
   document.querySelector(".total-pagar_inNav").classList.toggle("visibleFloating");
+
+  let contains = {
+    btnsOptionInBottom: true,
+  }
+
+   console.log('contains: ', contains.btnsOptionInBottom);
+
+   let btnOption = contains.btnsOptionInBottom;
+
+   localStorage.setItem("btnOptionMenuArr", JSON.stringify(btnOption)); 
 })
 
 
@@ -1633,31 +1336,8 @@ btnOptionMenu.addEventListener('click', () => {
   document.querySelector(".options").classList.toggle('hover');
   document.querySelector(".configuration").classList.toggle('no__Visible');
   document.querySelector(".options-close").classList.toggle('visible');
-  
-  let contains = {
-    btnsOptionInBottom: btnToTop.classList.contains("visiblebtnFloating"),
-  }
-
-   console.log('contains: ', contains.btnsOptionInBottom);
-
-   let btnOption = contains.btnsOptionInBottom;
-
-   localStorage.setItem("btnOptionMenuArr", JSON.stringify(btnOption)); 
  
 })
-
-
-// document.addEventListener("DOMContentLoaded", function() {
-//   // Titulo
-//   //  test = JSON.parse(localStorage.getItem("arr"));
-//   // if (test === true) {
-//   //     // const positionBtnList = document.querySelector(".menu-invertion-btns");
-//   //     positionBtnList.click();
-//   // }
-
-
-// })
-
 
 
 
@@ -1673,6 +1353,16 @@ btnToNav.addEventListener('click', () => {
   document.querySelector("#btnArrowUp").classList.remove("visiblebtnFloating");
   document.querySelector("#btnArrowDown").classList.remove("visiblebtnFloating");
   document.querySelector(".total-pagar_inNav").classList.remove("visibleFloating");
+
+  let contains = {
+    btnsOptionInBottom: false,
+  }
+
+   console.log('contains: ', contains.btnsOptionInBottom);
+
+   let btnOption = contains.btnsOptionInBottom;
+
+   localStorage.setItem("btnOptionMenuArr", JSON.stringify(btnOption)); 
 })
 
 
@@ -1742,12 +1432,6 @@ deleteCtnQuestion.addEventListener('click', () => {
 
 
 
-
-
-
-
-
-
 document.addEventListener("DOMContentLoaded", function() {
   // Titulo
     
@@ -1780,7 +1464,6 @@ document.addEventListener("DOMContentLoaded", function() {
     btnOption = JSON.parse(localStorage.getItem("btnOptionMenuArr"));
 
     if (btnOption === true) {
-      // const positionBtnList = document.querySelector(".menu-invertion-btns");
       btnOptionMenu.click();
       btnToTop.click();
     }
@@ -1790,71 +1473,9 @@ document.addEventListener("DOMContentLoaded", function() {
     test = JSON.parse(localStorage.getItem("arr"));
 
     if (test === true) {
-        // const positionBtnList = document.querySelector(".menu-invertion-btns");
         positionBtnList.click();
     }
 
+
+    scrollToTop()
 })
-
-
-
-
-
-
-
-
-
-// const boxes = document.querySelectorAll('.product_card');
-// const option = {
-//   root: null, //viewport
-//   rootMargin: '80px',
-//   threshold: 0.5, // 50%가 viewport에 들어와 있어야 callback 실행
-// }
-// const callback = (entries, observer) => {
-
-//   newArr = allProducts.filter(x=>x.hasOwnProperty('position')).map(x=>x.position[0]);
-
-//   newArrSort = newArr.sort((a, b) => a - b );
-
-//   console.log(allProducts.filter(x=>x.hasOwnProperty('position')).map(x=>x.position[0]))
-
-//   console.log('newArrSort ', newArrSort )
-
-//   entries.forEach(entry => {
-
-//     if (entry.isIntersecting) {
-//       // entry.target.classList.add('active');
-//       console.log('entry.target .add', entry.target, entry.target.dataset.for)
-
-//       // return entry.target.dataset.for
-
-//       // sumar1(valor)
-//     //  console.log('data X', valor)
-
-//       // document.querySelector("#torta_porcion").dataset.for
-//       // allProducts.map((value, index, arrayRef) => { console.log('arrayRef.length ', arrayRef.length) });
-//       // sumar1(entry.target)
-
-//       let val = entry.target.dataset.for;
-//       let number = newArrSort.reverse().find(e => e <= val);
-  
-//       console.log('cercanoMinimo ', number);
-  
-  
-//       goal = entry.target.dataset.for;
-  
-//       let min = Math.min(...newArrSort.filter( num => num >= goal ));
-  
-//       console.log('cercanoMaximo ', min)
-        
-//     } else {
-//       // entry.target.classList.remove('active');
-//       console.log('entry.target .remove ', entry.target, entry.target.dataset.for)
-//     }
-      
-//   });
-
-// };
-// const observer = new IntersectionObserver(callback, option);
-
-// boxes.forEach(box => observer.observe(box));

@@ -136,6 +136,10 @@ cartProductList.addEventListener("click", () => {
 //  document.documentElement.scrollTop = 0;
 // }
 
+function scrollToTop() {
+ document.body.scrollTop = 0;
+ document.documentElement.scrollTop = 0; 
+}
 
 // window.onscroll = function() {scrollFunction()};
 

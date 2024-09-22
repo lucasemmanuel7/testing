@@ -3179,6 +3179,7 @@ filter: hue-rotate(90deg);
   column-gap: 2rem;
   overflow: hidden;
   box-shadow: rgb(0 0 0 / 40%) 0px 30px 90px;
+  transition: all 0.3s ease;
 }
 
 .ctn-btn-limpiar-cards.noVisible {

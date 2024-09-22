@@ -3778,3 +3778,11 @@ filter: hue-rotate(90deg);
   flex-direction: column;
   color: black;
 }
+
+.designed-by {
+  max-width: fit-content;
+}
+
+.design-name {
+  width: min-content;
+}

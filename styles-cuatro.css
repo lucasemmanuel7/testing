@@ -3646,13 +3646,12 @@ filter: hue-rotate(90deg);
   bottom: 1.5rem;
   left: 0;
   right: 0;
-  width: 94%;
+  width: 100%;
   /* height: 60px; */
   transition: bottom .3s ease;
   /* background-color: black; */
   color: white;
   font-size: 1.5rem;
   box-shadow: 0 2px 16px hsla(228, 95%, 4%, .1);
-  margin-inline: auto;
   padding: 0.5rem 1rem;
 }

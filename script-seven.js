@@ -1304,6 +1304,15 @@ btnToTop.addEventListener('click', () => {
   document.querySelector(".delete-info-btn").classList.toggle("btnFloating");
   document.querySelector(".total-pagar_inNav").classList.toggle("visibleFloating");
 
+  valueScrollBottom = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
+  
+  if( valueScrollBottom <= 80){	  
+      document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
+      document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
+      document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
+      document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');     
+  } 
+
   let contains = {
     btnsOptionInBottom: true,
   }

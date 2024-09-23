@@ -1109,6 +1109,10 @@ width: 90%;      /* width: 100%; */
   background-size: cover;
 }
 
+ .container_card.violet_active {
+  box-shadow: blueviolet 0px 0px 0px 4px;
+ }
+
  .container_card.background-yellow {
   background-image: url(img/cake-pasteleria.jpg);
   background-size: contain;

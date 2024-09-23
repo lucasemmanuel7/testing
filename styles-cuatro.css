@@ -3808,6 +3808,7 @@ filter: hue-rotate(90deg);
 
   .footer_section {
     align-items: center;
+    padding: 0rem 1.5rem;
   }
 
   .design-name {

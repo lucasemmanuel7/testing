@@ -3795,6 +3795,15 @@ filter: hue-rotate(90deg);
   width: min-content;
 }
 
+@media screen and (min-width:360px){
+
+  .list-products-options .height-container .styleBtnList {
+    width: 193px;
+  }
+  .ctn-info-counters {
+    width: 35%;
+  }
+}
 
 @media only screen and (min-width: 390px) and (max-width: 700px) {
   .container_cards{

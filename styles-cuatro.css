@@ -3773,7 +3773,7 @@ filter: hue-rotate(90deg);
   font-size: 1.5rem;
   box-shadow: 0 2px 16px hsla(228, 95%, 4%, .1);
   /*margin-inline: auto;*/
-  padding: 1rem 0.5rem;
+  padding: 0rem 1rem;
 }
 
 .ctn-menu-in-footer {

@@ -60,6 +60,9 @@ abrir.addEventListener("click", () => {
    navExpandList.classList.remove('show-list');
    document.querySelector(".btnToNavbar").classList.remove("visiblebtnFloating");
    document.querySelector(".btnToNavbarTwo").classList.remove("visiblebtnFloating");
+   document.querySelector(".options").classList.remove("hover");
+   document.querySelector(".options-close").classList.remove("visible")
+   document.querySelector(".configuration").classList.remove("no__Visible")
 })
 
 
@@ -95,6 +98,9 @@ shopListOpen.addEventListener("click", () => {
  navExpandList.classList.remove('show-list');
  document.querySelector(".btnToNavbar").classList.remove("visiblebtnFloating");
  document.querySelector(".btnToNavbarTwo").classList.remove("visiblebtnFloating");
+ document.querySelector(".options").classList.remove("hover");
+ document.querySelector(".options-close").classList.remove("visible")
+ document.querySelector(".configuration").classList.remove("no__Visible")
 
 })
 

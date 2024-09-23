@@ -3819,9 +3819,9 @@ filter: hue-rotate(90deg);
 
 @media screen and (min-width:1024px){
   .container_cards{
-      width: 95%;
+      width: 90%;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 10px;
+      grid-gap: 25px;
       /* grid-template-rows: 200px; */
   }
   .container_cards .box-img:nth-child(1){

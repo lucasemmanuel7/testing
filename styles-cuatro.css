@@ -3790,6 +3790,7 @@ filter: hue-rotate(90deg);
 
 .designed-by {
   max-width: fit-content;
+  font-family: fangsong;
 }
 
 .design-name {

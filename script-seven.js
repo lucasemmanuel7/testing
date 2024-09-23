@@ -176,6 +176,19 @@ positionBtnList.addEventListener('click', () => {
   })
 }
 
+let productListBtn = document.querySelectorAll(".ctn-btn-list");
+
+for (let i = 0; i < productListBtn.length; i++) {
+  productListBtn[i].addEventListener('click', function() {
+    ctnCard = document.querySelectorAll(".container_card")[i].classList.add("violet_active");
+
+    setTimeout(function(){
+      document.querySelectorAll(".container_card")[i].classList.remove('violet_active');
+    }, 10000);
+    
+  }
+)}
+
 
 
 const ctnCards = document.querySelectorAll(".container_card");

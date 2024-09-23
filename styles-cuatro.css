@@ -3798,7 +3798,7 @@ filter: hue-rotate(90deg);
 
 @media screen and (min-width:700px){
   .container_cards{
-      width: 95%;
+      width: 90%;
       grid-template-columns: repeat(2, 1fr);
       grid-gap: 10px;
       /* grid-template-rows: 200px; */
@@ -3810,7 +3810,7 @@ filter: hue-rotate(90deg);
 }
 @media only screen and (min-width: 390px) and (max-width: 700px) {
   .container_cards{
-      width: 65%;
+      width: 85%;
       grid-template-columns: repeat(1, 1fr);
   }
 }

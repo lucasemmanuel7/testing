@@ -3840,7 +3840,11 @@ filter: hue-rotate(90deg);
   .container_cards .box-img:nth-child(1){
       grid-column-start: span 1;
   }
-
+	
+  .container-list-products-options {
+    width: 80%;
+    margin-inline: auto;
+  }
 }
 
 @media screen and (min-width:1024px){

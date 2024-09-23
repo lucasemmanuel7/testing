@@ -3819,13 +3819,40 @@ filter: hue-rotate(90deg);
 
 @media screen and (min-width:1024px){
   .container_cards{
-      width: 90%;
+      width: 95%;
       grid-template-columns: repeat(3, 1fr);
-      grid-gap: 25px;
+      grid-gap: 10px;
       /* grid-template-rows: 200px; */
   }
   .container_cards .box-img:nth-child(1){
       grid-column-start: span 1;
+  }
+
+  .container_nav_list {
+    width: 80%;
+    margin-inline: auto;
+  }
+
+  .row-product {
+    height: max-content;
+  }
+
+  .cart-product {
+    justify-content: space-around;
+    height: 120px;
+    gap: 0;
+  }
+
+  .ctn-name-product-and-close,
+  .ctn-name-product-and-close_green, 
+  .ctn-name-product-and-close_red {
+   height: 35px;
+  }
+
+  .ctn-num-product,
+  .ctn-icon-close {
+    width: 33px;
+    height: 33px;
   }
 
 }

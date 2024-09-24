@@ -1084,8 +1084,8 @@ const showHTML = () => {
               &nbsp &nbsp* Comprar: &nbsp ${data.order} <br/>
               &nbsp &nbsp* Stock: &nbsp ${numero} <br/>
               <br/>
-              • Precio por unidad: &nbsp $${data.price} <br/>
-              -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total} <- <br/>
+              • Precio por unidad: &nbsp ${formatNumber(data.price)} <br/>
+              -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp ${formatNumber(data.total)} <- <br/>
               <br/>
               """""""""""""""""""""""""""""""""""""" <br/>
           </div>
@@ -1121,12 +1121,12 @@ const showHTML = () => {
                 &nbsp &nbsp* Comprar: &nbsp ${data.order} <br/>
                 &nbsp &nbsp* Stock: &nbsp ${numero} <br/>
                 <br/>
-                • Precio por unidad: &nbsp $${data.price} <br/>
-                -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp $${data.total} <- <br/>
+                • Precio por unidad: &nbsp ${formatNumber(data.price)} <br/>
+                -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: &nbsp ${formatNumber(data.total)} <- <br/>
                 <br/>
                 """""""""""""""""""""""""""""""""""""" <br/>
                 <br/>
-                <span class="total-wsp"> (&nbsp Total por toda la compra: &nbsp $${totalOfProducts} &nbsp) </span> <br/>
+                <span class="total-wsp"> (&nbsp Total por toda la compra: &nbsp ${formatNumber(totalOfProducts)} &nbsp) </span> <br/>
                 <br/>
             </div>
             
@@ -1140,7 +1140,7 @@ const showHTML = () => {
 
         if( data.order > 0 && data.stock >= 0 ) {
 
-          productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(numOfProduct)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A%0A</div>`
+          productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(numOfProduct)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: ${formatNumber(data.price)}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: ${formatNumber(data.total)} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A%0A</div>`
 
         } if( data.order === 0 && data.stock >= 0 ) {
         
@@ -1148,16 +1148,16 @@ const showHTML = () => {
 
         } if( data.order >= 0 && data.stock >= 0 && position + 1 === allProducts.length ) {
 
-           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(numOfProduct)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: $${data.price}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: $${data.total} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp">(&nbsp Total por toda la compra: $${totalOfProducts} &nbsp) </span> %0A%0A</div>`
+           productWsp.innerHTML = `<div class="test">Producto: &nbsp ${(numOfProduct)} %0A %0A  [ &nbsp ${(data.title).toUpperCase()} &nbsp ] %0A %0A   * Comprar: &nbsp ${data.order} %0A   * Stock: &nbsp ${numero} %0A %0A • Precio por unidad: ${formatNumber(data.price)}  %0A -> Total por (&nbsp${data.order}&nbsp) ${cantidadOrder}: ${formatNumber(data.total)} <- %0A %0A <strong>""""""""""""""""""""""""""""""""""""""</strong> %0A %0A <span class="total-wsp">(&nbsp Total por toda la compra: ${formatNumber(totalOfProducts)} &nbsp) </span> %0A%0A</div>`
 
         } 
 
-          rowProduct.append(containerProduct);
+        rowProduct.append(containerProduct);
 
-          converWsp.append(ctnProductWsp);
-          converMessageWsp.append(productWsp);
+        converWsp.append(ctnProductWsp);
+        converMessageWsp.append(productWsp);
 
-          console.log('data.totalOfProducts ', data.totalOfProducts = totalOfProducts + data.total)
+        console.log('data.totalOfProducts ', data.totalOfProducts = totalOfProducts + data.total)
 
           // function format (n) {
           //   return n.toFixed(2).replace('.', ',').replace(/\d{3}(?=(\d{3})*,)/g, function (s) {
@@ -1170,14 +1170,14 @@ const showHTML = () => {
           // console.log('calculations ', calculations.map(format))
 
           
-          console.log('calculations ', formatNumber(totalOfProducts))
+        console.log('calculations ', formatNumber(totalOfProducts))
           
-          document.querySelector(".total-pagar").innerHTML = formatNumber(totalOfProducts);
-          document.querySelector(".total-pagar_inNav").innerHTML = formatNumber(totalOfProducts);  
-          document.querySelector(".total-pagar_footer").innerHTML = formatNumber(totalOfProducts);  
+        document.querySelector(".total-pagar").innerHTML = formatNumber(totalOfProducts);
+        document.querySelector(".total-pagar_inNav").innerHTML = formatNumber(totalOfProducts);  
+        document.querySelector(".total-pagar_footer").innerHTML = formatNumber(totalOfProducts);  
 
-        position++
-        numOfProduct++
+      position++
+      numOfProduct++
 
     });
 

@@ -718,8 +718,7 @@ p.inverteNamesBtnsList {
 }
   
 .container-stock-counter input {
-  display: flex;
-  width: 25px; 
+  display: flex; 
   height: 10%;
   text-align: center;
   align-items: end;

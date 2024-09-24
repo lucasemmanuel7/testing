@@ -476,6 +476,7 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
   border: 1px solid black;
   border-radius: 20px;
+  box-shadow: inset 5px 5px 10px #595959, inset -5px -5px 10px #999;
 }
 
 .list-products-options .height-container .styleBtnList {
@@ -487,7 +488,7 @@ input[type=number]::-webkit-outer-spin-button {
   position: relative;
   color: black;
   height: 78px;
-  width: 100%;
+  /*width: 100%;*/
   min-width: 153px;
   font-weight: 500;
   text-shadow: 0px 0px 12px #cecfd1;
@@ -506,6 +507,8 @@ input[type=number]::-webkit-outer-spin-button {
   border-right: 5px solid #fafafa;
   border-top: 8px solid white;
   border-bottom: 8px solid #fefefe;
+  width: 99%;
+  height: 95%;
 }
 
 
@@ -574,7 +577,6 @@ input[type=number]::-webkit-outer-spin-button {
   text-shadow: 0px 0px 12px white;
 
   border-radius: 20px;
-  border: 5px solid transparent;
   background-repeat: no-repeat;
   background-origin: padding-box, border-box;
   /* box-shadow: inset 5px 5px 10px #30972a, inset -5px -5px 10px #65ffbc; */
@@ -604,7 +606,6 @@ input[type=number]::-webkit-outer-spin-button {
   text-shadow: 0px 0px 12px white;
 
   border-radius: 20px;
-  border: 5px solid transparent;
   background-repeat: no-repeat;
   background-origin: padding-box, border-box;
   /* box-shadow: inset 5px 5px 10px #cfab01, inset -5px -5px 10px #ffff00; */

@@ -474,7 +474,7 @@ input[type=number]::-webkit-outer-spin-button {
   height: 79px;
   justify-content: center;
   align-items: center;
-  border: .9px solid black;
+  border: 1px solid black;
   border-radius: 20px;
 }
 
@@ -502,10 +502,10 @@ input[type=number]::-webkit-outer-spin-button {
   background-origin: padding-box, border-box;
   /* box-shadow: inset 5px 5px 10px #856666, inset -5px -5px 10px #b68d8d; */
   box-shadow: inset 5px 5px 10px #836464, inset -5px -5px 10px #ffbfbf;
-  border-left: 3px solid #ffffff;
-  border-right: 3px solid #fafafa;
-  border-top: 5px solid white;
-  border-bottom: 5px solid #fefefe;
+  border-left: 5px solid #ffffff;
+  border-right: 5px solid #fafafa;
+  border-top: 8px solid white;
+  border-bottom: 8px solid #fefefe;
 }
 
 
@@ -579,10 +579,6 @@ input[type=number]::-webkit-outer-spin-button {
   background-origin: padding-box, border-box;
   /* box-shadow: inset 5px 5px 10px #30972a, inset -5px -5px 10px #65ffbc; */
   box-shadow: inset 5px 5px 10px #047a2b, inset -5px -5px 10px #54ffb5;
-  border-left: 5px solid #ffffff;
-  border-right: 5px solid #fafafa;
-  border-top: 8px solid white;
-  border-bottom: 8px solid #fefefe;
 }
  
 .height-container .styleBtnList.active_red_list {
@@ -613,11 +609,6 @@ input[type=number]::-webkit-outer-spin-button {
   background-origin: padding-box, border-box;
   /* box-shadow: inset 5px 5px 10px #cfab01, inset -5px -5px 10px #ffff00; */
   box-shadow: inset 5px 5px 10px #a08402, inset -5px -5px 10px #ffff6d;
-
-  border-left: 3px solid #ffffff;
-  border-right: 3px solid #fafafa;
-  border-top: 5px solid white;
-  border-bottom: 5px solid #fefefe;
 }
  
 .activo { 

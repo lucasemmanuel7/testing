@@ -1992,7 +1992,7 @@ width: 90%;      /* width: 100%; */
  
 .botton_off.btn_off_red {
   background-color: red;
-  background-image: linear-gradient(to top, rgb(0 0 0 / 51%) 0%, #ea0606 50%, #ff0000 80%, #ffffff 100%);
+  background-image: linear-gradient(to top, rgb(0 0 0 / 51%) 0%, #ea0606 50%, #ff0000 80%, #ffffffc7 100%);
   color: #ffff71;
   transition: all .5s ease;
 }

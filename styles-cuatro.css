@@ -471,7 +471,7 @@ input[type=number]::-webkit-outer-spin-button {
 .ctn-btn-list {
   display: flex;
   width: 100%;
-  height: 79px;
+  height: 80px;
   justify-content: center;
   align-items: center;
   border: 1px solid black;
@@ -509,7 +509,7 @@ input[type=number]::-webkit-outer-spin-button {
   border-top: 8px solid white;
   border-bottom: 8px solid #fefefe;
   width: 99%;
-  height: 95%;
+  height: 100%;
 }
 
 

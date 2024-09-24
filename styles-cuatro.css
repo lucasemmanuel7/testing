@@ -476,7 +476,8 @@ input[type=number]::-webkit-outer-spin-button {
   align-items: center;
   border: 1px solid black;
   border-radius: 20px;
-  box-shadow: inset 5px 5px 10px #595959, inset -5px -5px 10px #999;
+  /*box-shadow: inset 5px 5px 10px #595959, inset -5px -5px 10px #999;*/
+  box-shadow: inset 5px 5px 10px #454545, inset -5px -5px 10px #6d6d6d;
 }
 
 .list-products-options .height-container .styleBtnList {

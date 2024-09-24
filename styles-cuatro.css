@@ -685,13 +685,13 @@ li.ultimate-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
+  width: 90%;
   /* border: 1px solid black; */
 } 
 
 .container-name-counter input,
 .container-stock-counter input {
-  width: 25px; 
+  width: 32px; 
   height: 10%;
   text-align: center;
 }
@@ -700,7 +700,7 @@ li.ultimate-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  width: 85%;
+  width: 90%;
   /* border: 1px solid black; */
 }
  

@@ -1991,13 +1991,18 @@ width: 90%;      /* width: 100%; */
 }
  
 .botton_off.btn_off_red {
-  background: linear-gradient(rgb(255, 0, 0), rgba(255, 0, 0, 0.644));
-  color: white;
+  background-color: red;
+  background-image: linear-gradient(to top, rgb(0 0 0 / 51%) 0%, #ea0606 50%, #ff0000 80%, #ffffff 100%);
+  color: #ffff71;
   transition: all .5s ease;
 }
 
 .opacyActive {
   right: 11px;
+}
+
+.botton_off[disabled]{
+  background-image: linear-gradient(to top, #D8D9DB 0%, #fff 80%, #FDFDFD 100%);
 }
 
 .botton_off.btn_off_red[disabled]{

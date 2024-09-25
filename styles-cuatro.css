@@ -3859,6 +3859,11 @@ filter: hue-rotate(90deg);
   .list-products-options li {
     width: 97%;
   }
+
+  .container_nav_list {
+    width: 80%;
+    margin-inline: auto;
+  } 
 }
 
 @media screen and (min-width:1024px){
@@ -3872,10 +3877,10 @@ filter: hue-rotate(90deg);
       grid-column-start: span 1;
   }
 
-  .container_nav_list {
+  /*.container_nav_list {
     width: 80%;
     margin-inline: auto;
-  }
+  } */
 
   .row-product {
     height: max-content;

@@ -127,6 +127,7 @@ input[type=number]::-webkit-outer-spin-button {
   background: -ms-linear-gradient(top, rgba(136,136,136,1) 0%, rgba(255,255,255,1) 100%); */
   background: linear-gradient(to bottom, rgba(136,136,136,1) 0%, rgba(255,255,255,1) 100%);
   border: 1px solid #000000d1;
+  margin: 10px 0;
   /* filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#888888', endColorstr='#ffffff', GradientType=0 ); */
 
   /* padding: 0.97rem;  reacomodando nav  */ 
@@ -136,12 +137,12 @@ input[type=number]::-webkit-outer-spin-button {
   display: grid;
   align-items: initial;
   overflow-y: scroll;
-  height: 71dvh;
+  /*height: 71dvh;*/
   border-radius: 15px;
   width: 100%;
   background-color: #c3717c;
   border: 1px solid rgb(0 0 0 / 28%);
-  /* overflow-y: scroll; */
+  height: 100%;
 
   /* box-shadow: 5px 5px 12px #c5c5c5, -5px -5px 12px #ffffff;
 
@@ -754,8 +755,10 @@ p.inverteNamesBtnsList {
 .container-list-products-options {
   display: flex;
   width: 100%;
-  height: 95dvh;
-  padding: 0rem 1.2rem 3rem;
+  /*height: 95dvh;*/
+  /*padding: 0rem 1.2rem 3rem;*/
+  height: 100%;
+  padding: 0rem 1.2rem 7.4rem;
 }
 
 .inverterBtnsList {
@@ -3141,6 +3144,7 @@ input:disabled {
 display: inline-flex;
 gap: 5px;
 align-items: center;
+height: 55px;
 }
 
 .total {

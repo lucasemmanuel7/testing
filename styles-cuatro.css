@@ -288,7 +288,7 @@ input[type=number]::-webkit-outer-spin-button {
 .nav.visible {
   opacity: 1;
   visibility: visible;
-  overflow: scroll;
+  /*overflow: scroll;*/
 }
 
 .nav-list li a {
@@ -3055,7 +3055,8 @@ input:disabled {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0.7px);
   border: 10px solid rgba(255, 255, 255, 0.3);
-  height: -webkit-fill-available;
+  position: absolute;
+  height: 100%;
 }
 
 .ctn-cartel-cart-empty.no_Visible {

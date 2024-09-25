@@ -108,7 +108,7 @@ input[type=number]::-webkit-outer-spin-button {
  
 .container_nav_list {
   width: 100%;
-  /* overflow-y: scroll; */
+  overflow-y: scroll; 
   /* height: 71dvh; */
   /* position: relative; */
   /* display: inline-block; */

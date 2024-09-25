@@ -3055,7 +3055,7 @@ input:disabled {
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(0.7px);
   border: 10px solid rgba(255, 255, 255, 0.3);
-  height: 100%;
+  height: -webkit-fill-available;
 }
 
 .ctn-cartel-cart-empty.no_Visible {

@@ -918,76 +918,79 @@ function funcion2(i) {
 }
 
 
-function yesDeleteInfoCard(i) {
-  yesResetCard(i), 
-  // nameActually = document.querySelectorAll(".name-product")[e].textContent;
-  // body.classList.remove("stop");
-  // body.classList.add("moving");
-    allProducts = allProducts.filter(
-      product =>  product.title !== productName,
-    )
-    
+function yesDeleteInfoCard(i, e) {
+  yesResetCard(i); 
+  funcion2(e);  
   document.querySelector(".ctn-delete-info__card").classList.remove("visible");
-  countProducts.innerHTML = allProducts.length;
-  countProductFooter.innerHTML = allProducts.length;
-
-  countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
-  countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-  ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-  ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-
-  if (allProducts.length === 0) {
-    totalOfProducts = 0;
-
-    document.querySelector(".total-pagar").innerHTML = "$ " + totalOfProducts;
-    document.querySelector(".total-pagar_inNav").innerHTML = "$ " + totalOfProducts;
-    document.querySelector(".total-pagar_footer").innerHTML = "$ " + totalOfProducts;
-  }
-
-  showHTML()
 }
 
+// rowProduct.addEventListener('click', e => {
 
-deleteCtnQuestionInNav = document.querySelector(".no_delete_ctn_question_inNav");
+//   console.log('borrar ', e.target.classList.contains("borrar"))
 
-deleteCtnQuestionInNav.addEventListener('click', () => {
-  document.querySelector(".ctn-delete-info__card").classList.remove("visible");
-  // body.classList.remove("stop");
-  // body.classList.add("moving");
-})
+//   // cartProduct = document.querySelectorAll('.cart-product')[0].querySelector("a").getAttribute("href").slice(1);
+  
 
+//     if(e.target.classList.contains("borrar")) {
+//         const product = e.target.parentElement;
+//         const title = product.querySelector("a").getAttribute("href").slice(1);
+
+//        console.log ('target ', e.target.parentElement)
+
+//         console.log('title ', title);
+
+
+//         allProducts = allProducts.filter(
+//             product => console.log('product.card ', product.card),
+//         )
+
+
+        
+//         console.log(allProducts);
+//         countProducts.innerHTML = allProducts.length;
+      
+//         showHTML();
+//     }
+// })
 
 function formatNumber(num) {
   return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 }
 
-
 const yesDeleteInfoCardInNav = document.querySelector(".yes_delete_info_cards_inNav");
-const cartelOff_Or_Not = document.querySelector('.cartel-off-or-not');
+const deleteInfoCard = document.querySelector('.delete-info__card');
 const ctnQuestionDeleteCard = document.createElement('div');
 cartelOff_Or_Not.innerHTML = '';
 
-function deleteCard(ubicationCardBody, positionInNav) {
-  ctnQuestionDeleteCard.classList.add("cartel-question_inNav");
+  function deleteCard(ubicationCardBody, positionInNav) {
+    ctnQuestionDeleteCard.classList.add("cartel-off-cristal-delete_inNav");
 
   
-  document.querySelector(".ctn-delete-info__card").classList.add('visible')
+    document.querySelector(".ctn-delete-info__card").classList.add('visible')
 
-  nameActually = document.querySelectorAll(".name-product")[positionInNav].textContent;
+    nameActually = document.querySelectorAll(".name-product")[positionInNav].textContent;
 
-   ctnQuestionDeleteCard.innerHTML =  `
-     <div class="">¿Desea quitar del carrito de compras, y eliminar los valores actuales del producto: <br/> <span class="ctn-name_Actually">${nameActually}</span>&nbsp?</div>
-     
-    `
+    console.log("44", nameActually)
+    ctnQuestionDeleteCard.innerHTML =  `
     
-    yesDeleteInfoCardInNav.addEventListener('click', ()=> {
-      yesDeleteInfoCard(ubicationCardBody);
-    })  
-    
-    //  yesDeleteInfoCard.addEventListener('click', yesResetCard(ubicationCardBody), funcion2(positionInNav));
+          <div class="cartel-off-or-not">
+              <div class="cartel-question_inNav">
+                ¿Desea quitar del carrito de compras, y eliminar los valores actuales del producto: <br/> <span class="ctn-name_Actually">${nameActually}</span>&nbsp?
+              </div> 
+          </div>
+          <div class="ctn_of_btn_delete_inNav">
+              <button class="yes_delete_info_cards_inNav" onclick="yesDeleteInfoCard(${ubicationCardBody}, ${positionInNav})">SI</button>
+              <button class="no_delete_ctn_question_inNav" onclick="noDeleteInfoCard()">NO</button>
+          </div> 
+      `
   }
+
   cartelOff_Or_Not.append(ctnQuestionDeleteCard);
 
+
+function noDeleteInfoCard() {
+  document.querySelector(".ctn-delete-info__card").classList.remove("visible");
+}
 
 
 totalOfProducts = 0;

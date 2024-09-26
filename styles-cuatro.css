@@ -3639,7 +3639,7 @@ filter: hue-rotate(90deg);
   padding: 0.5rem 1.5rem;
   overflow: hidden;
   background-color: #00000054;
-
+  z-index: 555;
 }
 
 .ctn-delete-info__card.visible,

@@ -918,17 +918,57 @@ function funcion2(i) {
 }
 
 
+function yesDeleteInfoCard(i, e) {
+  console.log('Objetooo', i, e);
+  yesResetCard(i), 
+  // nameActually = document.querySelectorAll(".name-product")[e].textContent;
+  // body.classList.remove("stop");
+  // body.classList.add("moving");
+    allProducts = allProducts.filter(
+      product =>  product.title !== productName,
+    )
+    
+  document.querySelector(".ctn-delete-info__card").classList.remove("visible");
+  countProducts.innerHTML = allProducts.length;
+  countProductFooter.innerHTML = allProducts.length;
+
+  countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
+  countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+  ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+  ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
+
+  if (allProducts.length === 0) {
+    totalOfProducts = 0;
+
+    document.querySelector(".total-pagar").innerHTML = "$ " + totalOfProducts;
+    document.querySelector(".total-pagar_inNav").innerHTML = "$ " + totalOfProducts;
+    document.querySelector(".total-pagar_footer").innerHTML = "$ " + totalOfProducts;
+  }
+
+  showHTML()
+}
+
+
+deleteCtnQuestionInNav = document.querySelector(".no_delete_ctn_question_inNav");
+
+deleteCtnQuestionInNav.addEventListener('click', () => {
+  document.querySelector(".ctn-delete-info__card").classList.remove("visible");
+  // body.classList.remove("stop");
+  // body.classList.add("moving");
+})
+
 
 function formatNumber(num) {
   return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 }
+
 
 const yesDeleteInfoCardInNav = document.querySelector(".yes_delete_info_cards_inNav");
 const cartelOff_Or_Not = document.querySelector('.cartel-off-or-not');
 const ctnQuestionDeleteCard = document.createElement('div');
 cartelOff_Or_Not.innerHTML = '';
 
-function deleteCard(ubicationCardBody, positionInNav) {
+function deleteCard(ubicationCardBody) {
   ctnQuestionDeleteCard.classList.add("cartel-question_inNav");
 
   
@@ -936,30 +976,19 @@ function deleteCard(ubicationCardBody, positionInNav) {
 
   nameActually = document.querySelectorAll(".name-product")[positionInNav].textContent;
 
-  ctnQuestionDeleteCard.innerHTML =  `
+   ctnQuestionDeleteCard.innerHTML =  `
      <div class="">¿Desea quitar del carrito de compras, y eliminar los valores actuales del producto: <br/> <span class="ctn-name_Actually">${nameActually}</span>&nbsp?</div>
      
     `
+    
     yesDeleteInfoCardInNav.addEventListener('click', ()=> {
       yesDeleteInfoCard(ubicationCardBody, positionInNav);
     })  
-  
-   cartelOff_Or_Not.append(ctnQuestionDeleteCard);
-}
+    
+    //  yesDeleteInfoCard.addEventListener('click', yesResetCard(ubicationCardBody), funcion2(positionInNav));
+  }
+  cartelOff_Or_Not.append(ctnQuestionDeleteCard);
 
-function yesDeleteInfoCard(i, e) {
-  console.log('Objetooo', i, e);
-  yesResetCard(i);
-  funcion2(e);
-  document.querySelector(".ctn-delete-info__card").classList.remove("visible");
-  showHTML()
-}
-
-deleteCtnQuestionInNav = document.querySelector(".no_delete_ctn_question_inNav");
-
-deleteCtnQuestionInNav.addEventListener('click', () => {
-  document.querySelector(".ctn-delete-info__card").classList.remove("visible");
-})
 
 
 totalOfProducts = 0;
@@ -1068,7 +1097,7 @@ const showHTML = () => {
                         <div class="info-btn hover-info">
 
                             <div class="${ctnBtnsColor}">
-                              <button  class="borrar" onclick="deleteCard(${data.position}, ${position})">Borrar
+                              <button  class="borrar" onclick="deleteCard(${data.position})">Borrar
                               
                               <svg xmlns="http://www.w3.org/2000/svg" 
                                 width="16" height="16" fill="currentColor"

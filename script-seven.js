@@ -1096,7 +1096,7 @@ const showHTML = () => {
                         <div class="info-btn hover-info">
 
                             <div class="${ctnBtnsColor}">
-                              <button  class="borrar" onclick="deleteCard(${data.position, ${position}})">Borrar
+                              <button  class="borrar" onclick="deleteCard(${data.position, ${position})">Borrar
                               
                               <svg xmlns="http://www.w3.org/2000/svg" 
                                 width="16" height="16" fill="currentColor"

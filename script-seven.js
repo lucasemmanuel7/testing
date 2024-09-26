@@ -960,7 +960,7 @@ function formatNumber(num) {
 const yesDeleteInfoCardInNav = document.querySelector(".yes_delete_info_cards_inNav");
 const deleteInfoCard = document.querySelector('.delete-info__card');
 const ctnQuestionDeleteCard = document.createElement('div');
-cartelOff_Or_Not.innerHTML = '';
+deleteInfoCard.innerHTML = '';
 
   function deleteCard(ubicationCardBody, positionInNav) {
     ctnQuestionDeleteCard.classList.add("cartel-off-cristal-delete_inNav");
@@ -985,7 +985,7 @@ cartelOff_Or_Not.innerHTML = '';
       `
   }
 
-  cartelOff_Or_Not.append(ctnQuestionDeleteCard);
+  deleteInfoCard.append(ctnQuestionDeleteCard);
 
 
 function noDeleteInfoCard() {

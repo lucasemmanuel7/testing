@@ -3660,7 +3660,7 @@ filter: hue-rotate(90deg);
   font-size: 13px;
   font-family: sans-serif;
   /* top: 40px; */
-  height: 64%;
+  min-height: 64%;
   width: 100%;
   padding: 0;
   border-radius: 10px;
@@ -3778,6 +3778,7 @@ filter: hue-rotate(90deg);
   justify-content: space-around;
   align-items: center;
 
+  min-height: 60px;
 }
     
 .footer_section {

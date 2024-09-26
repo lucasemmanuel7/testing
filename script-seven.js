@@ -936,8 +936,7 @@ function deleteCard(ubicationCardBody, positionInNav) {
 
   nameActually = document.querySelectorAll(".name-product")[positionInNav].textContent;
 
-   console.log("44", nameActually)
-   ctnQuestionDeleteCard.innerHTML =  `
+  ctnQuestionDeleteCard.innerHTML =  `
      <div class="">¿Desea quitar del carrito de compras, y eliminar los valores actuales del producto: <br/> <span class="ctn-name_Actually">${nameActually}</span>&nbsp?</div>
      
     `
@@ -945,10 +944,8 @@ function deleteCard(ubicationCardBody, positionInNav) {
       yesDeleteInfoCard(ubicationCardBody, positionInNav);
     })  
   
+   cartelOff_Or_Not.append(ctnQuestionDeleteCard);
 }
-
-cartelOff_Or_Not.append(ctnQuestionDeleteCard);
-
 
 function yesDeleteInfoCard(i, e) {
   console.log('Objetooo', i, e);

@@ -3647,7 +3647,7 @@ filter: hue-rotate(90deg);
   display: flex;
 }
 
-.delete-info__cards,
+.delete-info__card,
 .delete-info-all-cards {
 
   /* background: linear-gradient(to right, #DC281E, #F00000); */

@@ -918,8 +918,7 @@ function funcion2(i) {
 }
 
 
-function yesDeleteInfoCard(i, e) {
-  console.log('Objetooo', i, e);
+function yesDeleteInfoCard(i) {
   yesResetCard(i), 
   // nameActually = document.querySelectorAll(".name-product")[e].textContent;
   // body.classList.remove("stop");
@@ -968,7 +967,7 @@ const cartelOff_Or_Not = document.querySelector('.cartel-off-or-not');
 const ctnQuestionDeleteCard = document.createElement('div');
 cartelOff_Or_Not.innerHTML = '';
 
-function deleteCard(ubicationCardBody) {
+function deleteCard(ubicationCardBody, positionInNav) {
   ctnQuestionDeleteCard.classList.add("cartel-question_inNav");
 
   
@@ -982,7 +981,7 @@ function deleteCard(ubicationCardBody) {
     `
     
     yesDeleteInfoCardInNav.addEventListener('click', ()=> {
-      yesDeleteInfoCard(ubicationCardBody, positionInNav);
+      yesDeleteInfoCard(ubicationCardBody);
     })  
     
     //  yesDeleteInfoCard.addEventListener('click', yesResetCard(ubicationCardBody), funcion2(positionInNav));
@@ -1097,7 +1096,7 @@ const showHTML = () => {
                         <div class="info-btn hover-info">
 
                             <div class="${ctnBtnsColor}">
-                              <button  class="borrar" onclick="deleteCard(${data.position})">Borrar
+                              <button  class="borrar" onclick="deleteCard(${data.position, ${position}})">Borrar
                               
                               <svg xmlns="http://www.w3.org/2000/svg" 
                                 width="16" height="16" fill="currentColor"

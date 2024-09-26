@@ -923,6 +923,47 @@ function formatNumber(num) {
   return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 }
 
+const yesDeleteInfoCardInNav = document.querySelector(".yes_delete_info_cards_inNav");
+const cartelOff_Or_Not = document.querySelector('.cartel-off-or-not');
+const ctnQuestionDeleteCard = document.createElement('div');
+cartelOff_Or_Not.innerHTML = '';
+
+function deleteCard(ubicationCardBody, positionInNav) {
+  ctnQuestionDeleteCard.classList.add("cartel-question_inNav");
+
+  
+  document.querySelector(".ctn-delete-info__card").classList.add('visible')
+
+  nameActually = document.querySelectorAll(".name-product")[positionInNav].textContent;
+
+   console.log("44", nameActually)
+   ctnQuestionDeleteCard.innerHTML =  `
+     <div class="">¿Desea quitar del carrito de compras, y eliminar los valores actuales del producto: <br/> <span class="ctn-name_Actually">${nameActually}</span>&nbsp?</div>
+     
+    `
+    yesDeleteInfoCardInNav.addEventListener('click', ()=> {
+      yesDeleteInfoCard(ubicationCardBody, positionInNav);
+    })  
+  
+}
+
+cartelOff_Or_Not.append(ctnQuestionDeleteCard);
+
+
+function yesDeleteInfoCard(i, e) {
+  console.log('Objetooo', i, e);
+  yesResetCard(i);
+  funcion2(e);
+  document.querySelector(".ctn-delete-info__card").classList.remove("visible");
+  showHTML()
+}
+
+deleteCtnQuestionInNav = document.querySelector(".no_delete_ctn_question_inNav");
+
+deleteCtnQuestionInNav.addEventListener('click', () => {
+  document.querySelector(".ctn-delete-info__card").classList.remove("visible");
+})
+
 
 totalOfProducts = 0;
 
@@ -1030,7 +1071,7 @@ const showHTML = () => {
                         <div class="info-btn hover-info">
 
                             <div class="${ctnBtnsColor}">
-                              <button  class="borrar" onclick="yesResetCard(${data.position}); funcion2(${position})">Borrar
+                              <button  class="borrar" onclick="deleteCard(${data.position}, ${position})">Borrar
                               
                               <svg xmlns="http://www.w3.org/2000/svg" 
                                 width="16" height="16" fill="currentColor"

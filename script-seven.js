@@ -1471,8 +1471,32 @@ deleteInfoAllCards.addEventListener('click', () => {
   body.classList.remove("moving");
   body.classList.add("stop");
 
+  if ( allProducts.length === 0 ){
+
+    document.querySelector(".cartel-question_").classList.add("noVisible");
+    document.querySelector(".yes_delete_info_cards").classList.add("noVisible")
+    document.querySelector(".no_delete_ctn_question").classList.add("noVisible")
+    document.querySelector(".cards_noValues").classList.remove("noVisible");
+    document.querySelector(".btn-cards_noValues").classList.remove("noVisible");
+
+  } if ( allProducts.length > 0 ){
+    
+    document.querySelector(".cartel-question_").classList.remove("noVisible");
+    document.querySelector(".yes_delete_info_cards").classList.remove("noVisible");
+    document.querySelector(".no_delete_ctn_question").classList.remove("noVisible");
+    document.querySelector(".cards_noValues").classList.add("noVisible");
+    document.querySelector(".btn-cards_noValues").classList.add("noVisible");
+
+  }
 })
 
+btnCardsNoValues = document.querySelector(".btn-cards_noValues");
+
+btnCardsNoValues.addEventListener('click', () => {
+  document.querySelector(".ctn-delete-info-all-cards").classList.remove("visible");
+  body.classList.remove("stop");
+  body.classList.add("moving");
+})
 
 yesDeleteInfoCards.addEventListener('click', () => {
 

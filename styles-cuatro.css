@@ -3826,6 +3826,9 @@ filter: hue-rotate(90deg);
 .ctn-menu-in-footer {
   display: flex;
   gap: 10px;
+  background-color: black;
+  padding: 10px 20px;
+  border-radius: 4rem;
 }
 
 .ctn-design_by {

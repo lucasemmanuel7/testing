@@ -1417,8 +1417,7 @@ btnToTop.addEventListener('click', () => {
 const navExpand = document.getElementById('nav-expand');
       navExpandList = document.getElementById('nav-expand-list');
       navExpandIcon = document.getElementById('nav-expand-icon');
-      deleteInfoAllCards = document.getElementById('delete_info-cards');
-      deleteInfo = document.querySelector(".btnToNavbarTwo");
+
       deleteCtnQuestion = document.querySelector(".no_delete_ctn_question");
       yesDeleteInfoCards = document.querySelector(".yes_delete_info_cards");
       
@@ -1465,7 +1464,7 @@ btnToNav.addEventListener('click', () => {
 
 // allCards
 
-deleteInfoAllCards.addEventListener('click', () => {
+function dataToTrashcan() {
 
   document.querySelector(".ctn-delete-info-all-cards").classList.add("visible");
   body.classList.remove("moving");
@@ -1488,7 +1487,7 @@ deleteInfoAllCards.addEventListener('click', () => {
     document.querySelector(".btn-cards_noValues").classList.add("noVisible");
 
   }
-})
+}
 
 btnCardsNoValues = document.querySelector(".btn-cards_noValues");
 
@@ -1533,15 +1532,6 @@ yesDeleteInfoCards.addEventListener('click', () => {
     body.classList.add("moving");
 
     showHTML()
-})
-
-
-deleteInfo.addEventListener('click', () => {
-
-  document.querySelector(".ctn-delete-info-all-cards").classList.add("visible");
-  body.classList.remove("moving");
-  body.classList.add("stop");
-
 })
 
 

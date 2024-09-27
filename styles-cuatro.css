@@ -3444,7 +3444,8 @@ filter: hue-rotate(90deg);
 .total-pagar_inNav.visibleFloating {
   display: flex;
   align-items: center;
-  background: white;
+  /*background: white;*/
+  background: #ffd8dd;
   color: black;
   height: 80%;
   min-width: 15%;

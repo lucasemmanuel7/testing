@@ -3892,10 +3892,6 @@ filter: hue-rotate(90deg);
       width: 88%;
       grid-template-columns: repeat(1, 1fr);
   }
-
-  .ctn-menu-in-footer {
-    padding: 10px 20px;
-  }
 	
   .ctn-design_by {
     width: auto;

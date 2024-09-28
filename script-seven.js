@@ -730,9 +730,9 @@ for (let i = 0; i < allCards.length; i++) {
 
     if (allProducts.length === 0) {
       totalOfProducts = 0;
-      document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
-      document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
-      document.querySelector(".total-pagar_footer").innerHTML = "$  " + totalOfProducts;
+      document.querySelector(".total-pagar").innerHTML = "$" + totalOfProducts;
+      document.querySelector(".total-pagar_inNav").innerHTML = "$" + totalOfProducts;
+      document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
 
       document.querySelector("#count-product").innerHTML =  allProducts.length;
       
@@ -906,9 +906,9 @@ function funcion2(i) {
         if (allProducts.length === 0) {
           totalOfProducts = 0;
 
-          document.querySelector(".total-pagar").innerHTML = "$ " + totalOfProducts;
-          document.querySelector(".total-pagar_inNav").innerHTML = "$ " + totalOfProducts;
-          document.querySelector(".total-pagar_footer").innerHTML = "$ " + totalOfProducts;
+          document.querySelector(".total-pagar").innerHTML = "$" + totalOfProducts;
+          document.querySelector(".total-pagar_inNav").innerHTML = "$" + totalOfProducts;
+          document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
         }
       
         showHTML();

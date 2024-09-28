@@ -1397,11 +1397,12 @@ btnToTop.addEventListener('click', () => {
 
   valueScrollBottom = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
   
-  if( valueScrollBottom <= 80){	  
+  if( valueScrollBottom <= 100){	  
       document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
       document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
       document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-      document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');     
+      document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone'); 
+      document.querySelector(".ctn-menu-in-footer").classList.add('visible');
   } 
 
   let contains = {

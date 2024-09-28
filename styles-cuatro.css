@@ -3444,8 +3444,9 @@ filter: hue-rotate(90deg);
 .ctn-total-pagar_footer {
   border: 0.9px solid transparent;
   border-radius: 4rem;
-  border-top-color: white;
-  border-left-color: white;
+  border-color: white;
+  /*border-top-color: white;*/
+  /*border-left-color: white;*/
 }
 
 .total-pagar_footer.visibleFooter,

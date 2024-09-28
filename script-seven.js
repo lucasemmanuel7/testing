@@ -1363,7 +1363,7 @@ function OnScrolling(){                             // put this on a scrolling E
         document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
         document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
         document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-        document.querySelector(".ctn-menu-in-footer").classList.remove('transparent');
+        document.querySelector(".ctn-menu-in-footer").classList.add('visible');
        
       } if( boolean > 100 ){
         
@@ -1371,7 +1371,7 @@ function OnScrolling(){                             // put this on a scrolling E
         document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
         document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
         document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-        document.querySelector(".ctn-menu-in-footer").classList.add('transparent');
+        document.querySelector(".ctn-menu-in-footer").classList.remove('visible');
         
       }
 

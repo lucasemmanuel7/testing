@@ -3470,7 +3470,7 @@ filter: hue-rotate(90deg);
 
   /*padding: 0px 7px;*/
   border-radius: 4rem;
-  /*min-width: 40px;*/
+  min-width: 40px;
   /*box-shadow: inset 3px 3px 3px #fff, inset -3px -3px 3px 0px #d19aa2;*/
   /*border-color-top: #cecfd1;*/
   /*border-top-color: #ff9e77;*/

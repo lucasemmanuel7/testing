@@ -409,9 +409,9 @@ function yesResetCard(i) {
 
   if (allProducts.length === 0) {
     totalOfProducts = 0;
-    document.querySelector(".total-pagar").innerHTML = "$  " + totalOfProducts;
-    document.querySelector(".total-pagar_inNav").innerHTML = "$  " + totalOfProducts;
-    document.querySelector(".total-pagar_footer").innerHTML = "$  " + totalOfProducts;
+    document.querySelector(".total-pagar").innerHTML = "$" + totalOfProducts;
+    document.querySelector(".total-pagar_inNav").innerHTML = "$" + totalOfProducts;
+    document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
   }
 
   countProducts.innerHTML = allProducts.length;
@@ -1525,9 +1525,9 @@ yesDeleteInfoCards.addEventListener('click', () => {
         if (allProducts.length === 0) {
           totalOfProducts = 0;
 
-          document.querySelector(".total-pagar").innerHTML = "$ " + totalOfProducts;
-          document.querySelector(".total-pagar_inNav").innerHTML = "$ " + totalOfProducts;
-          document.querySelector(".total-pagar_footer").innerHTML = "$ " + totalOfProducts;
+          document.querySelector(".total-pagar").innerHTML = "$" + totalOfProducts;
+          document.querySelector(".total-pagar_inNav").innerHTML = "$" + totalOfProducts;
+          document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
         }
     }
 

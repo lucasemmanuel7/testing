@@ -3851,6 +3851,10 @@ filter: hue-rotate(90deg);
   border-radius: 4rem;
 }
 
+.ctn-menu-in-footer.transparent {
+  background-color: transparent;
+}
+
 .ctn-design_by {
   display: flex;
   flex-direction: column;

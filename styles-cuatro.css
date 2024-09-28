@@ -3466,8 +3466,8 @@ filter: hue-rotate(90deg);
   /* background-color: #ecf0f3;*/
 
   padding: 0px 7px;
-  box-shadow: inset 3px 3px 3px #fff, inset -3px -3px 3px 0px #d19aa2;
   border-radius: 4rem;
+  /*box-shadow: inset 3px 3px 3px #fff, inset -3px -3px 3px 0px #d19aa2;*/
   /*border-color-top: #cecfd1;*/
   /*border-top-color: #ff9e77;*/
   /*border-left-color: lightsalmon;*/
@@ -3475,6 +3475,7 @@ filter: hue-rotate(90deg);
     border-top-color: #ff9e77;
     border-left-color: lightsalmon;
     background: linear-gradient(#aaaaaa85, #ffffff), linear-gradient(to right, #ffffff, #eae9e9);
+    box-shadow: inset 3px 3px 3px #fff, inset -3px -1px 3px 0px #aaa;
 }
 
 .total-pagar_footer.visibleFooter {

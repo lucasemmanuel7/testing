@@ -3440,12 +3440,19 @@ filter: hue-rotate(90deg);
   font-size: 17px;
 }
 
+.ctn-total-pagar_inNav,
+.ctn-total-pagar_footer {
+  border: 0.5px solid transparent;
+  border-radius: 4rem;
+  border-top-color: white;
+  border-left-color: white;
+}
+
 .total-pagar_footer.visibleFooter,
 .total-pagar_inNav.visibleFloating {
   display: flex;
   align-items: center;
   /*background: white;*/
-  background: #ffd8dd;
   color: black;
   height: 80%;
   min-width: 15%;
@@ -3461,9 +3468,13 @@ filter: hue-rotate(90deg);
   padding: 0px 7px;
   box-shadow: inset 3px 3px 3px #fff, inset -3px -3px 3px 0px #d19aa2;
   border-radius: 4rem;
-  border-color-top: #cecfd1;
-  border-top-color: #ff9e77;
-  border-left-color: lightsalmon;
+  /*border-color-top: #cecfd1;*/
+  /*border-top-color: #ff9e77;*/
+  /*border-left-color: lightsalmon;*/
+  /*background: #ffd8dd;*/
+    border-top-color: #ff9e77;
+    border-left-color: lightsalmon;
+    background: linear-gradient(#aaaaaa85, #ffffff), linear-gradient(to right, #ffffff, #eae9e9);
 }
 
 .total-pagar_footer.visibleFooter {
@@ -3814,7 +3825,7 @@ filter: hue-rotate(90deg);
   align-items: center;
   justify-content: space-between;
   gap: 10px;
-  height: 80px;
+  height: 100px;
   background-color: #ffdde1;
 
   bottom: 1.5rem;
@@ -3835,7 +3846,7 @@ filter: hue-rotate(90deg);
   display: flex;
   gap: 10px;
   background-color: black;
-  padding: 10px 20px;
+  padding: 10px 10px;
   border-radius: 4rem;
 }
 
@@ -3876,10 +3887,18 @@ filter: hue-rotate(90deg);
 	
 }
 
-@media only screen and (min-width: 390px) and (max-width: 700px) {
+@media only screen and (min-width: 392px) and (max-width: 700px) {
   .container_cards{
       width: 88%;
       grid-template-columns: repeat(1, 1fr);
+  }
+
+  .ctn-menu-in-footer {
+    padding: 10px 20px;
+  }
+	
+  .ctn-design_by {
+    width: auto;
   }
 }
 

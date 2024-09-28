@@ -1357,14 +1357,14 @@ function OnScrolling(){                             // put this on a scrolling E
       
     if(document.querySelector('.ctn-btn-limpiar-cards').classList.contains("btnFloating")) {
 
-      if( boolean <= 80){
+      if( boolean <= 100){
           console.log('Holis', $(document).height() - $(window).height() - $(window).scrollTop())
     
         document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
         document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
         document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
         document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-      } if( boolean > 80 ){
+      } if( boolean > 100 ){
         
         document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
         document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');

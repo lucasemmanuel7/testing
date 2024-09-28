@@ -3846,13 +3846,13 @@ filter: hue-rotate(90deg);
 .ctn-menu-in-footer {
   display: flex;
   gap: 10px;
-  background-color: black;
+  background-color: transparent;
   padding: 10px 10px;
   border-radius: 4rem;
 }
 
-.ctn-menu-in-footer.transparent {
-  background-color: transparent;
+.ctn-menu-in-footer.visible {
+  background-color: black;
 }
 
 .ctn-design_by {

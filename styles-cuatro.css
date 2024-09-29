@@ -3443,36 +3443,24 @@ filter: hue-rotate(90deg);
 .total-pagar_inNav.visibleFloating {
   display: flex;
   align-items: center;
-  /*background: white;*/
   color: black;
   height: 40px;
   min-width: 15%;
   justify-content: center;
-  /*padding: 0px 4px;*/
-  /*border-radius: 2px;*/
-  /* box-shadow: inset 2px 2px 2px #ffdde1, inset -2px -2px 2px rgba(0,0,0,0.4); */
-  /*box-shadow: inset 3px 3px 3px #cbced1, inset -3px -3px 3px #ffffff;*/
   backdrop-filter: blur(0.7px);
-  /*border: 1.5px solid white;*/
-  /* background-color: #ecf0f3;*/
-
-  padding: 0px 7px;
   border-radius: 4rem;
   min-width: 40px;
-  /*box-shadow: inset 3px 3px 3px #fff, inset -3px -3px 3px 0px #d19aa2;*/
-  /*border-color-top: #cecfd1;*/
-  /*border-top-color: #ff9e77;*/
-  /*border-left-color: lightsalmon;*/
-  /*background: #ffd8dd;*/
-    /*border-top-color: #ff9e77;*/
-    /*border-left-color: lightsalmon;*/
-    background: linear-gradient(#aaaaaa85, #ffffff), linear-gradient(to right, #ffffff, #eae9e9);
-    box-shadow: inset 3px 3px 3px #fff, inset -3px -1px 3px 0px #aaa;
+  background: linear-gradient(#aaaaaa85, #ffffff), linear-gradient(to right, #ffffff, #eae9e9);
+  box-shadow: inset 3px 3px 3px #fff, inset -3px -1px 3px 0px #aaa;
+  border: 2px solid transparent;
+  outline: 0.5px solid white;
+  border-top-color: #ff9e77;
+  border-left-color: lightsalmon;
+}
 
-    border: 2px solid transparent;
-    outline: 0.5px solid white;
-    border-top-color: #ff9e77;
-    border-left-color: lightsalmon;
+.total-pagar_footer.addPadding, 
+.total-pagar_inNav.addPadding {
+  padding: 0px 7px;
 }
 
 .delete-info-btn.btnFloating {

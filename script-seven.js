@@ -954,6 +954,14 @@ function yesDeleteInfoCard(i, e) {
 // })
 
 function formatNumber(num) {
+  if ( num !== 0 ) {
+  document.querySelector(".total-pagar_footer").classList.add('addPadding');
+  document.querySelector(".total-pagar_inNav").classList.add('addPadding');
+  } if ( num === 0 ) {
+    document.querySelector(".total-pagar_footer").classList.remove('addPadding');
+    document.querySelector(".total-pagar_inNav").classList.remove('addPadding');
+  }
+	
   return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 }
 

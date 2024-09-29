@@ -3445,7 +3445,6 @@ filter: hue-rotate(90deg);
   align-items: center;
   color: black;
   height: 40px;
-  min-width: 15%;
   justify-content: center;
   backdrop-filter: blur(0.7px);
   border-radius: 4rem;
@@ -3454,7 +3453,7 @@ filter: hue-rotate(90deg);
   box-shadow: inset 3px 3px 3px #fff, inset -3px -1px 3px 0px #aaa;
   border: 2px solid transparent;
   outline: 0.5px solid white;
-  border-top-color: #ff9e77;
+  border-top-color: #ffae8e;
   border-left-color: lightsalmon;
 }
 

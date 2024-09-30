@@ -795,6 +795,8 @@ for (let i = 0; i < allCards.length; i++) {
         let borrarAndModifiedGreen = "ctn-btns-borrar-and-modified_green";
         let borrarAndModifiedRed = "ctn-btns-borrar-and-modified_red";
 
+	let namesProductsBlack = "name-product";
+        let namesProductsWhite = "name-product-white";
     
         let cardId = document.querySelectorAll(".product_card")[i].id;   
         
@@ -809,6 +811,8 @@ for (let i = 0; i < allCards.length; i++) {
           order: allOrder,
           stock: allStock,
           title: nameProduct,
+	  colorTitleBlack: namesProductsBlack,
+          colorTitleWhite: namesProductsWhite,
           price: priceProduct,
           nameYellow: yellowNameProduct,
           nameGreen: greenNameProduct,
@@ -1039,8 +1043,7 @@ const showHTML = () => {
   position = 0;
   numOfProduct = 1;
   totalOfProducts = 0;
-  namesProductsBlack = "name-product";
-  nameProductWhite = "name-product-white";
+	
 
     allProducts.forEach(data => {
 
@@ -1056,8 +1059,7 @@ const showHTML = () => {
 
         ctnNameColor = data.nameYellow; if( data.order > 0 && data.stock >= 0 ) { ctnNameColor = data.nameGreen; } if ( data.order >= 0  &&  data.stock === -1 ) {ctnNameColor = data.nameRed; }
         ctnBtnsColor = data.ctnBtnsYellow; if( data.order > 0 && data.stock >= 0 ) { ctnBtnsColor = data.ctnBtnsGreen; } if ( data.order >= 0  &&  data.stock === -1 ) { ctnBtnsColor = data.ctnBtnsRed; }
-        namesOfProducts = namesProductsBlack; if(data.stock === -1) { namesOfProducts = nameProductWhite; }
-        // namesOfProducts = data.colorTitleBlack; if(data.stock === -1) {namesOfProducts = data.colorTitleWhite;}
+        namesOfProducts = data.colorTitleBlack; if(data.stock === -1) { namesOfProducts = data.colorTitleWhite; }
 
 
           containerProduct.innerHTML = `

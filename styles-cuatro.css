@@ -2900,7 +2900,7 @@ input:disabled {
   border: 1px solid white;
   background: yellow;
   /* border-radius: 10px; */
-  border-radius: 15px;
+  border-radius: 4rem;
 }
 
 .ctn-name-product-and-close_green {
@@ -2928,7 +2928,7 @@ input:disabled {
   right: 0px;
   border: 0.5px solid black;
   background: white;
-  border-radius: 15px;
+  border-radius: 4rem;
 }
 
 .ctn-num-product {

@@ -2922,6 +2922,7 @@ input:disabled {
   text-shadow: 1px 1px 5px black;
   word-spacing: 1px;
   letter-spacing: 1px;
+  font-size: 14px;	
 }
 
 .ctn-num-product,

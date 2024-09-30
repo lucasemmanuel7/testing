@@ -2910,9 +2910,15 @@ input:disabled {
   background: red;
 }
 
-.name-product {
+.name-product,
+.name-product-white {
   text-align: center;
   font-size: 13px;
+  color: black;
+}
+
+.name-product-white {
+  color: white;
 }
 
 .ctn-num-product,

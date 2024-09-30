@@ -1039,14 +1039,14 @@ const showHTML = () => {
   position = 0;
   numOfProduct = 1;
   totalOfProducts = 0;
-  
+  namesProductsBlack = "name-product";
+  nameProductWhite = "name-product-white";
 
     allProducts.forEach(data => {
 
         const containerProduct = document.createElement('div');
         containerProduct.classList.add("cart-product");
-	namesProductsBlack = "name-product";
-        nameProductWhite = "name-product-white";
+
 
 
         data.total = total + parseInt(data.order * data.price);
@@ -1057,6 +1057,7 @@ const showHTML = () => {
         ctnNameColor = data.nameYellow; if( data.order > 0 && data.stock >= 0 ) { ctnNameColor = data.nameGreen; } if ( data.order >= 0  &&  data.stock === -1 ) {ctnNameColor = data.nameRed; }
         ctnBtnsColor = data.ctnBtnsYellow; if( data.order > 0 && data.stock >= 0 ) { ctnBtnsColor = data.ctnBtnsGreen; } if ( data.order >= 0  &&  data.stock === -1 ) { ctnBtnsColor = data.ctnBtnsRed; }
         namesOfProducts = namesProductsBlack; if(data.stock === -1) { namesOfProducts = nameProductWhite; }
+        // namesOfProducts = data.colorTitleBlack; if(data.stock === -1) {namesOfProducts = data.colorTitleWhite;}
 
 
           containerProduct.innerHTML = `

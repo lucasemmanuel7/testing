@@ -794,9 +794,6 @@ for (let i = 0; i < allCards.length; i++) {
         let borrarAndModifiedYellow = "ctn-btns-borrar-and-modified_yellow";
         let borrarAndModifiedGreen = "ctn-btns-borrar-and-modified_green";
         let borrarAndModifiedRed = "ctn-btns-borrar-and-modified_red";
-
-	let namesProductsBlack = "name-product";
-        let namesProductsWhite = "name-product-white";
     
         let cardId = document.querySelectorAll(".product_card")[i].id;   
         
@@ -811,8 +808,6 @@ for (let i = 0; i < allCards.length; i++) {
           order: allOrder,
           stock: allStock,
           title: nameProduct,
-	  colorTitleBlack: namesProductsBlack,
-          colorTitleWhite: namesProductsWhite,
           price: priceProduct,
           nameYellow: yellowNameProduct,
           nameGreen: greenNameProduct,
@@ -1059,8 +1054,7 @@ const showHTML = () => {
 
         ctnNameColor = data.nameYellow; if( data.order > 0 && data.stock >= 0 ) { ctnNameColor = data.nameGreen; } if ( data.order >= 0  &&  data.stock === -1 ) {ctnNameColor = data.nameRed; }
         ctnBtnsColor = data.ctnBtnsYellow; if( data.order > 0 && data.stock >= 0 ) { ctnBtnsColor = data.ctnBtnsGreen; } if ( data.order >= 0  &&  data.stock === -1 ) { ctnBtnsColor = data.ctnBtnsRed; }
-        namesOfProducts = data.colorTitleBlack; if(data.stock === -1) { namesOfProducts = data.colorTitleWhite; }
-
+	namesOfProducts = namesProductsBlack; if(data.stock === -1) { namesOfProducts = nameProductWhite; }
 
           containerProduct.innerHTML = `
                       
@@ -1070,7 +1064,7 @@ const showHTML = () => {
                             <div class="container">${numOfProduct}</div>
                           </div>
 
-                        <span class="name-product" data-for="${data.position}">${data.title}</span>
+                        <span class="${namesOfProducts}" data-for="${data.position}">${data.title}</span>
                         <div class="ctn-icon-close"> 
                             <div class="container">
                               <div class="bar1"></div>

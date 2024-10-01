@@ -576,7 +576,10 @@ for (let i = 0; i < allCards.length; i++) {
       document.querySelectorAll(".question_yes_no")[i].classList.remove('questionVisible'); 
       document.querySelectorAll(".yes_reset")[i].classList.remove('activo');
       document.querySelectorAll(".no_reset")[i].classList.remove('activo');          
-     
+
+      for (var x = 0; x < allCards.length ; x++) {
+        document.querySelectorAll(".ctn-blocking-card")[x].classList.remove('active');
+      }
 
     } if( allOrder >= 0  &&  allStock === -1  && cartelStart === true ) {  // active CARTELES FALTA COMPLETAR STOCK 
         document.querySelectorAll(".container_product_stock")[i].classList.add('noComplete');
@@ -881,7 +884,16 @@ for (let i = 0; i < allCards.length; i++) {
       
       console.log('Soy allProducts ', allProducts);
 
-    }  
+    } else {
+	/* Blocking all cards no value stock -1 */
+        for (var x = 0; x < allCards.length ; x++) {
+          if (x == i) {
+            continue;
+          } else {
+            document.querySelectorAll(".ctn-blocking-card")[x].classList.add('active');
+          }
+        }
+    }
 
   }    
 
@@ -1153,24 +1165,6 @@ const showHTML = () => {
                       </div>
 
         `
-
-	/* Blocking all cards no value stock -1 */
-        if (data.stock === -1) {
-          for (var i = 0; i < allCards.length ; i++) {
-            if (i == data.position[0]) {
-                continue;
-            } else {
-                document.querySelectorAll(".ctn-blocking-card")[i].classList.add('active');
-            }
-          }
-          // .ctn-blocking-card.active
-        } if (data.stock > -1) {
-
-          for (var i = 0; i < allCards.length ; i++) {
-            document.querySelectorAll(".ctn-blocking-card")[i].classList.remove('active');
-          }
-        
-        }
 	
 	    
         totalOfProducts = totalOfProducts + data.order * data.price;

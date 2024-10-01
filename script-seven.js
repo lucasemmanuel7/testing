@@ -412,7 +412,7 @@ function yesResetCard(i) {
     document.querySelectorAll(".title-falta-completar")[i].classList.remove('titleVisible');    /// Elevation de Name Product
   }  
 
- 
+  document.querySelectorAll(".ctn-blocking-card").forEach(obj=>obj.classList.remove("active"));
 
   productName = document.querySelectorAll('.product_name')[i].textContent;
 
@@ -793,7 +793,8 @@ let countProductFooter = document.querySelector('#count-product');
 
 for (let i = 0; i < allCards.length; i++) {
   allCards[i].addEventListener("click", function() {
-
+    red = document.querySelectorAll(".name_img_price")[i].classList.contains('activo_red_card')
+	  
     if (allCards[i].querySelector(".num_stock_counter").value >= 0 ) { 
 
         console.log('soy target ', allCards[i]);
@@ -887,7 +888,7 @@ for (let i = 0; i < allCards.length; i++) {
       
       console.log('Soy allProducts ', allProducts);
 
-    } else {
+    } if( red ===  true) {
 	/* Blocking all cards no value stock -1 */
         for (var x = 0; x < allCards.length ; x++) {
           if (x == i) {

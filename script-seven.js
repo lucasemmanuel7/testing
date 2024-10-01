@@ -79,7 +79,7 @@ const closeViewportWsp = document.querySelector("#close-wsp-viewport");
 abrirWsp.addEventListener("click", () => {
   viewportWsp.classList.add("visible-viewport-wsp");
 
-  cartProduct = document.querySelectorAll(".quantity-stock-product")
+ /* cartProduct = document.querySelectorAll(".quantity-stock-product")
 
   for (let i = 0; i < cartProduct.length; i++){
     // console.log("rowProduct", document.querySelectorAll('.quantity-stock-product')[i].textContent);
@@ -87,7 +87,7 @@ abrirWsp.addEventListener("click", () => {
     if(stockData === '-' ){
       console.log("rowProduct", "constancia");
     }
-  }
+  }*/
 })
 
 

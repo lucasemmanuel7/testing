@@ -1088,7 +1088,16 @@ width: 90%;      /* width: 100%; */
 .product_card {
   scroll-margin-top: 75px;
 }
-  
+
+.ctn-blocking-card.active {
+  background-color: #00000059;
+  border-radius: 10px;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 94000;
+}
+
 .container_card {
  display: grid;
   /* grid-template-rows: 500px; */

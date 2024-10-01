@@ -986,7 +986,7 @@ deleteInfoCard.innerHTML = '';
   
     document.querySelector(".ctn-delete-info__card").classList.add('visible')
 
-    nameActually = document.querySelectorAll(".name-product")[positionInNav].textContent;
+    nameActually = document.querySelectorAll(".name-products")[positionInNav].textContent;
 
     console.log("44", nameActually)
     ctnQuestionDeleteCard.innerHTML =  `
@@ -1077,7 +1077,7 @@ const showHTML = () => {
                             <div class="container">${numOfProduct}</div>
                           </div>
 
-                        <span class="${namesOfProducts}" data-for="${data.position}">${data.title}</span>
+                        <span class="${namesOfProducts} name-products" data-for="${data.position}">${data.title}</span>
                         <div class="ctn-icon-close"> 
                             <div class="container">
                               <div class="bar1"></div>

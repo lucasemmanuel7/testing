@@ -330,7 +330,10 @@ function yesResetCard(i) {
       ctnOpacy[i].classList.remove("btns-blocking"); // toggle
       lockOpen[i].classList.remove("hidden"); //  toggle
       lockClose[i].classList.remove("visible");  //  toggle
-
+	
+      for (var x = 0; x < allCards.length ; x++) {
+        document.querySelectorAll(".ctn-blocking-card")[x].classList.remove('active');
+      }
 
   console.log('cartelOff ', cartelOff)
 

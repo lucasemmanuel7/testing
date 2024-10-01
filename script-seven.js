@@ -1154,6 +1154,25 @@ const showHTML = () => {
 
         `
 
+	/* Blocking all cards no value stock -1 */
+        if (data.stock === -1) {
+          for (var i = 0; i < allCards.length ; i++) {
+            if (i == data.position[0]) {
+                continue;
+            } else {
+                document.querySelectorAll(".ctn-blocking-card")[i].classList.add('active');
+            }
+          }
+          // .ctn-blocking-card.active
+        } if (data.stock > -1) {
+
+          for (var i = 0; i < allCards.length ; i++) {
+            document.querySelectorAll(".ctn-blocking-card")[i].classList.remove('active');
+          }
+        
+        }
+	
+	    
         totalOfProducts = totalOfProducts + data.order * data.price;
         
         const ctnProductWsp = document.createElement('div');

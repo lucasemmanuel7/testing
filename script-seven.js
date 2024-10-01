@@ -78,7 +78,18 @@ const closeViewportWsp = document.querySelector("#close-wsp-viewport");
 
 abrirWsp.addEventListener("click", () => {
   viewportWsp.classList.add("visible-viewport-wsp");
+
+  cartProduct = document.querySelectorAll(".quantity-stock-product")
+
+  for (let i = 0; i < cartProduct.length; i++){
+    // console.log("rowProduct", document.querySelectorAll('.quantity-stock-product')[i].textContent);
+    stockData = document.querySelectorAll('.quantity-stock-product')[i].textContent;
+    if(stockData === '-' ){
+      console.log("rowProduct", "constancia");
+    }
+  }
 })
+
 
 closeViewportWsp.addEventListener("click", () => {
   viewportWsp.classList.remove("visible-viewport-wsp");

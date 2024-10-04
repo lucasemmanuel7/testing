@@ -3940,7 +3940,8 @@ filter: hue-rotate(90deg);
 }
 
 .ctn-menu-in-footer.transparent {
-  background-color: transparent;
+  /*background-color: transparent;*/
+  display: none;
 }
 
 .ctn-cristal_inFooter {

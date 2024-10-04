@@ -4091,6 +4091,11 @@ filter: hue-rotate(90deg);
     bottom: .5rem;
   }
 
+  .ctn-cartel-aviso {
+    gap: 16px;
+    height: 210px;
+   }
+	   
 }
 
 

@@ -3925,6 +3925,10 @@ filter: hue-rotate(90deg);
   padding: 0rem 1rem;
 }
 
+.footer_section.menuNoFooter {
+  justify-content: end;
+}
+
 .ctn-menu-in-footer {
   display: flex;
   gap: 10px;

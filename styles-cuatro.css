@@ -4104,8 +4104,6 @@ filter: hue-rotate(90deg);
 }
 
 
-
-
 @media screen and (min-width:360px){
 
   .ctn-btn-list {
@@ -4135,6 +4133,22 @@ filter: hue-rotate(90deg);
 
   .ctn-design_by {
     width: auto;
+  }
+}
+
+
+@media screen and (min-width:480px){
+
+  .copyright {
+    flex-direction: row;
+  }
+
+  .separator-text {
+    display: none;
+  }
+
+  .separator-text-solo {
+    display: flex;
   }
 }
 

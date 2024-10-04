@@ -413,7 +413,8 @@ function yesResetCard(i) {
   }  
 
   document.querySelectorAll(".ctn-blocking-card").forEach(obj=>obj.classList.remove("active"));
-
+  document.querySelectorAll(".ctn-cartel-aviso").forEach(obj=>obj.classList.add("noActive"));
+	
   productName = document.querySelectorAll('.product_name')[i].textContent;
 
   console.log('productName ',  productName);
@@ -580,9 +581,12 @@ for (let i = 0; i < allCards.length; i++) {
       document.querySelectorAll(".yes_reset")[i].classList.remove('activo');
       document.querySelectorAll(".no_reset")[i].classList.remove('activo');          
 
-      for (var x = 0; x < allCards.length ; x++) {
-        document.querySelectorAll(".ctn-blocking-card")[x].classList.remove('active');
-      }
+      btnGreenPlus = document.querySelectorAll(".buttonIncrement_stock")[i];
+
+      btnGreenPlus.addEventListener("click", function() {
+        document.querySelectorAll(".ctn-blocking-card").forEach(obj=>obj.classList.remove("active"));
+        document.querySelectorAll(".ctn-cartel-aviso").forEach(obj=>obj.classList.add("noActive"));
+      })
 
     } if( allOrder >= 0  &&  allStock === -1  && cartelStart === true ) {  // active CARTELES FALTA COMPLETAR STOCK 
         document.querySelectorAll(".container_product_stock")[i].classList.add('noComplete');
@@ -793,8 +797,9 @@ let countProductFooter = document.querySelector('#count-product');
 
 for (let i = 0; i < allCards.length; i++) {
   allCards[i].addEventListener("click", function() {
+
     red = document.querySelectorAll(".name_img_price")[i].classList.contains('activo_red_card')
-	  
+
     if (allCards[i].querySelector(".num_stock_counter").value >= 0 ) { 
 
         console.log('soy target ', allCards[i]);
@@ -812,6 +817,9 @@ for (let i = 0; i < allCards.length; i++) {
         let borrarAndModifiedYellow = "ctn-btns-borrar-and-modified_yellow";
         let borrarAndModifiedGreen = "ctn-btns-borrar-and-modified_green";
         let borrarAndModifiedRed = "ctn-btns-borrar-and-modified_red";
+
+        let namesProductsBlack = "name-product";
+        let namesProductsWhite = "name-product-white";
     
         let cardId = document.querySelectorAll(".product_card")[i].id;   
         
@@ -826,6 +834,8 @@ for (let i = 0; i < allCards.length; i++) {
           order: allOrder,
           stock: allStock,
           title: nameProduct,
+          colorTitleBlack: namesProductsBlack,
+          colorTitleWhite: namesProductsWhite,
           price: priceProduct,
           nameYellow: yellowNameProduct,
           nameGreen: greenNameProduct,
@@ -888,20 +898,38 @@ for (let i = 0; i < allCards.length; i++) {
       
       console.log('Soy allProducts ', allProducts);
 
-    } if( red ===  true) {
-	/* Blocking all cards no value stock -1 */
-        for (var x = 0; x < allCards.length ; x++) {
-          if (x == i) {
-            continue;
-          } else {
-            document.querySelectorAll(".ctn-blocking-card")[x].classList.add('active');
-          }
-        }
-    }
+    }  if( red === true) {
 
-  }    
+      if( !document.querySelector(".ctn-blocking-card").classList.contains('active')){
 
-)}
+          console.log(document.querySelectorAll(".product_name")[i].textContent);
+          nameProductError = document.querySelectorAll(".product_name")[i].textContent;
+          idProduct = document.querySelectorAll(".product_card")[i].id;
+
+          console.log('ids', document.querySelectorAll(".product_card")[i].id);
+          for (var x = 0; x < allCards.length ; x++) {
+            if (x == i) {
+                continue;
+            } else {
+                document.querySelectorAll(".ctn-blocking-card")[x].classList.add('active');
+
+                document.querySelectorAll(".ctn-blocking-card")[x].innerHTML +=  `
+          
+                <div class="ctn-cartel-aviso">
+                  <div class="cartel-aviso">
+                    Falta reportar cantidad de STOCK en el producto: <br> 
+                    <span class="name-product-error">${nameProductError}</span>
+                  </div>
+                  <a class="btn-to-product-error" href="#${idProduct}">Ir al PRODUCTO</a>
+                </div>
+              `
+           }              
+         }        
+       }
+     }    
+  })
+}
+
 
 
 

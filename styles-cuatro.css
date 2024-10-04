@@ -3975,6 +3975,40 @@ filter: hue-rotate(90deg);
   width: min-content;
 }
 
+.copyright {
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-evenly;
+  font-size: 14px;
+  padding: 10px 5px;
+  background: black;
+  color: wheat;
+  width: 100%;
+  height: auto;
+  overflow: hidden;
+  text-align: center;
+}
+
+.copy-text {
+  /* min-width: max-content; */
+  /* display: contents; */
+  display: inline-flex;
+  width: auto;
+  padding: 4px;
+  margin: auto;
+  gap: 7px;
+  align-items: center;
+}
+
+.separator-text {
+  display: flex;
+}
+
+.separator-text-solo {
+  display: none;
+  align-items: center;
+}
+
 
 @media screen and ( min-width: 320px ) and ( max-height: 615px )
 {

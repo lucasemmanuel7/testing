@@ -1415,13 +1415,17 @@ let TheBody = document.getElementsByTagName("body");
   
 function OnScrolling(){                             // put this on a scrolling EVENT
 
-      console.log('scrool ',  Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed()))
-      console.log('$(document).height() ', typeof $(document).height())
-
       boolean = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
+	
+    if(!document.querySelector('.options').classList.contains("visibleInNavbar")) {
+      document.querySelector(".ctn-menu-in-footer").classList.add('transparent');
+      document.querySelector(".footer_section").classList.add('menuNoFooter');
 
+    } if(document.querySelector('.options').classList.contains("visibleInNavbar")) {
+
+      document.querySelector(".footer_section").classList.remove('menuNoFooter');
       
-    if(document.querySelector('.ctn-btn-limpiar-cards').classList.contains("btnFloating")) {
+    } if(document.querySelector('.ctn-btn-limpiar-cards').classList.contains("btnFloating")) {
 
       if( boolean <= 100){
     

@@ -1423,6 +1423,7 @@ function OnScrolling(){                             // put this on a scrolling E
 
     } if(document.querySelector('.options').classList.contains("visibleInNavbar")) {
 
+      document.querySelector(".ctn-menu-in-footer").classList.remove('transparent');
       document.querySelector(".footer_section").classList.remove('menuNoFooter');
       
     } if(document.querySelector('.ctn-btn-limpiar-cards').classList.contains("btnFloating")) {
@@ -1473,6 +1474,9 @@ btnToTop.addEventListener('click', () => {
       document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
       document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone'); 
       document.querySelector(".ctn-menu-in-footer").classList.add('visible');
+
+      document.querySelector(".footer_section").classList.remove('menuNoFooter');
+      document.querySelector(".ctn-menu-in-footer").classList.remove('transparent');
   } 
 
   let contains = {

@@ -1428,7 +1428,7 @@ function OnScrolling(){                             // put this on a scrolling E
       
     } if(document.querySelector('.ctn-btn-limpiar-cards').classList.contains("btnFloating")) {
 
-      if( boolean <= 100){
+      if( boolean <= 173){
     
         document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
         document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
@@ -1436,7 +1436,7 @@ function OnScrolling(){                             // put this on a scrolling E
         document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
         document.querySelector(".ctn-menu-in-footer").classList.add('visible');
        
-      } if( boolean > 100 ){
+      } if( boolean > 173 ){
         
         document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
         document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
@@ -1468,7 +1468,7 @@ btnToTop.addEventListener('click', () => {
 
   valueScrollBottom = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
   
-  if( valueScrollBottom <= 100){	  
+  if( valueScrollBottom <= 173){	  
       document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
       document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
       document.querySelector(".total-pagar_footer").classList.add('visibleFooter');

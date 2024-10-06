@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
 
     <link href="https://fonts.googleapis.com/css?family=Archivo+Black&display=swap" rel="stylesheet">   <!-- link cartel start-->
-    <link rel="stylesheet" href="styles-cuatro.css">
+    <link rel="stylesheet" href="styles.css">
     <!-- <link rel="shortcut icon" href="favicon.ico"> -->
     <!-- <link rel="icon" src="/img/suPasteleriasApp.ico" type="image/x-icon"> -->
     <!-- <link rel="icon" type="https://cdn.sstatic.net/Sites/es/img/apple-touch-icon.png?v=7739871010e6"> -->
@@ -24,7 +24,7 @@
 
 
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-    <script src="script-seven.js" defer></script>
+    <script src="script-ocho.js" defer></script>
 </head>
 <!-- IsScrollbarAtBottom(); OnScrolling()  onScroll(event)-->
 <body  onscroll="bodyScroll()">
@@ -36,25 +36,9 @@
             <!-- <i id="to-top-arrow" class="bi bi-caret-up-fill"></i> -->
         </div>
 
-        <div class="ctn-btn-limpiar-cards">
-            <button class="limpiar-cards">
-                <!-- <img class="btnToNav" src="./img/send.png" alt="" hidden > -->
-            <div class="ctn-btns-floating">   
-                <!-- Ocultar menú -->
-                <span class="btnToNav" hidden><i class="bi bi-eye-slash-fill"></i></span>
-                <span id="btnArrowDown" hidden>0</span>
-
-                <!-- xl-torta-de-ricota -->
-                <!-- <a  id="btnArrowDown" href="#xl-torta-de-ricota" hidden><i class="bi bi-arrow-down"></i></a>                                       -->
 
 
-                <span id="btnArrowUp" hidden>0</span>
-                <div class="total-pagar_inNav">$0</div>
-                <!-- Borrar info -->
-                <span class="delete-info-btn" onclick="dataToTrashcan()" hidden ><i class="bi bi-trash3"></i></span>
-            </div>    
-            <!-- <i class="bi bi-gear-fill"></i> -->
-            <div class="options">
+        <div class="options">
             <i class="bi bi-gear configuration"></i>
             <i class="bi bi-x options-close"></i>
                 <ul class="nav__expand-list" id="nav-expand-list">
@@ -97,8 +81,6 @@
                 </ul>
                       
             </div>
-            </button>
-        </div>
 
         <ul class="ctn-delete-info-all-cards" >
 
@@ -106,12 +88,12 @@
                 <div class="cartel-off-cristal-delete">
                     <div class="cartel-off-">
                         <div class="cartel-question_">¿Desea eliminar los valores actuales de los productos seleccionados?</div> 
-			<div class="cards_noValues">Ninguno de los productos tiene valor asignado.</div> 
+                        <div class="cards_noValues">Ninguno de los productos tiene valor asignado.</div> 
                     </div>
                     <div class="ctn_of_btn_delete">
                         <button class="yes_delete_info_cards" >SI</button>
                         <button class="no_delete_ctn_question">NO</button>
-			<button class="btn-cards_noValues"><i class="bi bi-x"></i></button>
+                        <button class="btn-cards_noValues"><i class="bi bi-x"></i></button>
                     </div> 
                 </div>
             </div>
@@ -137,7 +119,7 @@
                     <!--           1           -->
                     <li class="height-container one">
 
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#torta_porcion" onclick="closeList()">Torta Porción
                                     <!-- <div class="scene"> -->
                                         <!-- <div class="cube">
@@ -150,7 +132,7 @@
                                         </div> -->
                                     <!-- </div> -->
                                 </a>  
-                            </div>                                    
+                            </button>                                    
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -165,9 +147,9 @@
                     <!--           2           -->
                     <li class="height-container">
 
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#alf-de-maicena" onclick="closeList()">Alfajor de Maicena</a>
-                            </div>                                        
+                            </button>                                        
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -182,9 +164,9 @@
                     <!--           3           -->
                     <li class="height-container">
 
-                            <div class="ctn-btn-list">                                         
+                            <button class="ctn-btn-list">                                         
                                 <a  class="styleBtnList" href="#xl-frola-de-batata" onclick="closeList()">XL Frola de Batata</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -199,9 +181,9 @@
                     <!--           4           -->
                     <li class="height-container">
                                              
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#xl-frola-de-membrillo" onclick="closeList()">XL Frola de Membrillo</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -216,9 +198,9 @@
                     <!--           5           -->
                     <li class="height-container">
                              
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#xl-torta-de-ricota" onclick="closeList()">XL Torta de Ricota</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -233,9 +215,9 @@
                     <!--           6           -->
                     <li class="height-container">
                               
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#xl-torta-de-coco" onclick="closeList()">XL Torta de Coco</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -250,9 +232,9 @@
                     <!--           7           -->
                     <li class="height-container">
                              
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#mini-frola-de-batata" onclick="closeList()">Mini Frola de Batata</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -267,9 +249,9 @@
                     <!--           8           -->
                     <li class="height-container">
                             
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#mini-frola-de-membrillo" onclick="closeList()">Mini Frola de Membrillo</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -284,9 +266,9 @@
                     <!--           9           -->
                     <li class="height-container">
                          
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#mini-ricota" onclick="closeList()">Mini Ricota</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -301,9 +283,9 @@
                     <!--           10           -->
                     <li class="height-container">
                             
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#mini-coco" onclick="closeList()">Mini Coco</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -318,9 +300,9 @@
                     <!--           11           -->
                     <li class="height-container">
                            
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#tortita-de-manzana" onclick="closeList()">Tortita de Manzana</a >
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -335,9 +317,9 @@
                     <!--          12           -->
                     <li class="height-container">
                            
-                            <div class="ctn-btn-list">
+                            <button class="ctn-btn-list">
                                 <a  class="styleBtnList" href="#tortita-de-merengue" onclick="closeList()">Tortita de Merengue</a>
-                            </div>
+                            </button>
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -352,9 +334,9 @@
                     <!--           13           -->
                     <li class="height-container ultimate-card">
 
-                            <div class="ctn-btn-list">                                           
+                            <button class="ctn-btn-list">                                           
                                 <a  class="styleBtnList" href="#conito-choco-ddl" onclick="closeList()">Conito Chocolate/DDL</a>
-                            </div>  
+                            </button>  
                             <div class="ctn-info-counters">
                                 <div class="container-name-counter">
                                     <p>comprar</p>
@@ -393,12 +375,12 @@
                     <li><a href="#">Qué hacemos</a></li>
                     <li><a href="#">Contacto</a></li> -->
 
-                    <div class="ctn-cartel-cart-empty">
-		   	<p class="cartel-cart-empty">El carrito está vacío</p>
-                    </div>
                     <div class="row-product">
 			
-		    </div>
+					</div>
+                    <div class="ctn-cartel-cart-empty">
+					    <p class="cartel-cart-empty">El carrito está vacío</p>
+                    </div>
                 </ul>
             </div>
             <div class="cart-total">
@@ -424,12 +406,20 @@
 
                 <div class="delete-info__card">
                     <div class="cartel-off-cristal-delete_inNav">
+                        <!-- <div class="cartel-off-or-not">
+                            <div class="cartel-question_inNav">
 
+                            </div> 
+                        </div>
+                        <div class="ctn_of_btn_delete_inNav">
+                            <button class="yes_delete_info_cards_inNav">SI</button>
+                            <button class="no_delete_ctn_question_inNav">NO</button>
+                        </div>  -->
                     </div>
                 </div>
     
             </ul>
-		
+
         </nav>
         
         <div id="viewportWsp" class="whatsapp">
@@ -493,7 +483,9 @@
         <!--                                 1                                       -->
         
         <div id="torta_porcion" data-for="0" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                 
+            <div id="blocking-card" class="ctn-blocking-card">
+                
+            </div>                            
             <div class="container_card">
                 <div class="name_img_price">
                      <div class="ctn-tittle-rotate">
@@ -668,13 +660,15 @@
                     </div>
                 </section>
             </div>
-        
+          
         </div>
 
          <!--                                 2                                      -->
 
         <div id="alf-de-maicena" data-for="1" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                              
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>                           
             <div class="container_card">
                 <div class="name_img_price" >
                      <div class="ctn-tittle-rotate">
@@ -856,7 +850,9 @@
          <!--                                 3                                     -->
 
          <div id="xl-frola-de-batata" data-for="2" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                               
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>                        
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -1009,7 +1005,9 @@
          <!--                                 4                                      -->
 
          <div id="xl-frola-de-membrillo" data-for="3" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>                                
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -1162,7 +1160,9 @@
          <!--                                5                                      -->
 
          <div id="xl-torta-de-ricota" data-for="4" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>                             
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -1315,7 +1315,9 @@
          <!--                                 6                                     -->
 
          <div id="xl-torta-de-coco" data-for="5" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>                             
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -1468,7 +1470,9 @@
          <!--                                7                                     -->
 
          <div id="mini-frola-de-batata" data-for="6" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>                        
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -1621,7 +1625,9 @@
          <!--                                 8                                     -->
 
         <div id="mini-frola-de-membrillo" data-for="7" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>                   
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -1773,7 +1779,9 @@
          <!--                                 9                                     -->
 
         <div id="mini-ricota" data-for="8" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                 
+            <div id="blocking-card" class="ctn-blocking-card">
+          
+            </div>                           
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -1925,7 +1933,9 @@
                  <!--                                 10                                     -->
 
         <div id="mini-coco" data-for="9" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>   
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -2077,8 +2087,10 @@
                          <!--                                 11                                     -->
 
         <div id="tortita-de-manzana" data-for="10" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
-            <div class="container_card">
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>            
+            <div class="container_card"> 
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
                         <div class="side default-side">
@@ -2229,7 +2241,9 @@
                                  <!--                                 12                                     -->
 
         <div id="tortita-de-merengue" data-for="11" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>                   
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -2381,7 +2395,9 @@
                                  <!--                                 13                                     -->
 
         <div id="conito-choco-ddl" data-for="12" class="product_card one" >
-            <div class="ctn-blocking-card"></div>                                
+            <div id="blocking-card" class="ctn-blocking-card">
+
+            </div>           
             <div class="container_card">
                 <div class="name_img_price" >
                     <div class="ctn-tittle-rotate">
@@ -2533,25 +2549,62 @@
 
     </div>
 
-    <footer class="footer_section">
 
-        <div class="ctn-menu-in-footer">
+    <footer class="footer_section">
+       
+      <div class="ctn-in-footer">
+        <div class="menu-floating-footer">
+
+            <div class="ctn-btn-limpiar-cards">
+                <button class="limpiar-cards">
+                    <!-- <img class="btnToNav" src="./img/send.png" alt="" hidden > -->
+                <div class="ctn-btns-floating">   
+                    <!-- Ocultar menú -->
+                    <span class="btnToNav" hidden><i class="bi bi-eye-slash-fill"></i></span>
+                    <span id="btnArrowDown" hidden>0</span>
+    
+                    <!-- xl-torta-de-ricota -->
+                    <!-- <a  id="btnArrowDown" href="#xl-torta-de-ricota" hidden><i class="bi bi-arrow-down"></i></a>                                       -->
+    
+    
+                    <span id="btnArrowUp" hidden>0</span>
+                    <div class="total-pagar_inNav">$0</div>
+    
+                    <!-- Borrar info  id="delete_info-cards" -->
+                    <span  class="delete-info-btn" onclick="dataToTrashcan()" hidden><i class="bi bi-trash3"></i></span>
+                </div>    
+                <!-- <i class="bi bi-gear-fill"></i> -->
+    
+                </button>
+            </div>
+    
+        </div>
+        <!-- <div class="ctn-menu-in-footer">
             <div class="ctn-cristal_inFooter">
                 <span id="ctnValueStockFooter">0</span>
                 <span id="ctnValueOrderFooter">0</span>
-                <div class="total-pagar_footer">$0</div>
+                <div class="ctn-total-pagar_footer">
+                    <div class="total-pagar_footer">$0</div>
+                </div>
+            </div>
+        </div> -->
+        <div class="ctn-text-and-btn-contact">
+            <div class="ctn-contact-us-text">
+                <p class="contact-us-text">Contacta con Nosotros</p>
+            </div>
+            <div class="ctn-contact-us">
+                <span class="contact-wsp"><i class="bi bi-whatsapp"></i></span> 
+                <span class="contact-email"><i class="bi bi-envelope-at"></i></span>     
             </div>
         </div>
-        <p class="ctn-design_by">
-            <span class="designed-by">Designed by</span> 
-            <span class="design-name">Lucas Emmanuel</span>     
-        </p>
-	    
+      </div>  
+
     </footer>
     <p class="copyright">
        <span class="copy-text">Copyright © 2024 All rights reserved</span> 
        <span class="separator-text-solo">|</span> 
        <span class="copy-text">Designed by Lucas Emmanuel<span class="separator-text">|</span></span>
+        <!-- <span class="design-by"></span> -->
     </p>
 </body>
 </html>

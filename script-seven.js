@@ -1,3 +1,4 @@
+
 const quantities = document.querySelectorAll('.product_card');
 
 [...quantities].forEach(function(quantity) {
@@ -45,7 +46,6 @@ const quantities = document.querySelectorAll('.product_card');
 
 somefunction = function () { return false;}
 
-
 const body = document.querySelector("body");
 const nav = document.querySelector("#nav");
 const abrir = document.querySelector("#abrir");
@@ -78,18 +78,17 @@ const closeViewportWsp = document.querySelector("#close-wsp-viewport");
 
 abrirWsp.addEventListener("click", () => {
   viewportWsp.classList.add("visible-viewport-wsp");
-
- /* cartProduct = document.querySelectorAll(".quantity-stock-product")
+  cartProduct = document.querySelectorAll(".quantity-stock-product")
 
   for (let i = 0; i < cartProduct.length; i++){
-    // console.log("rowProduct", document.querySelectorAll('.quantity-stock-product')[i].textContent);
+	  
     stockData = document.querySelectorAll('.quantity-stock-product')[i].textContent;
     if(stockData === '-' ){
       console.log("rowProduct", "constancia");
     }
-  }*/
+  }
+  
 })
-
 
 closeViewportWsp.addEventListener("click", () => {
   viewportWsp.classList.remove("visible-viewport-wsp");
@@ -100,7 +99,6 @@ const productsList = document.querySelector(".container_products_list");
 const shopListOpen = document.getElementById("list-products");
 const shopListClose = document.getElementById("close-product-list");
 
-// products_list-visible
 shopListOpen.addEventListener("click", () => {
  productsList.classList.add("visible");
  body.classList.remove("moving");
@@ -112,10 +110,9 @@ shopListOpen.addEventListener("click", () => {
  document.querySelector(".options").classList.remove("hover");
  document.querySelector(".options-close").classList.remove("visible")
  document.querySelector(".configuration").classList.remove("no__Visible")
-
+ 
 })
 
-// products_list-visible
 shopListClose.addEventListener("click", () => {
  productsList.classList.remove("visible");
  body.classList.remove("stop");
@@ -150,7 +147,7 @@ function closeNav() {
   nav.classList.remove("visible");
   body.classList.remove("stop");
   body.classList.add("moving");
-}
+ }
 
 
 function closeList() {
@@ -186,20 +183,6 @@ positionBtnList.addEventListener('click', () => {
 
   })
 }
-
-let productListBtn = document.querySelectorAll(".ctn-btn-list");
-
-for (let i = 0; i < productListBtn.length; i++) {
-  productListBtn[i].addEventListener('click', function() {
-    ctnCard = document.querySelectorAll(".container_card")[i].classList.add("violet_active");
-
-    setTimeout(function(){
-      document.querySelectorAll(".container_card")[i].classList.remove('violet_active');
-    }, 10000);
-    
-  }
-)}
-
 
 
 const ctnCards = document.querySelectorAll(".container_card");
@@ -330,10 +313,7 @@ function yesResetCard(i) {
       ctnOpacy[i].classList.remove("btns-blocking"); // toggle
       lockOpen[i].classList.remove("hidden"); //  toggle
       lockClose[i].classList.remove("visible");  //  toggle
-	
-      for (var x = 0; x < allCards.length ; x++) {
-        document.querySelectorAll(".ctn-blocking-card")[x].classList.remove('active');
-      }
+
 
   console.log('cartelOff ', cartelOff)
 
@@ -412,9 +392,8 @@ function yesResetCard(i) {
     document.querySelectorAll(".title-falta-completar")[i].classList.remove('titleVisible');    /// Elevation de Name Product
   }  
 
-  document.querySelectorAll(".ctn-blocking-card").forEach(obj=>obj.classList.remove("active"));
-  document.querySelectorAll(".ctn-cartel-aviso").forEach(obj=>obj.classList.add("noActive"));
-	
+ 
+
   productName = document.querySelectorAll('.product_name')[i].textContent;
 
   console.log('productName ',  productName);
@@ -426,16 +405,17 @@ function yesResetCard(i) {
     totalOfProducts = 0;
     document.querySelector(".total-pagar").innerHTML = "$" + totalOfProducts;
     document.querySelector(".total-pagar_inNav").innerHTML = "$" + totalOfProducts;
-    document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
   }
+ 
+  
+      document.querySelectorAll(".ctn-blocking-card").forEach(obj=>obj.classList.remove("active"));
+      document.querySelectorAll(".ctn-cartel-aviso").forEach(obj=>obj.classList.add("noActive"));
 
   countProducts.innerHTML = allProducts.length;
   countProductFooter.innerHTML = allProducts.length;
 
   countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
   countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-  ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order === 0 ).length;
-  ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
   showHTML();
 }
@@ -579,14 +559,16 @@ for (let i = 0; i < allCards.length; i++) {
       document.querySelectorAll(".ctn_btn_confirmation")[i].classList.remove('btnVisible'); 
       document.querySelectorAll(".question_yes_no")[i].classList.remove('questionVisible'); 
       document.querySelectorAll(".yes_reset")[i].classList.remove('activo');
-      document.querySelectorAll(".no_reset")[i].classList.remove('activo');          
+      document.querySelectorAll(".no_reset")[i].classList.remove('activo');      
 
-      btnGreenPlus = document.querySelectorAll(".buttonIncrement_stock")[i];
 
-      btnGreenPlus.addEventListener("click", function() {
-        document.querySelectorAll(".ctn-blocking-card").forEach(obj=>obj.classList.remove("active"));
-        document.querySelectorAll(".ctn-cartel-aviso").forEach(obj=>obj.classList.add("noActive"));
-      })
+        btnGreenPlus = document.querySelectorAll(".buttonIncrement_stock")[i];
+
+        btnGreenPlus.addEventListener("click", function() {
+            document.querySelectorAll(".ctn-blocking-card").forEach(obj=>obj.classList.remove("active"));
+            document.querySelectorAll(".ctn-cartel-aviso").forEach(obj=>obj.classList.add("noActive"));
+        })
+
 
     } if( allOrder >= 0  &&  allStock === -1  && cartelStart === true ) {  // active CARTELES FALTA COMPLETAR STOCK 
         document.querySelectorAll(".container_product_stock")[i].classList.add('noComplete');
@@ -706,6 +688,7 @@ for (let i = 0; i < allCards.length; i++) {
   
         countProducts.innerHTML = allProducts.length;
 
+
         console.log("allProducts ", allProducts)
 
       showHTML(infoProduct) 
@@ -733,14 +716,10 @@ for (let i = 0; i < allCards.length; i++) {
         product =>  product.title !== productName,
       )
 
-        
         countProducts.innerHTML = allProducts.length;
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order === 0 ).length;
-        ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        
       
       showHTML();
     }
@@ -753,10 +732,10 @@ for (let i = 0; i < allCards.length; i++) {
       totalOfProducts = 0;
       document.querySelector(".total-pagar").innerHTML = "$" + totalOfProducts;
       document.querySelector(".total-pagar_inNav").innerHTML = "$" + totalOfProducts;
-      document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
 
       document.querySelector("#count-product").innerHTML =  allProducts.length;
       
+     
       showHTML();
     } else {
       document.querySelector("#count-product").innerHTML =  allProducts.length;
@@ -765,7 +744,6 @@ for (let i = 0; i < allCards.length; i++) {
 
   })
 }
-
 
 
 const rowProduct = document.querySelector('.row-product');
@@ -780,19 +758,13 @@ const converMessageWsp = document.querySelector('.converMessageWsp')
 let productsLista = document.querySelector(".container_cards");
 
 
-
 let valorTotal = parseInt(document.querySelector('.total-pagar').textContent);
 
 let countProducts = document.querySelector('#contador-productos');
 let countStock = document.querySelector('#btnArrowDown');
 let countOrder = document.querySelector('#btnArrowUp');
-let ctnValueOrderFooter = document.querySelector('#ctnValueOrderFooter');
-let ctnValueStockFooter = document.querySelector('#ctnValueStockFooter');
-
 
 let countProductFooter = document.querySelector('#count-product');
-
-
 
 
 for (let i = 0; i < allCards.length; i++) {
@@ -889,8 +861,6 @@ for (let i = 0; i < allCards.length; i++) {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order === 0 ).length;
-        ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
         console.log("totalPagar ", typeof valorTotal, valorTotal)
 
@@ -923,13 +893,19 @@ for (let i = 0; i < allCards.length; i++) {
                   <a class="btn-to-product-error" href="#${idProduct}">Ir al PRODUCTO</a>
                 </div>
               `
-           }              
-         }        
-       }
-     }    
+
+            }              
+		  
+          }
+         
+      }
+
+           // console.log("allProducts.STOCK ", allProducts.map(product => { return product.stock, product.position }));
+          console.log("allProducts.STOCK ", allProducts.map((function (product) { if(product.stock === -1){ return product.position }})));
+
+    }    
   })
 }
-
 
 
 
@@ -954,15 +930,12 @@ function funcion2(i) {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order === 0 ).length;
-        ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
         if (allProducts.length === 0) {
           totalOfProducts = 0;
 
           document.querySelector(".total-pagar").innerHTML = "$" + totalOfProducts;
           document.querySelector(".total-pagar_inNav").innerHTML = "$" + totalOfProducts;
-          document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
         }
       
         showHTML();
@@ -971,53 +944,24 @@ function funcion2(i) {
      console.log('soy position ', i);
 }
 
-
 function yesDeleteInfoCard(i, e) {
+  console.log('Objetooo', i, e);
   yesResetCard(i); 
-  funcion2(e);  
+  funcion2(e);
   document.querySelector(".ctn-delete-info__card").classList.remove("visible");
 }
 
-// rowProduct.addEventListener('click', e => {
-
-//   console.log('borrar ', e.target.classList.contains("borrar"))
-
-//   // cartProduct = document.querySelectorAll('.cart-product')[0].querySelector("a").getAttribute("href").slice(1);
-  
-
-//     if(e.target.classList.contains("borrar")) {
-//         const product = e.target.parentElement;
-//         const title = product.querySelector("a").getAttribute("href").slice(1);
-
-//        console.log ('target ', e.target.parentElement)
-
-//         console.log('title ', title);
-
-
-//         allProducts = allProducts.filter(
-//             product => console.log('product.card ', product.card),
-//         )
-
-
-        
-//         console.log(allProducts);
-//         countProducts.innerHTML = allProducts.length;
-      
-//         showHTML();
-//     }
-// })
 
 function formatNumber(num) {
   if ( num !== 0 ) {
-  document.querySelector(".total-pagar_footer").classList.add('addPadding');
   document.querySelector(".total-pagar_inNav").classList.add('addPadding');
   } if ( num === 0 ) {
-    document.querySelector(".total-pagar_footer").classList.remove('addPadding');
     document.querySelector(".total-pagar_inNav").classList.remove('addPadding');
   }
-	
   return "$ " + num.toString().replace(/(\d)(?=(\d{3})+(?!\d))/g, '$1.')
 }
+
+
 
 const yesDeleteInfoCardInNav = document.querySelector(".yes_delete_info_cards_inNav");
 const deleteInfoCard = document.querySelector('.delete-info__card');
@@ -1027,12 +971,12 @@ deleteInfoCard.innerHTML = '';
   function deleteCard(ubicationCardBody, positionInNav) {
     ctnQuestionDeleteCard.classList.add("cartel-off-cristal-delete_inNav");
 
-  
+
     document.querySelector(".ctn-delete-info__card").classList.add('visible')
 
-    nameActually = document.querySelectorAll(".name-products")[positionInNav].textContent;
+    nameActually = document.querySelectorAll(".name-products")[positionInNav].innerText;
 
-    console.log("44", nameActually)
+    // console.log("44", nameActually)
     ctnQuestionDeleteCard.innerHTML =  `
     
           <div class="cartel-off-or-not">
@@ -1044,7 +988,8 @@ deleteInfoCard.innerHTML = '';
               <button class="yes_delete_info_cards_inNav" onclick="yesDeleteInfoCard(${ubicationCardBody}, ${positionInNav})">SI</button>
               <button class="no_delete_ctn_question_inNav" onclick="noDeleteInfoCard()">NO</button>
           </div> 
-      `
+     
+    `
   }
 
   deleteInfoCard.append(ctnQuestionDeleteCard);
@@ -1057,7 +1002,6 @@ function noDeleteInfoCard() {
 
 totalOfProducts = 0;
 
-
 // Funcion para mostrar HTML
 
 const showHTML = () => {
@@ -1066,20 +1010,16 @@ const showHTML = () => {
   let cartEmpty = document.querySelector(".ctn-cartel-cart-empty");
   let ctnMessageWsp = document.querySelector(".ctn-messages");
 
-  
   if (!allProducts.length) {
-		counter.classList.add('hidden');
-		cartEmpty.classList.remove('no_Visible');
+    counter.classList.add('hidden');
+    cartEmpty.classList.remove('no_Visible');
     rowProduct.classList.remove('no__Visible');
-    // navList.classList.add('flow_hidden');
     ctnMessageWsp.classList.add('hidden');
-	} else {
-		counter.classList.remove('hidden');
-		cartEmpty.classList.add('no_Visible');
-   
-    // navList.classList.remove('flow_hidden');
+  } else {
+    counter.classList.remove('hidden');
+    cartEmpty.classList.add('no_Visible');
     ctnMessageWsp.classList.remove('hidden');
-	}
+  }
   
   // Limpiar HTML
   rowProduct.innerHTML = '';
@@ -1093,16 +1033,14 @@ const showHTML = () => {
   position = 0;
   numOfProduct = 1;
   totalOfProducts = 0;
-	
+  
 
     allProducts.forEach(data => {
 
         const containerProduct = document.createElement('div');
         containerProduct.classList.add("cart-product");
-	nameProductBlack = "name-product";
+        namesProductsBlack = "name-product";
         nameProductWhite = "name-product-white";
-
-
 
         data.total = total + parseInt(data.order * data.price);
         console.log(data.totalOfProducts = totalOfProducts + data.total)
@@ -1111,7 +1049,7 @@ const showHTML = () => {
 
         ctnNameColor = data.nameYellow; if( data.order > 0 && data.stock >= 0 ) { ctnNameColor = data.nameGreen; } if ( data.order >= 0  &&  data.stock === -1 ) {ctnNameColor = data.nameRed; }
         ctnBtnsColor = data.ctnBtnsYellow; if( data.order > 0 && data.stock >= 0 ) { ctnBtnsColor = data.ctnBtnsGreen; } if ( data.order >= 0  &&  data.stock === -1 ) { ctnBtnsColor = data.ctnBtnsRed; }
-	namesOfProducts = nameProductBlack; if(data.stock === -1) { namesOfProducts = nameProductWhite; }
+        namesOfProducts = namesProductsBlack; if(data.stock === -1) {namesOfProducts = nameProductWhite;}
 
           containerProduct.innerHTML = `
                       
@@ -1121,7 +1059,8 @@ const showHTML = () => {
                             <div class="container">${numOfProduct}</div>
                           </div>
 
-                        <span class="${namesOfProducts} name-products" data-for="${data.position}">${data.title}</span>
+                          <span class="${namesOfProducts} name-products" data-for="${data.position}">${data.title}</span>
+  
                         <div class="ctn-icon-close"> 
                             <div class="container">
                               <div class="bar1"></div>
@@ -1197,8 +1136,7 @@ const showHTML = () => {
                       </div>
 
         `
-	
-	    
+
         totalOfProducts = totalOfProducts + data.order * data.price;
         
         const ctnProductWsp = document.createElement('div');
@@ -1287,12 +1225,12 @@ const showHTML = () => {
 
         } 
 
-        rowProduct.append(containerProduct);
+          rowProduct.append(containerProduct);
 
-        converWsp.append(ctnProductWsp);
-        converMessageWsp.append(productWsp);
+          converWsp.append(ctnProductWsp);
+          converMessageWsp.append(productWsp);
 
-        console.log('data.totalOfProducts ', data.totalOfProducts = totalOfProducts + data.total)
+          console.log('data.totalOfProducts ', data.totalOfProducts = totalOfProducts + data.total)
 
           // function format (n) {
           //   return n.toFixed(2).replace('.', ',').replace(/\d{3}(?=(\d{3})*,)/g, function (s) {
@@ -1305,25 +1243,29 @@ const showHTML = () => {
           // console.log('calculations ', calculations.map(format))
 
           
-        console.log('calculations ', formatNumber(totalOfProducts))
+          console.log('calculations ', formatNumber(totalOfProducts))
           
-        document.querySelector(".total-pagar").innerHTML = formatNumber(totalOfProducts);
-        document.querySelector(".total-pagar_inNav").innerHTML = formatNumber(totalOfProducts);  
-        document.querySelector(".total-pagar_footer").innerHTML = formatNumber(totalOfProducts);  
+          document.querySelector(".total-pagar").innerHTML = formatNumber(totalOfProducts);
+          document.querySelector(".total-pagar_inNav").innerHTML = formatNumber(totalOfProducts);  
 
-      position++
-      numOfProduct++
+        position++
+        numOfProduct++
 
     });
 
 
-  localStorage.setItem("allProducts", JSON.stringify(allProducts));   // Guardando en localStorage
+    localStorage.setItem("allProducts", JSON.stringify(allProducts));   // Guardando en localStorage
 
 
   let tester = document.querySelector(".test");
 
+  console.log('ctnMessageWsp ', ctnMessageWsp.textContent,  ctnMessageWsp.textContent.length)
   
+  // console.log('k ', isNaN(tester.length)) 
   let contain = document.getElementsByClassName('test').length;
+
+  console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
+
   
     if ( contain >= 1 ) {
       
@@ -1335,7 +1277,8 @@ const showHTML = () => {
 
     }
 
-  const ctnBtn = document.querySelectorAll(".ctn-icon-close");
+
+    const ctnBtn = document.querySelectorAll(".ctn-icon-close");
 
     for (let i = 0; i < ctnBtn.length; i++) {
       ctnBtn[i].addEventListener("click", function() {
@@ -1348,7 +1291,7 @@ const showHTML = () => {
 
       }
     )}
-    
+  
 }
 
 
@@ -1358,29 +1301,31 @@ $(".ctn-btn-message").click(function(){
 
   let testWsp = document.querySelector(".testWsp");
   
-
-  let ctnMessageWsp = document.querySelector(".converMessageWsp");
+   let ctnMessageWsp = document.querySelector(".converMessageWsp");
 	
-  console.log('ctnMessageWsp ', ctnMessageWsp)
+   console.log('ctnMessageWsp ', ctnMessageWsp)
 	
   let contain = document.getElementsByClassName('test').length;
 
   console.log('contain.legth ', contain, 'type contain.legth ', typeof contain)
 
   
-  if ( contain >= 1 ) {
+    if ( contain >= 1 ) {
       
-    console.log('tester ', tester.textContent,  tester.textContent.length)
+      console.log('tester ', tester.textContent,  tester.textContent.length)
 
-    document.querySelector(".preloader").classList.toggle("hidden");
+      document.querySelector(".preloader").classList.toggle("hidden");
 
-    window.addEventListener("blur", () => {
-    document.querySelector(".preloader").classList.add("hidden");
-    })
+      window.addEventListener("blur", () => {
+      document.querySelector(".preloader").classList.add("hidden");
+      })
 
-  } if ( contain === 0 ) {
-    tester = 0;
-  }
+	    
+    } if ( contain === 0 ) {
+
+      console.log('tester ', tester = 0);
+
+    }
 
   if( contain >= 1 ){
       var phone = "+5491150649933";
@@ -1392,11 +1337,13 @@ $(".ctn-btn-message").click(function(){
 })
 
 
+
 let ctnBtnLimpiarCards = document.querySelector(".ctn-btn-limpiar-cards");
 
 var scrollTimer = -1;
 
 function bodyScroll() {
+  
   document.querySelector(".ctn-btn-limpiar-cards").classList.add('noVisible');
 
   if (scrollTimer != -1)
@@ -1410,55 +1357,13 @@ function scrollFinished() {
 }
 
 
-
-let TheBody = document.getElementsByTagName("body");
-  
-function OnScrolling(){                             // put this on a scrolling EVENT
-
-      boolean = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
-	
-    if(!document.querySelector('.options').classList.contains("visibleInNavbar")) {
-      document.querySelector(".ctn-menu-in-footer").classList.add('transparent');
-      document.querySelector(".footer_section").classList.add('menuNoFooter');
-
-    } if(document.querySelector('.options').classList.contains("visibleInNavbar")) {
-
-      document.querySelector(".ctn-menu-in-footer").classList.remove('transparent');
-      document.querySelector(".footer_section").classList.remove('menuNoFooter');
-      
-    } if(document.querySelector('.ctn-btn-limpiar-cards').classList.contains("btnFloating")) {
-
-      if( boolean <= 173){
-    
-        document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-        document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-        document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-        document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
-        document.querySelector(".ctn-menu-in-footer").classList.add('visible');
-       
-      } if( boolean > 173 ){
-        
-        document.getElementById("ctnValueOrderFooter").classList.remove('visibleFooter');
-        document.getElementById("ctnValueStockFooter").classList.remove('visibleFooter');
-        document.querySelector(".total-pagar_footer").classList.remove('visibleFooter');
-        document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
-        document.querySelector(".ctn-menu-in-footer").classList.remove('visible');
-        
-      }
-
-    }
-
-  }
-
-
-
 const btnToTop = document.querySelector(".btnToNavbar");
 const btnOptionMenu = document.querySelector(".options"); 
 
 btnToTop.addEventListener('click', () => {
   document.querySelector(".ctn-btn-limpiar-cards").classList.toggle("btnFloating");
   document.querySelector(".limpiar-cards").classList.toggle("btnInNavbar");
-  document.querySelector(".options").classList.toggle("visibleInNavbar");
+  document.querySelector(".options").classList.toggle("visibleInNavbar");  
   document.querySelector(".btnToNavbar").classList.toggle("visiblebtnFloating");
   document.querySelector(".btnToNav").classList.toggle("visiblebtnFloating");
   document.querySelector("#btnArrowUp").classList.toggle("visiblebtnFloating");
@@ -1466,18 +1371,11 @@ btnToTop.addEventListener('click', () => {
   document.querySelector(".delete-info-btn").classList.toggle("btnFloating");
   document.querySelector(".total-pagar_inNav").classList.toggle("visibleFloating");
 
-  valueScrollBottom = Number(($(document).height() - $(window).height() - $(window).scrollTop()).toFixed());
-  
-  if( valueScrollBottom <= 173){	  
-      document.getElementById("ctnValueOrderFooter").classList.add('visibleFooter');
-      document.getElementById("ctnValueStockFooter").classList.add('visibleFooter');
-      document.querySelector(".total-pagar_footer").classList.add('visibleFooter');
-      document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone'); 
-      document.querySelector(".ctn-menu-in-footer").classList.add('visible');
+  document.querySelector(".ctn-btn-limpiar-cards").classList.add("visibility");
 
-      document.querySelector(".footer_section").classList.remove('menuNoFooter');
-      document.querySelector(".ctn-menu-in-footer").classList.remove('transparent');
-  } 
+  document.querySelector(".footer_section").classList.add("menuFloating");
+  document.querySelector(".menu-floating-footer").classList.add("visible");
+  document.querySelector(".ctn-text-and-btn-contact").classList.add("menuFloatingVisible");
 
   let contains = {
     btnsOptionInBottom: true,
@@ -1491,11 +1389,13 @@ btnToTop.addEventListener('click', () => {
 })
 
 
+
 /*=============== EXPANDED LIST ===============*/
 const navExpand = document.getElementById('nav-expand');
-      navExpandList = document.getElementById('nav-expand-list');
+const navExpandList = document.getElementById('nav-expand-list');
       navExpandIcon = document.getElementById('nav-expand-icon');
-
+      // deleteInfoAllCards = document.getElementById('delete_info-cards');
+      // deleteInfo = document.querySelector(".btnToNavbarTwo");
       deleteCtnQuestion = document.querySelector(".no_delete_ctn_question");
       yesDeleteInfoCards = document.querySelector(".yes_delete_info_cards");
       
@@ -1514,7 +1414,6 @@ btnOptionMenu.addEventListener('click', () => {
 })
 
 
-
 const btnToNav = document.querySelector(".btnToNav");
 
 btnToNav.addEventListener('click', () => {
@@ -1527,6 +1426,12 @@ btnToNav.addEventListener('click', () => {
   document.querySelector("#btnArrowUp").classList.remove("visiblebtnFloating");
   document.querySelector("#btnArrowDown").classList.remove("visiblebtnFloating");
   document.querySelector(".total-pagar_inNav").classList.remove("visibleFloating");
+
+  document.querySelector(".ctn-btn-limpiar-cards").classList.remove("visibility");
+  
+  document.querySelector(".footer_section").classList.remove("menuFloating");
+  document.querySelector(".menu-floating-footer").classList.remove("visible");
+  document.querySelector(".ctn-text-and-btn-contact").classList.remove("menuFloatingVisible");
 
   let contains = {
     btnsOptionInBottom: false,
@@ -1565,6 +1470,7 @@ function dataToTrashcan() {
     document.querySelector(".btn-cards_noValues").classList.add("noVisible");
 
   }
+
 }
 
 btnCardsNoValues = document.querySelector(".btn-cards_noValues");
@@ -1574,6 +1480,7 @@ btnCardsNoValues.addEventListener('click', () => {
   body.classList.remove("stop");
   body.classList.add("moving");
 })
+
 
 yesDeleteInfoCards.addEventListener('click', () => {
 
@@ -1593,15 +1500,13 @@ yesDeleteInfoCards.addEventListener('click', () => {
 
         countStock.innerHTML = allProducts.filter(a => a.order === 0 ).length;
         countOrder.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        ctnValueOrderFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
-        ctnValueStockFooter.innerHTML = allProducts.filter(a => a.order > 0 ).length;
 
         if (allProducts.length === 0) {
           totalOfProducts = 0;
 
           document.querySelector(".total-pagar").innerHTML = "$" + totalOfProducts;
           document.querySelector(".total-pagar_inNav").innerHTML = "$" + totalOfProducts;
-          document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
+          // document.querySelector(".total-pagar_footer").innerHTML = "$" + totalOfProducts;
         }
     }
 
@@ -1618,7 +1523,6 @@ deleteCtnQuestion.addEventListener('click', () => {
   body.classList.remove("stop");
   body.classList.add("moving");
 })
-
 
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -1668,3 +1572,54 @@ document.addEventListener("DOMContentLoaded", function() {
 
     scrollToTop()
 })
+
+
+let productListBtn = document.querySelectorAll(".ctn-btn-list");
+
+
+for (let i = 0; i < productListBtn.length; i++) {
+  productListBtn[i].addEventListener('click', function() {
+    console.log('click en', productListBtn[i].querySelector("a").getAttribute("href").slice(1))
+    cartName = productListBtn[i].querySelector("a").getAttribute("href").slice(1);
+
+    ctnCard = document.querySelectorAll(".container_card")[i].classList.add("violet_active");
+    
+    setTimeout(function(){
+      document.querySelectorAll(".container_card")[i].classList.remove('violet_active');
+    
+      console.log("holis");
+    }, 10000);
+    
+  }
+)}
+
+
+
+const header = document.querySelector("header");
+const footer = document.querySelector("footer");
+
+const sectionOptions = {
+    root: null
+};
+
+const sectionObserver = new IntersectionObserver(function(entries, sectionObserver) {
+  const headerEntry = entries.find(entry => entry.target.tagName === 'HEADER');
+  const footerEntry = entries.find(entry => entry.target.tagName === 'FOOTER');
+  if (headerEntry && headerEntry.isIntersecting) {
+    console.log('jazz')
+	  
+  } else if(footerEntry && footerEntry.isIntersecting) {
+    console.log('rock')
+    document.querySelector(".ctn-btn-limpiar-cards").classList.add('displayNone');
+
+  } else {
+	  
+    console.log('urbano')
+    document.querySelector(".ctn-btn-limpiar-cards").classList.remove('displayNone');
+
+  }
+}, sectionOptions);
+
+
+sectionObserver.observe(header);
+sectionObserver.observe(footer);

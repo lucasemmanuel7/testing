@@ -143,11 +143,18 @@ function scrollToTop() {
 }
 
 
-function closeNav() {
+function closeNav(i) {
   nav.classList.remove("visible");
   body.classList.remove("stop");
   body.classList.add("moving");
- }
+
+  ctnCard = document.querySelectorAll(".container_card")[i].classList.add("violet_active");
+
+  setTimeout(function(){
+   document.querySelectorAll(".container_card")[i].classList.remove('violet_active');
+   console.log("HHR");
+  }, 10000);
+}
 
 
 function closeList() {
@@ -1115,7 +1122,7 @@ const showHTML = () => {
                               </svg>
                             
                               </button>
-                              <a  class="modified" href="#${data.card}" onclick="closeNav()">
+                              <a  class="modified" href="#${data.card}" onclick="closeNav(${data.position})">
                               Modificar
                               
                               <svg xmlns="http://www.w3.org/2000/svg" 

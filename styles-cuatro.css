@@ -849,32 +849,29 @@ width: 90%;      /* width: 100%; */
   
 .container_card {
  display: grid;
-  /* grid-template-rows: 500px; */
-  /* grid-template-rows: 440px; */
-  grid-template-rows: 445px;    /* grid-template-rows: 445px   */
-  grid-template-rows: 450px;  /* grid-template-rows: 450px   */
+  grid-template-rows: 445px;  
+  grid-template-rows: 450px;  
   width: 100%;
   height: 100%;
-  border: 1px solid #ee9ca7;
   border: 1px solid #1b1b1b;
-  background: #efefef;
-  background: #ddadad;
-  background: #fbdada87;;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, .5);
   box-shadow: 0 4px 8px rgb(0 0 0 / 30%);
-  background-image: url(/img/pasteleria_background.jpg);
-  background-size: cover;
+  background-image: url(img/fondo-design-transparent.png);
+  background-color: #e7acbd;
+  background-size: contain;
 }
 
+ .container_card.violet_active {
+  box-shadow: blueviolet 0px 0px 0px 4px;
+ }
+
  .container_card.background-yellow {
-  background-image: url(/img/cake-pasteleria.jpg);
-  background-size: contain;
+  background-color: #eeee00;
  }
  
  .container_card.background-green {
-  background-image: url(/img/cake-pasteleria-green-700px_rose_strong.jpg);
-  background-size: contain;
+  background-color: mediumspringgreen;
  }
  
  .name_img_price {
